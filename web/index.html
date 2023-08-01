@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Session Replay for Android - POC</title>
+  <style>
+    * {
+      margin: 0;
+    }
+
+    body {
+      position: relative;
+    }
+
+    #footer {
+      position: absolute;
+      left: 2rem;
+      right: 2rem;
+      bottom: 2rem;
+      padding: 2rem;
+    }
+
+    #seekbar {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="canvas"></canvas>
+  <section id="footer">
+    <input id="seekbar" disabled type="range" min="0" max="99" value="0">
+  </section>
+  <script type="text/javascript" src="https://unpkg.com/canvaskit-wasm@0.19.0/bin/canvaskit.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/protobufjs@7.2.4/dist/protobuf.js"></script>
+  <script>
+    const canvasElement = document.getElementById('canvas');
+    canvasElement.width = window.innerWidth;
+    canvasElement.height = window.innerHeight;
+
+    const canvasKitLoaded = CanvasKitInit({
+      locateFile: (file) => 'https://unpkg.com/canvaskit-wasm@0.19.0/bin/' + file
+    });
+    const protoBufLoaded = protobuf.load("replay.proto");
+
+    const basicFontLoaded = fetch('https://storage.googleapis.com/skia-cdn/misc/Roboto-Regular.ttf')
+      .then((response) => response.arrayBuffer());
+
+    Promise.all([canvasKitLoaded, protoBufLoaded, basicFontLoaded]).then(([
+      CanvasKit, protoBufRoot, basicFont
+    ]) => {
+      const surface = CanvasKit.MakeCanvasSurface('canvas');
+      const fontMananger = CanvasKit.FontMgr.FromData([basicFont]);
+      const font = new CanvasKit.Font();
+
+      const replayMessage = protoBufRoot.lookupType("io.sentry.replay.android.proto.Replay");
+
+      const saveCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.SaveCommand");
+      const restoreCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.RestoreCommand");
+      const restoreToCountCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.RestoreToCountCommand");
+      const translateCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.TranslateCommand");
+      const clipRectCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.ClipRectCommand");
+      const clipRectFCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.ClipRectFCommand");
+      const drawTextCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.DrawTextCommand");
+      const drawRoundRectCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.DrawRoundRectCommand");
+      const drawCircleCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.DrawCircleCommand");
+      const drawRectCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.DrawRectCommand");
+      const concatCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.ConcatCommand");
+
+      COMMAND_TYPE_SAVE = '0';
+      COMMAND_TYPE_RESTORE = '1';
+      COMMAND_TYPE_RESTORE_TO_COUNT = '2';
+      COMMAND_TYPE_TRANSLATE = '3';
+      COMMAND_TYPE_CLIP_RECT = '4';
+      COMMAND_TYPE_CLIP_RECTF = '5';
+      COMMAND_TYPE_DRAW_TEXT = '6';
+      COMMAND_TYPE_DRAW_ROUND_RECT = '7';
+      COMMAND_TYPE_DRAW_CIRCLE = '8';
+      COMMAND_TYPE_DRAW_RECT = '9';
+      COMMAND_TYPE_CONCAT = '10';
+
+      const getTextAlign = (value) => {
+        /*
+          TEXT_ALIGN_LEFT = 0;
+          TEXT_ALIGN_CENTER = 1;
+          TEXT_ALIGN_RIGHT = 2;
+        */
+        if (value == 1) {
+          return CanvasKit.TextAlign.Center;
+        } else if (value == 2) {
+          return CanvasKit.TextAlign.Right;
+        }
+        return CanvasKit.TextAlign.Left;
+      };
+
+      const getPaintStyle = (value) => {
+        /*
+          PAINT_STYLE_FILL = 0;
+          PAINT_STYLE_STROKE = 1;
+          PAINT_STYLE_FILL_AND_STROKE = 2;
+        */
+        if (value == 1) {
+          return CanvasKit.PaintStyle.Stroke;
+        } else if (value == 2) {
+          return CanvasKit.PaintStyle.FillAndStroke;
+        }
+        return CanvasKit.PaintStyle.Fill;
+      }
+
+      const getColor = (color) => {
+
+        const a = color >>> 24;
+        const r = (color >> 16) & 0xFF;
+        const g = (color >> 8) & 0xFF;
+        const b = color & 0xFF;
+
+        return CanvasKit.Color4f(r / 255.0, g / 255.0, b / 255.0, a / 255.0);
+      }
+
+      const getRect = (value) => {
+        return CanvasKit.LTRBRect(
+          value.left,
+          value.top,
+          value.right,
+          value.bottom)
+      }
+
+      const getPaint = (protoPaint) => {
+        const skiaPaint = new CanvasKit.Paint();
+        skiaPaint.setColor(getColor(protoPaint.color));
+        skiaPaint.setAlphaf(protoPaint.alpha);
+        skiaPaint.setStyle(getPaintStyle(protoPaint.style));
+
+        if (protoPaint.porterDuffColorFilter) {
+          const skiaColor = getColor(protoPaint.porterDuffColorFilter.color);
+          const protoMode = protoPaint.porterDuffColorFilter.mode;
+          var skiaMode = CanvasKit.BlendMode.SrcIn;
+          switch (protoMode) {
+            // PORTER_DUFF_MODE_CLEAR = 0;
+            case 0:
+              skiaMode = CanvasKit.BlendMode.Clear;
+              break;
+            // PORTER_DUFF_MODE_SRC = 1;
+            case 1:
+              skiaMode = CanvasKit.BlendMode.Src;
+              break;
+            // PORTER_DUFF_MODE_DST = 2;
+            case 2:
+              skiaMode = CanvasKit.BlendMode.Dst;
+              break;
+            // PORTER_DUFF_MODE_SRC_OVER = 3;
+            case 3:
+              skiaMode = CanvasKit.BlendMode.SrcOver;
+              break;
+            //   PORTER_DUFF_MODE_DST_OVER = 4;
+            case 4:
+              skiaMode = CanvasKit.BlendMode.DstOver;
+              break;
+            // PORTER_DUFF_MODE_SRC_IN = 5;
+            case 5:
+              skiaMode = CanvasKit.BlendMode.SrcIn;
+              break;
+            // PORTER_DUFF_MODE_DST_IN = 6;
+            case 6:
+              skiaMode = CanvasKit.BlendMode.DstIn;
+              break;
+            // PORTER_DUFF_MODE_SRC_OUT = 7;
+            case 7:
+              skiaMode = CanvasKit.BlendMode.SrcOut;
+              break;
+            // PORTER_DUFF_MODE_DST_OUT = 8;
+            case 8:
+              skiaMode = CanvasKit.BlendMode.DstOut;
+              break;
+            // PORTER_DUFF_MODE_SRC_ATOP = 9;
+            case 9:
+              skiaMode = CanvasKit.BlendMode.SrcATop;
+              break;
+            // PORTER_DUFF_MODE_DST_ATOP = 10;
+            case 10:
+              skiaMode = CanvasKit.BlendMode.DstATop;
+              break;
+            // PORTER_DUFF_MODE_XOR = 11;
+            case 11:
+              skiaMode = CanvasKit.BlendMode.Xor;
+              break;
+            // PORTER_DUFF_MODE_DARKEN = 16;
+            case 16:
+              skiaMode = CanvasKit.BlendMode.Darken;
+              break;
+            // PORTER_DUFF_MODE_LIGHTEN = 17;
+            case 17:
+              skiaMode = CanvasKit.BlendMode.Lighten;
+              break;
+            // PORTER_DUFF_MODE_MULTIPLY = 13;
+            case 13:
+              skiaMode = CanvasKit.BlendMode.Multiply;
+              break;
+            // PORTER_DUFF_MODE_SCREEN = 14;
+            case 14:
+              skiaMode = CanvasKit.BlendMode.Screen;
+              break;
+            // PORTER_DUFF_MODE_ADD = 12;
+            case 12:
+              skiaMode = CanvasKit.BlendMode.Plus;
+              break;
+            // PORTER_DUFF_MODE_OVERLAY = 15;
+            case 15:
+              skiaMode = CanvasKit.BlendMode.Overlay;
+              break;
+          }
+          skiaPaint.setColor(skiaColor);
+          skiaPaint.setBlendMode(skiaMode);
+        } else {
+          // ??? what's the actual default
+          // skiaPaint.setBlendMode(CanvasKit.BlendMode.Src);
+        }
+        return skiaPaint;
+      };
+
+      const drawFrame = (canvas, frame) => {
+        canvas.clear(CanvasKit.Color4f(0.9, 0.9, 0.9, 1));
+
+        const commands = frame.commands;
+        for (var j = 0; j < commands.length; j++) {
+          const command = commands[j];
+          const type = command.type_url;
+          const payload = command.value;
+
+          if (type === COMMAND_TYPE_SAVE) {
+            canvas.save();
+          } else if (type === COMMAND_TYPE_RESTORE) {
+            canvas.restore();
+          } else if (type === COMMAND_TYPE_RESTORE_TO_COUNT) {
+            const data = restoreToCountCommand.decode(payload);
+            canvas.restoreToCount(data.count);
+          } else if (type === COMMAND_TYPE_TRANSLATE) {
+            const data = translateCommand.decode(payload);
+            canvas.translate(data.coordinate.x, data.coordinate.y);
+          } else if (type === COMMAND_TYPE_CLIP_RECT) {
+            const data = clipRectCommand.decode(payload);
+            const rect = CanvasKit.LTRBRect(data.rect.left,
+              data.rect.top,
+              data.rect.right,
+              data.rect.bottom);
+            // TODO something is off, probably clips wrong region
+            // canvas.clipRect(rect, 0, true);
+          } else if (type === COMMAND_TYPE_CLIP_RECTF) {
+            const data = clipRectFCommand.decode(payload);
+            const rect = CanvasKit.LTRBRect(
+              data.rect.left,
+              data.rect.top,
+              data.rect.right,
+              data.rect.bottom);
+            // TODO something is off, probably clips wrong region
+            // canvas.clipRect(rect, 0, true);
+          } else if (type === COMMAND_TYPE_DRAW_TEXT) {
+            // not sure if paragraph API is the right one,
+            // but drawText doesn't seem to support TextAlign
+            const data = drawTextCommand.decode(payload);
+            const paint = getPaint(data.paint);
+            const paraStyle = new CanvasKit.ParagraphStyle({
+              textStyle: {
+                color: getColor(data.paint.color),
+                fontFamilies: ['Roboto'],
+                fontSize: data.paint.textSize,
+              },
+              textAlign: getTextAlign(data.paint.textAlign),
+              maxLines: 1
+            });
+
+            const builder = CanvasKit.ParagraphBuilder.Make(paraStyle, fontMananger);
+            builder.addText(data.text);
+            paragraph = builder.build();
+            // to infinity, and beyond!
+            // seriously, any large number will do as layouting is already performed by android
+            paragraph.layout(999);
+            canvas.drawParagraph(paragraph, data.position.x, data.position.y - data.paint.textSize);
+            // paint.setColor(CanvasKit.Color4f(0, 0, 0, 1));
+            // paint.setStyle(CanvasKit.PaintStyle.Fill);
+            // paint.setAntiAlias(true);
+            // canvas.drawText(data.text, data.position.x, data.position.y, paint, font);
+          } else if (type === COMMAND_TYPE_DRAW_ROUND_RECT) {
+            const data = drawRoundRectCommand.decode(payload);
+
+            if (data.paint.porterDuffColorFilter && data.paint.porterDuffColorFilter.color !== 0) {
+              const paint = getPaint(data.paint);
+              const rect = getRect(data.rect);
+              const rr = CanvasKit.RRectXY(rect, data.radii.x, data.radii.y);
+              canvas.drawRRect(rr, paint);
+            } else {
+              console.warn("weird round rect", data);
+            }
+          } else if (type === COMMAND_TYPE_DRAW_RECT) {
+            const data = drawRectCommand.decode(payload);
+            const paint = getPaint(data.paint);
+            const rect = getRect(data.rect);
+            canvas.drawRect(rect, paint);
+          } else if (type === COMMAND_TYPE_DRAW_CIRCLE) {
+            const data = drawCircleCommand.decode(payload);
+            console.log("TODO: circle");
+          } else if (type === COMMAND_TYPE_CONCAT) {
+            const data = concatCommand.decode(payload);
+            console.log("TODO: concat");
+          } else {
+            console.error("unknown command", type);
+          }
+        }
+      };
+
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const payload = urlParams.get('payload');
+      if (payload === null || payload === undefined) {
+        console.log("No payload, aborting!");
+        return;
+      }
+
+      // there seriously has to be a better way of doing this
+      const decodedData = Uint8Array.from(atob(payload), c => c.charCodeAt(0));
+      const replay = replayMessage.decode(decodedData);
+      const id = replay.id;
+      const frames = replay.frames;
+      const frameCount = replay.frames.length;
+      var frameIdx = 0;
+
+      const onAnimationFrame = (canvas) => {
+        const frame = replay.frames[frameIdx];
+        drawFrame(canvas, frame);
+      };
+      const seekbar = document.getElementById("seekbar");
+      setInterval(() => {
+        surface.requestAnimationFrame(onAnimationFrame);
+        frameIdx++;
+        if (frameIdx >= frameCount) {
+          frameIdx = 0;
+        }
+        seekbar.value = parseInt((frameIdx) / (frameCount - 1) * 99);
+      }, 1000);
+    });
+  </script>
+</body>
+
+</html>

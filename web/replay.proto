@@ -1,0 +1,170 @@
+syntax = "proto3";
+
+package io.sentry.replay.android.proto;
+import "google/protobuf/any.proto";
+
+enum PaintStyle {
+  PAINT_STYLE_FILL = 0;
+  PAINT_STYLE_STROKE = 1;
+  PAINT_STYLE_FILL_AND_STROKE = 2;
+}
+
+enum TextAlign {
+  TEXT_ALIGN_LEFT = 0;
+  TEXT_ALIGN_CENTER = 1;
+  TEXT_ALIGN_RIGHT = 2;
+}
+
+enum PorterDuffMode {
+  PORTER_DUFF_MODE_CLEAR = 0;
+  PORTER_DUFF_MODE_SRC = 1;
+  PORTER_DUFF_MODE_DST = 2;
+  PORTER_DUFF_MODE_SRC_OVER = 3;
+  PORTER_DUFF_MODE_DST_OVER = 4;
+  PORTER_DUFF_MODE_SRC_IN = 5;
+  PORTER_DUFF_MODE_DST_IN = 6;
+  PORTER_DUFF_MODE_SRC_OUT = 7;
+  PORTER_DUFF_MODE_DST_OUT = 8 ;
+  PORTER_DUFF_MODE_SRC_ATOP = 9;
+  PORTER_DUFF_MODE_DST_ATOP = 10;
+  PORTER_DUFF_MODE_XOR = 11;
+  PORTER_DUFF_MODE_DARKEN = 16;
+  PORTER_DUFF_MODE_LIGHTEN = 17;
+  PORTER_DUFF_MODE_MULTIPLY = 13;
+  PORTER_DUFF_MODE_SCREEN = 14;
+  PORTER_DUFF_MODE_ADD = 12;
+  PORTER_DUFF_MODE_OVERLAY = 15;
+}
+
+enum BlendMode {
+  BLEND_MODE_CLEAR = 0;
+  BLEND_MODE_SRC = 1;
+  BLEND_MODE_DST = 2;
+  BLEND_MODE_SRC_OVER = 3;
+  BLEND_MODE_DST_OVER = 4;
+  BLEND_MODE_SRC_IN = 5;
+  BLEND_MODE_DST_IN = 6;
+  BLEND_MODE_SRC_OUT = 7;
+  BLEND_MODE_DST_OUT = 8;
+  BLEND_MODE_SRC_ATOP = 9;
+  BLEND_MODE_DST_ATOP = 10;
+  BLEND_MODE_XOR = 11;
+  BLEND_MODE_PLUS = 12;
+  BLEND_MODE_MODULATE = 13;
+  BLEND_MODE_SCREEN = 14;
+  BLEND_MODE_OVERLAY = 15;
+  BLEND_MODE_DARKEN = 16;
+  BLEND_MODE_LIGHTEN = 17;
+  BLEND_MODE_COLOR_DODGE = 18;
+  BLEND_MODE_COLOR_BURN = 19;
+  BLEND_MODE_HARD_LIGHT = 20;
+  BLEND_MODE_SOFT_LIGHT = 21;
+  BLEND_MODE_DIFFERENCE = 22;
+  BLEND_MODE_EXCLUSION = 23;
+  BLEND_MODE_MULTIPLY = 24;
+  BLEND_MODE_HUE = 25;
+  BLEND_MODE_SATURATION = 26;
+  BLEND_MODE_COLOR = 27;
+  BLEND_MODE_LUMINOSITY = 28;
+}
+
+message PorterDuffColorFilter {
+  int32 color = 1;
+  PorterDuffMode mode = 2;
+}
+
+message BlendModeColorFilter {
+  int32 color = 1;
+  BlendMode mode = 2;
+}
+
+message Paint {
+  PaintStyle style = 1;
+  TextAlign textAlign = 2;
+  int32 color = 3;
+  float alpha = 8;
+  float strokeWidth = 4;
+  float textSize = 5;
+  optional PorterDuffColorFilter porterDuffColorFilter = 6;
+  optional BlendMode blendMode = 7;
+}
+
+message CoordinateF {
+  float x = 1;
+  float y = 2;
+}
+
+message Rect {
+  int32 left = 1;
+  int32 right = 2;
+  int32 top = 3;
+  int32 bottom = 4;
+}
+
+message RectF {
+  float left = 1;
+  float right = 2;
+  float top = 3;
+  float bottom = 4;
+}
+
+message SaveCommand {
+
+}
+
+message RestoreCommand {
+
+}
+
+message RestoreToCountCommand {
+  int32 count = 1;
+}
+
+message TranslateCommand {
+  CoordinateF coordinate = 1;
+}
+
+message ClipRectCommand {
+  Rect rect = 1;
+}
+
+message ClipRectFCommand {
+  RectF rect = 1;
+}
+
+message DrawTextCommand {
+  string text = 1;
+  CoordinateF position = 2;
+  Paint paint = 3;
+}
+
+message DrawRoundRectCommand {
+  RectF rect = 1;
+  CoordinateF radii = 2;
+  Paint paint = 3;
+}
+
+message DrawCircleCommand {
+  CoordinateF position = 1;
+  float radius = 2;
+  Paint paint = 3;
+}
+
+message DrawRectCommand {
+  Rect rect = 1;
+  Paint paint = 2;
+}
+
+message ConcatCommand {
+  repeated float matrix = 1;
+}
+
+message Frame {
+  int64 time = 1;
+  repeated google.protobuf.Any commands = 2;
+}
+
+message Replay {
+  string id = 1;
+  repeated Frame frames = 2;
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <io.sentry.replay.android.InterceptingView
+        android:id="@+id/recording"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp"
+            tools:context=".android.sandbox.MainActivity">
+
+            <TextView
+                android:id="@+id/counter_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginTop="4dp"
+                android:background="#78997a"
+                android:padding="12dp"
+                android:text="0"
+                android:textColor="#19361f"
+                android:textSize="32sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/increase_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Increase" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/decrease_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Decrease"/>
+
+        </LinearLayout>
+    </io.sentry.replay.android.InterceptingView>
+
+    <Button
+        android:id="@+id/action_replay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:text="Watch Replay" />
+
+</FrameLayout>
