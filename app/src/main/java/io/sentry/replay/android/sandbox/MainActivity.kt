@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.action_replay).setOnClickListener {
             val replay = recordingView.canvasCommandRecorder.getReplay()
             val replayBase64 = String(Base64.encode(replay, Base64.DEFAULT or Base64.NO_WRAP))
-            val webpage: Uri = Uri.parse("https://markushi.github.io/session-replay-android")
+            val webpage: Uri = Uri.parse("https://markushi.github.io/session-replay-android/web/")
                     .buildUpon()
                     .appendQueryParameter("payload", replayBase64).build()
 
