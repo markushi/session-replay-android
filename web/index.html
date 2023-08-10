@@ -55,32 +55,8 @@
       const surface = CanvasKit.MakeCanvasSurface('canvas');
       const fontMananger = CanvasKit.FontMgr.FromData([basicFont]);
       const font = new CanvasKit.Font();
-
       const replayMessage = protoBufRoot.lookupType("io.sentry.replay.android.proto.Replay");
-
-      const saveCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.SaveCommand");
-      const restoreCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.RestoreCommand");
-      const restoreToCountCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.RestoreToCountCommand");
-      const translateCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.TranslateCommand");
-      const clipRectCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.ClipRectCommand");
-      const clipRectFCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.ClipRectFCommand");
-      const drawTextCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.DrawTextCommand");
-      const drawRoundRectCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.DrawRoundRectCommand");
-      const drawCircleCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.DrawCircleCommand");
-      const drawRectCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.DrawRectCommand");
-      const concatCommand = protoBufRoot.lookupType("io.sentry.replay.android.proto.ConcatCommand");
-
-      COMMAND_TYPE_SAVE = '0';
-      COMMAND_TYPE_RESTORE = '1';
-      COMMAND_TYPE_RESTORE_TO_COUNT = '2';
-      COMMAND_TYPE_TRANSLATE = '3';
-      COMMAND_TYPE_CLIP_RECT = '4';
-      COMMAND_TYPE_CLIP_RECTF = '5';
-      COMMAND_TYPE_DRAW_TEXT = '6';
-      COMMAND_TYPE_DRAW_ROUND_RECT = '7';
-      COMMAND_TYPE_DRAW_CIRCLE = '8';
-      COMMAND_TYPE_DRAW_RECT = '9';
-      COMMAND_TYPE_CONCAT = '10';
+      const DEBUG_CLIPPING = false;
 
       const getTextAlign = (value) => {
         /*
@@ -136,6 +112,7 @@
 
         if (protoPaint.porterDuffColorFilter) {
           const skiaColor = getColor(protoPaint.porterDuffColorFilter.color);
+          
           const protoMode = protoPaint.porterDuffColorFilter.mode;
           var skiaMode = CanvasKit.BlendMode.SrcIn;
           switch (protoMode) {
@@ -227,40 +204,36 @@
         const commands = frame.commands;
         for (var j = 0; j < commands.length; j++) {
           const command = commands[j];
-          const type = command.type_url;
-          const payload = command.value;
+          const payload = command.payload;
 
-          if (type === COMMAND_TYPE_SAVE) {
+          if (payload.save) {
             canvas.save();
-          } else if (type === COMMAND_TYPE_RESTORE) {
+          } else if (payload.restore) {
             canvas.restore();
-          } else if (type === COMMAND_TYPE_RESTORE_TO_COUNT) {
-            const data = restoreToCountCommand.decode(payload);
-            canvas.restoreToCount(data.count);
-          } else if (type === COMMAND_TYPE_TRANSLATE) {
-            const data = translateCommand.decode(payload);
-            canvas.translate(data.coordinate.x, data.coordinate.y);
-          } else if (type === COMMAND_TYPE_CLIP_RECT) {
-            const data = clipRectCommand.decode(payload);
-            const rect = CanvasKit.LTRBRect(data.rect.left,
-              data.rect.top,
-              data.rect.right,
-              data.rect.bottom);
-            // TODO something is off, probably clips wrong region
-            // canvas.clipRect(rect, 0, true);
-          } else if (type === COMMAND_TYPE_CLIP_RECTF) {
-            const data = clipRectFCommand.decode(payload);
+          } else if (payload.restoreToCount) {
+            canvas.restoreToCount(payload.restoreToCount.count);
+          } else if (payload.translate) {
+            canvas.translate(payload.translate.coordinate.x, payload.translate.coordinate.y);
+          } else if (payload.clipRectF) {
+            const data = payload.clipRectF;
             const rect = CanvasKit.LTRBRect(
               data.rect.left,
               data.rect.top,
               data.rect.right,
               data.rect.bottom);
-            // TODO something is off, probably clips wrong region
-            // canvas.clipRect(rect, 0, true);
-          } else if (type === COMMAND_TYPE_DRAW_TEXT) {
+
+            if (DEBUG_CLIPPING) {
+              const paint = new CanvasKit.Paint();
+              paint.setColor(CanvasKit.Color4f(1, 0.0, 0.0, 0.5));
+              paint.setStyle(CanvasKit.PaintStyle.Fill);
+              canvas.drawRect(rect, paint);
+            } else {
+              canvas.clipRect(rect, CanvasKit.ClipOp.Intersect);
+            }
+          } else if (payload.drawText) {
             // not sure if paragraph API is the right one,
             // but drawText doesn't seem to support TextAlign
-            const data = drawTextCommand.decode(payload);
+            const data = payload.drawText;
             const paint = getPaint(data.paint);
             const paraStyle = new CanvasKit.ParagraphStyle({
               textStyle: {
@@ -283,8 +256,8 @@
             // paint.setStyle(CanvasKit.PaintStyle.Fill);
             // paint.setAntiAlias(true);
             // canvas.drawText(data.text, data.position.x, data.position.y, paint, font);
-          } else if (type === COMMAND_TYPE_DRAW_ROUND_RECT) {
-            const data = drawRoundRectCommand.decode(payload);
+          } else if (payload.drawRoundRect) {
+            const data = payload.drawRoundRect;
 
             if (data.paint.porterDuffColorFilter && data.paint.porterDuffColorFilter.color !== 0) {
               const paint = getPaint(data.paint);
@@ -292,21 +265,34 @@
               const rr = CanvasKit.RRectXY(rect, data.radii.x, data.radii.y);
               canvas.drawRRect(rr, paint);
             } else {
-              console.warn("weird round rect", data);
+              console.debug("transparent porterduff filter set, skipping round rect");
             }
-          } else if (type === COMMAND_TYPE_DRAW_RECT) {
-            const data = drawRectCommand.decode(payload);
+          } else if (payload.drawRect) {
+            const data = payload.drawRect;
             const paint = getPaint(data.paint);
             const rect = getRect(data.rect);
             canvas.drawRect(rect, paint);
-          } else if (type === COMMAND_TYPE_DRAW_CIRCLE) {
-            const data = drawCircleCommand.decode(payload);
-            console.log("TODO: circle");
-          } else if (type === COMMAND_TYPE_CONCAT) {
-            const data = concatCommand.decode(payload);
-            console.log("TODO: concat");
+          } else if (payload.drawCircle) {
+            const data = payload.drawCircle;
+            const paint = getPaint(data.paint);
+            canvas.drawCircle(data.position.x, data.position.y, data.radius, paint);
+          } else if (payload.concat) {
+            // TODO check if we can use matrix as-is
+            const data = payload.concat;
+            const matrix = data.matrix;
+            canvas.concat(data.matrix);
+          } else if (payload.scale) {
+            canvas.scale(payload.concat.sx, payload.concat.sy);
+          } else if (payload.rotate) {
+            canvas.rotate(payload.rotate.degrees);
+          } else if (payload.skew) {
+            canvas.skew(payload.skew.sx, payload.skew.sy);
+          } else if (payload.setMatrix) {
+            const matrix = payload.setMatrix.matrix;
+            // ?
+            // canvas.setMatrix(data.matrix);
           } else {
-            console.error("unknown command", type);
+            console.error("unknown command", payload);
           }
         }
       };

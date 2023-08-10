@@ -1,7 +1,6 @@
 syntax = "proto3";
 
 package io.sentry.replay.android.proto;
-import "google/protobuf/any.proto";
 
 enum PaintStyle {
   PAINT_STYLE_FILL = 0;
@@ -124,10 +123,6 @@ message TranslateCommand {
   CoordinateF coordinate = 1;
 }
 
-message ClipRectCommand {
-  Rect rect = 1;
-}
-
 message ClipRectFCommand {
   RectF rect = 1;
 }
@@ -159,9 +154,50 @@ message ConcatCommand {
   repeated float matrix = 1;
 }
 
+message ScaleCommand {
+  float sx = 1;
+  float sy = 2;
+}
+
+message RotateCommand {
+  float degrees = 1;
+}
+
+message SkewCommand {
+  float sx = 1;
+  float sy = 2;
+}
+
+message SetMatrixCommand {
+  repeated float matrix = 1;
+}
+
+message DrawingCommandPayload {
+  oneof payload {
+    SaveCommand save = 2;
+    RestoreCommand restore = 3;
+    RestoreToCountCommand restoreToCount = 4;
+    TranslateCommand translate = 5;
+    ClipRectFCommand clipRectF = 7;
+    DrawTextCommand drawText = 8;
+    DrawRoundRectCommand drawRoundRect = 9;
+    DrawRectCommand drawRect = 10;
+    ConcatCommand concat = 11;
+    DrawCircleCommand drawCircle = 12;
+    RotateCommand rotate = 13;
+    SkewCommand skew = 14;
+    ScaleCommand scale = 15;
+    SetMatrixCommand setMatrix = 16;
+  }
+}
+
+message DrawingCommand {
+  DrawingCommandPayload payload = 1;
+}
+
 message Frame {
   int64 time = 1;
-  repeated google.protobuf.Any commands = 2;
+  repeated DrawingCommand commands = 2;
 }
 
 message Replay {

@@ -7,11 +7,10 @@ import android.util.Base64
 import android.util.Log
 import android.util.TypedValue
 import android.view.View
-import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import io.sentry.replay.R
-import io.sentry.replay.android.InterceptingView
+import io.sentry.replay.android.ViewRecorder
 
 class MainActivity : AppCompatActivity() {
     companion object {
@@ -22,13 +21,14 @@ class MainActivity : AppCompatActivity() {
         var count = 0;
     }
 
+    private val viewRecorder: ViewRecorder = ViewRecorder()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         var state = State()
 
-        val recordingView = findViewById<InterceptingView>(R.id.recording)
         val txtCounter = findViewById<TextView>(R.id.counter_label)
         findViewById<View>(R.id.increase_counter).setOnClickListener {
             state.count++
@@ -42,12 +42,12 @@ class MainActivity : AppCompatActivity() {
             txtCounter.text = "${state.count}"
         }
 
-        findViewById<Button>(R.id.action_replay).setOnClickListener {
-            val replay = recordingView.canvasCommandRecorder.getReplay()
+        findViewById<View>(R.id.action_replay).setOnClickListener {
+            val replay = viewRecorder.canvasCommandRecorder.getReplay()
             val replayBase64 = String(Base64.encode(replay, Base64.DEFAULT or Base64.NO_WRAP))
             val webpage: Uri = Uri.parse("https://markushi.github.io/session-replay-android/web/")
-                    .buildUpon()
-                    .appendQueryParameter("payload", replayBase64).build()
+                .buildUpon()
+                .appendQueryParameter("payload", replayBase64).build()
 
             val intent = Intent(Intent.ACTION_VIEW, webpage)
             try {
@@ -56,5 +56,15 @@ class MainActivity : AppCompatActivity() {
                 Log.e(TAG, "failed to launch website", e)
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewRecorder.setView(findViewById(R.id.recording))
+    }
+
+    override fun onPause() {
+        super.onPause()
+        viewRecorder.setView(null)
     }
 }

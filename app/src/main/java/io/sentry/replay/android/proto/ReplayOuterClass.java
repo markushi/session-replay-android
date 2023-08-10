@@ -7071,606 +7071,6 @@ public final class ReplayOuterClass {
 
   }
 
-  public interface ClipRectCommandOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:io.sentry.replay.android.proto.ClipRectCommand)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.io.sentry.replay.android.proto.Rect rect = 1;</code>
-     * @return Whether the rect field is set.
-     */
-    boolean hasRect();
-    /**
-     * <code>.io.sentry.replay.android.proto.Rect rect = 1;</code>
-     * @return The rect.
-     */
-    io.sentry.replay.android.proto.ReplayOuterClass.Rect getRect();
-    /**
-     * <code>.io.sentry.replay.android.proto.Rect rect = 1;</code>
-     */
-    io.sentry.replay.android.proto.ReplayOuterClass.RectOrBuilder getRectOrBuilder();
-  }
-  /**
-   * Protobuf type {@code io.sentry.replay.android.proto.ClipRectCommand}
-   */
-  public static final class ClipRectCommand extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:io.sentry.replay.android.proto.ClipRectCommand)
-      ClipRectCommandOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ClipRectCommand.newBuilder() to construct.
-    private ClipRectCommand(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ClipRectCommand() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ClipRectCommand();
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_ClipRectCommand_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_ClipRectCommand_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand.class, io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand.Builder.class);
-    }
-
-    public static final int RECT_FIELD_NUMBER = 1;
-    private io.sentry.replay.android.proto.ReplayOuterClass.Rect rect_;
-    /**
-     * <code>.io.sentry.replay.android.proto.Rect rect = 1;</code>
-     * @return Whether the rect field is set.
-     */
-    @java.lang.Override
-    public boolean hasRect() {
-      return rect_ != null;
-    }
-    /**
-     * <code>.io.sentry.replay.android.proto.Rect rect = 1;</code>
-     * @return The rect.
-     */
-    @java.lang.Override
-    public io.sentry.replay.android.proto.ReplayOuterClass.Rect getRect() {
-      return rect_ == null ? io.sentry.replay.android.proto.ReplayOuterClass.Rect.getDefaultInstance() : rect_;
-    }
-    /**
-     * <code>.io.sentry.replay.android.proto.Rect rect = 1;</code>
-     */
-    @java.lang.Override
-    public io.sentry.replay.android.proto.ReplayOuterClass.RectOrBuilder getRectOrBuilder() {
-      return rect_ == null ? io.sentry.replay.android.proto.ReplayOuterClass.Rect.getDefaultInstance() : rect_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (rect_ != null) {
-        output.writeMessage(1, getRect());
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (rect_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getRect());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand)) {
-        return super.equals(obj);
-      }
-      io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand other = (io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand) obj;
-
-      if (hasRect() != other.hasRect()) return false;
-      if (hasRect()) {
-        if (!getRect()
-            .equals(other.getRect())) return false;
-      }
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasRect()) {
-        hash = (37 * hash) + RECT_FIELD_NUMBER;
-        hash = (53 * hash) + getRect().hashCode();
-      }
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code io.sentry.replay.android.proto.ClipRectCommand}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:io.sentry.replay.android.proto.ClipRectCommand)
-        io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommandOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_ClipRectCommand_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_ClipRectCommand_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand.class, io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand.Builder.class);
-      }
-
-      // Construct using io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        rect_ = null;
-        if (rectBuilder_ != null) {
-          rectBuilder_.dispose();
-          rectBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_ClipRectCommand_descriptor;
-      }
-
-      @java.lang.Override
-      public io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand getDefaultInstanceForType() {
-        return io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand build() {
-        io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand buildPartial() {
-        io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand result = new io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.rect_ = rectBuilder_ == null
-              ? rect_
-              : rectBuilder_.build();
-        }
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand) {
-          return mergeFrom((io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand other) {
-        if (other == io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand.getDefaultInstance()) return this;
-        if (other.hasRect()) {
-          mergeRect(other.getRect());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                input.readMessage(
-                    getRectFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private io.sentry.replay.android.proto.ReplayOuterClass.Rect rect_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.sentry.replay.android.proto.ReplayOuterClass.Rect, io.sentry.replay.android.proto.ReplayOuterClass.Rect.Builder, io.sentry.replay.android.proto.ReplayOuterClass.RectOrBuilder> rectBuilder_;
-      /**
-       * <code>.io.sentry.replay.android.proto.Rect rect = 1;</code>
-       * @return Whether the rect field is set.
-       */
-      public boolean hasRect() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>.io.sentry.replay.android.proto.Rect rect = 1;</code>
-       * @return The rect.
-       */
-      public io.sentry.replay.android.proto.ReplayOuterClass.Rect getRect() {
-        if (rectBuilder_ == null) {
-          return rect_ == null ? io.sentry.replay.android.proto.ReplayOuterClass.Rect.getDefaultInstance() : rect_;
-        } else {
-          return rectBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.io.sentry.replay.android.proto.Rect rect = 1;</code>
-       */
-      public Builder setRect(io.sentry.replay.android.proto.ReplayOuterClass.Rect value) {
-        if (rectBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          rect_ = value;
-        } else {
-          rectBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.io.sentry.replay.android.proto.Rect rect = 1;</code>
-       */
-      public Builder setRect(
-          io.sentry.replay.android.proto.ReplayOuterClass.Rect.Builder builderForValue) {
-        if (rectBuilder_ == null) {
-          rect_ = builderForValue.build();
-        } else {
-          rectBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.io.sentry.replay.android.proto.Rect rect = 1;</code>
-       */
-      public Builder mergeRect(io.sentry.replay.android.proto.ReplayOuterClass.Rect value) {
-        if (rectBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            rect_ != null &&
-            rect_ != io.sentry.replay.android.proto.ReplayOuterClass.Rect.getDefaultInstance()) {
-            getRectBuilder().mergeFrom(value);
-          } else {
-            rect_ = value;
-          }
-        } else {
-          rectBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.io.sentry.replay.android.proto.Rect rect = 1;</code>
-       */
-      public Builder clearRect() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        rect_ = null;
-        if (rectBuilder_ != null) {
-          rectBuilder_.dispose();
-          rectBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.io.sentry.replay.android.proto.Rect rect = 1;</code>
-       */
-      public io.sentry.replay.android.proto.ReplayOuterClass.Rect.Builder getRectBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getRectFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.io.sentry.replay.android.proto.Rect rect = 1;</code>
-       */
-      public io.sentry.replay.android.proto.ReplayOuterClass.RectOrBuilder getRectOrBuilder() {
-        if (rectBuilder_ != null) {
-          return rectBuilder_.getMessageOrBuilder();
-        } else {
-          return rect_ == null ?
-              io.sentry.replay.android.proto.ReplayOuterClass.Rect.getDefaultInstance() : rect_;
-        }
-      }
-      /**
-       * <code>.io.sentry.replay.android.proto.Rect rect = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          io.sentry.replay.android.proto.ReplayOuterClass.Rect, io.sentry.replay.android.proto.ReplayOuterClass.Rect.Builder, io.sentry.replay.android.proto.ReplayOuterClass.RectOrBuilder> 
-          getRectFieldBuilder() {
-        if (rectBuilder_ == null) {
-          rectBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              io.sentry.replay.android.proto.ReplayOuterClass.Rect, io.sentry.replay.android.proto.ReplayOuterClass.Rect.Builder, io.sentry.replay.android.proto.ReplayOuterClass.RectOrBuilder>(
-                  getRect(),
-                  getParentForChildren(),
-                  isClean());
-          rect_ = null;
-        }
-        return rectBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:io.sentry.replay.android.proto.ClipRectCommand)
-    }
-
-    // @@protoc_insertion_point(class_scope:io.sentry.replay.android.proto.ClipRectCommand)
-    private static final io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand();
-    }
-
-    public static io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ClipRectCommand>
-        PARSER = new com.google.protobuf.AbstractParser<ClipRectCommand>() {
-      @java.lang.Override
-      public ClipRectCommand parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<ClipRectCommand> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ClipRectCommand> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public io.sentry.replay.android.proto.ReplayOuterClass.ClipRectCommand getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface ClipRectFCommandOrBuilder extends
       // @@protoc_insertion_point(interface_extends:io.sentry.replay.android.proto.ClipRectFCommand)
       com.google.protobuf.MessageOrBuilder {
@@ -12466,6 +11866,6384 @@ public final class ReplayOuterClass {
 
   }
 
+  public interface ScaleCommandOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.sentry.replay.android.proto.ScaleCommand)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>float sx = 1;</code>
+     * @return The sx.
+     */
+    float getSx();
+
+    /**
+     * <code>float sy = 2;</code>
+     * @return The sy.
+     */
+    float getSy();
+  }
+  /**
+   * Protobuf type {@code io.sentry.replay.android.proto.ScaleCommand}
+   */
+  public static final class ScaleCommand extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.sentry.replay.android.proto.ScaleCommand)
+      ScaleCommandOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ScaleCommand.newBuilder() to construct.
+    private ScaleCommand(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ScaleCommand() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ScaleCommand();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_ScaleCommand_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_ScaleCommand_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.class, io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.Builder.class);
+    }
+
+    public static final int SX_FIELD_NUMBER = 1;
+    private float sx_ = 0F;
+    /**
+     * <code>float sx = 1;</code>
+     * @return The sx.
+     */
+    @java.lang.Override
+    public float getSx() {
+      return sx_;
+    }
+
+    public static final int SY_FIELD_NUMBER = 2;
+    private float sy_ = 0F;
+    /**
+     * <code>float sy = 2;</code>
+     * @return The sy.
+     */
+    @java.lang.Override
+    public float getSy() {
+      return sy_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (java.lang.Float.floatToRawIntBits(sx_) != 0) {
+        output.writeFloat(1, sx_);
+      }
+      if (java.lang.Float.floatToRawIntBits(sy_) != 0) {
+        output.writeFloat(2, sy_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (java.lang.Float.floatToRawIntBits(sx_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(1, sx_);
+      }
+      if (java.lang.Float.floatToRawIntBits(sy_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, sy_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand)) {
+        return super.equals(obj);
+      }
+      io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand other = (io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand) obj;
+
+      if (java.lang.Float.floatToIntBits(getSx())
+          != java.lang.Float.floatToIntBits(
+              other.getSx())) return false;
+      if (java.lang.Float.floatToIntBits(getSy())
+          != java.lang.Float.floatToIntBits(
+              other.getSy())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SX_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getSx());
+      hash = (37 * hash) + SY_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getSy());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.sentry.replay.android.proto.ScaleCommand}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.sentry.replay.android.proto.ScaleCommand)
+        io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommandOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_ScaleCommand_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_ScaleCommand_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.class, io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.Builder.class);
+      }
+
+      // Construct using io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sx_ = 0F;
+        sy_ = 0F;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_ScaleCommand_descriptor;
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand getDefaultInstanceForType() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand build() {
+        io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand buildPartial() {
+        io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand result = new io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sx_ = sx_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sy_ = sy_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand) {
+          return mergeFrom((io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand other) {
+        if (other == io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.getDefaultInstance()) return this;
+        if (other.getSx() != 0F) {
+          setSx(other.getSx());
+        }
+        if (other.getSy() != 0F) {
+          setSy(other.getSy());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 13: {
+                sx_ = input.readFloat();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 13
+              case 21: {
+                sy_ = input.readFloat();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 21
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private float sx_ ;
+      /**
+       * <code>float sx = 1;</code>
+       * @return The sx.
+       */
+      @java.lang.Override
+      public float getSx() {
+        return sx_;
+      }
+      /**
+       * <code>float sx = 1;</code>
+       * @param value The sx to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSx(float value) {
+
+        sx_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float sx = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSx() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sx_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float sy_ ;
+      /**
+       * <code>float sy = 2;</code>
+       * @return The sy.
+       */
+      @java.lang.Override
+      public float getSy() {
+        return sy_;
+      }
+      /**
+       * <code>float sy = 2;</code>
+       * @param value The sy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSy(float value) {
+
+        sy_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float sy = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSy() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sy_ = 0F;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.sentry.replay.android.proto.ScaleCommand)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.sentry.replay.android.proto.ScaleCommand)
+    private static final io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand();
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ScaleCommand>
+        PARSER = new com.google.protobuf.AbstractParser<ScaleCommand>() {
+      @java.lang.Override
+      public ScaleCommand parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ScaleCommand> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ScaleCommand> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RotateCommandOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.sentry.replay.android.proto.RotateCommand)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>float degrees = 1;</code>
+     * @return The degrees.
+     */
+    float getDegrees();
+  }
+  /**
+   * Protobuf type {@code io.sentry.replay.android.proto.RotateCommand}
+   */
+  public static final class RotateCommand extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.sentry.replay.android.proto.RotateCommand)
+      RotateCommandOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use RotateCommand.newBuilder() to construct.
+    private RotateCommand(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private RotateCommand() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RotateCommand();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_RotateCommand_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_RotateCommand_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.class, io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.Builder.class);
+    }
+
+    public static final int DEGREES_FIELD_NUMBER = 1;
+    private float degrees_ = 0F;
+    /**
+     * <code>float degrees = 1;</code>
+     * @return The degrees.
+     */
+    @java.lang.Override
+    public float getDegrees() {
+      return degrees_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (java.lang.Float.floatToRawIntBits(degrees_) != 0) {
+        output.writeFloat(1, degrees_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (java.lang.Float.floatToRawIntBits(degrees_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(1, degrees_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand)) {
+        return super.equals(obj);
+      }
+      io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand other = (io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand) obj;
+
+      if (java.lang.Float.floatToIntBits(getDegrees())
+          != java.lang.Float.floatToIntBits(
+              other.getDegrees())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DEGREES_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getDegrees());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.sentry.replay.android.proto.RotateCommand}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.sentry.replay.android.proto.RotateCommand)
+        io.sentry.replay.android.proto.ReplayOuterClass.RotateCommandOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_RotateCommand_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_RotateCommand_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.class, io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.Builder.class);
+      }
+
+      // Construct using io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        degrees_ = 0F;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_RotateCommand_descriptor;
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand getDefaultInstanceForType() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand build() {
+        io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand buildPartial() {
+        io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand result = new io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.degrees_ = degrees_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand) {
+          return mergeFrom((io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand other) {
+        if (other == io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.getDefaultInstance()) return this;
+        if (other.getDegrees() != 0F) {
+          setDegrees(other.getDegrees());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 13: {
+                degrees_ = input.readFloat();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 13
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private float degrees_ ;
+      /**
+       * <code>float degrees = 1;</code>
+       * @return The degrees.
+       */
+      @java.lang.Override
+      public float getDegrees() {
+        return degrees_;
+      }
+      /**
+       * <code>float degrees = 1;</code>
+       * @param value The degrees to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDegrees(float value) {
+
+        degrees_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float degrees = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDegrees() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        degrees_ = 0F;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.sentry.replay.android.proto.RotateCommand)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.sentry.replay.android.proto.RotateCommand)
+    private static final io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand();
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RotateCommand>
+        PARSER = new com.google.protobuf.AbstractParser<RotateCommand>() {
+      @java.lang.Override
+      public RotateCommand parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RotateCommand> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RotateCommand> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SkewCommandOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.sentry.replay.android.proto.SkewCommand)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>float sx = 1;</code>
+     * @return The sx.
+     */
+    float getSx();
+
+    /**
+     * <code>float sy = 2;</code>
+     * @return The sy.
+     */
+    float getSy();
+  }
+  /**
+   * Protobuf type {@code io.sentry.replay.android.proto.SkewCommand}
+   */
+  public static final class SkewCommand extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.sentry.replay.android.proto.SkewCommand)
+      SkewCommandOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SkewCommand.newBuilder() to construct.
+    private SkewCommand(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SkewCommand() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SkewCommand();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_SkewCommand_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_SkewCommand_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.class, io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.Builder.class);
+    }
+
+    public static final int SX_FIELD_NUMBER = 1;
+    private float sx_ = 0F;
+    /**
+     * <code>float sx = 1;</code>
+     * @return The sx.
+     */
+    @java.lang.Override
+    public float getSx() {
+      return sx_;
+    }
+
+    public static final int SY_FIELD_NUMBER = 2;
+    private float sy_ = 0F;
+    /**
+     * <code>float sy = 2;</code>
+     * @return The sy.
+     */
+    @java.lang.Override
+    public float getSy() {
+      return sy_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (java.lang.Float.floatToRawIntBits(sx_) != 0) {
+        output.writeFloat(1, sx_);
+      }
+      if (java.lang.Float.floatToRawIntBits(sy_) != 0) {
+        output.writeFloat(2, sy_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (java.lang.Float.floatToRawIntBits(sx_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(1, sx_);
+      }
+      if (java.lang.Float.floatToRawIntBits(sy_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, sy_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand)) {
+        return super.equals(obj);
+      }
+      io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand other = (io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand) obj;
+
+      if (java.lang.Float.floatToIntBits(getSx())
+          != java.lang.Float.floatToIntBits(
+              other.getSx())) return false;
+      if (java.lang.Float.floatToIntBits(getSy())
+          != java.lang.Float.floatToIntBits(
+              other.getSy())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SX_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getSx());
+      hash = (37 * hash) + SY_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getSy());
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.sentry.replay.android.proto.SkewCommand}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.sentry.replay.android.proto.SkewCommand)
+        io.sentry.replay.android.proto.ReplayOuterClass.SkewCommandOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_SkewCommand_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_SkewCommand_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.class, io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.Builder.class);
+      }
+
+      // Construct using io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        sx_ = 0F;
+        sy_ = 0F;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_SkewCommand_descriptor;
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand getDefaultInstanceForType() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand build() {
+        io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand buildPartial() {
+        io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand result = new io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sx_ = sx_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.sy_ = sy_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand) {
+          return mergeFrom((io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand other) {
+        if (other == io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.getDefaultInstance()) return this;
+        if (other.getSx() != 0F) {
+          setSx(other.getSx());
+        }
+        if (other.getSy() != 0F) {
+          setSy(other.getSy());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 13: {
+                sx_ = input.readFloat();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 13
+              case 21: {
+                sy_ = input.readFloat();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 21
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private float sx_ ;
+      /**
+       * <code>float sx = 1;</code>
+       * @return The sx.
+       */
+      @java.lang.Override
+      public float getSx() {
+        return sx_;
+      }
+      /**
+       * <code>float sx = 1;</code>
+       * @param value The sx to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSx(float value) {
+
+        sx_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float sx = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSx() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sx_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float sy_ ;
+      /**
+       * <code>float sy = 2;</code>
+       * @return The sy.
+       */
+      @java.lang.Override
+      public float getSy() {
+        return sy_;
+      }
+      /**
+       * <code>float sy = 2;</code>
+       * @param value The sy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSy(float value) {
+
+        sy_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float sy = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSy() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        sy_ = 0F;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.sentry.replay.android.proto.SkewCommand)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.sentry.replay.android.proto.SkewCommand)
+    private static final io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand();
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SkewCommand>
+        PARSER = new com.google.protobuf.AbstractParser<SkewCommand>() {
+      @java.lang.Override
+      public SkewCommand parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SkewCommand> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SkewCommand> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SetMatrixCommandOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.sentry.replay.android.proto.SetMatrixCommand)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated float matrix = 1;</code>
+     * @return A list containing the matrix.
+     */
+    java.util.List<java.lang.Float> getMatrixList();
+    /**
+     * <code>repeated float matrix = 1;</code>
+     * @return The count of matrix.
+     */
+    int getMatrixCount();
+    /**
+     * <code>repeated float matrix = 1;</code>
+     * @param index The index of the element to return.
+     * @return The matrix at the given index.
+     */
+    float getMatrix(int index);
+  }
+  /**
+   * Protobuf type {@code io.sentry.replay.android.proto.SetMatrixCommand}
+   */
+  public static final class SetMatrixCommand extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.sentry.replay.android.proto.SetMatrixCommand)
+      SetMatrixCommandOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SetMatrixCommand.newBuilder() to construct.
+    private SetMatrixCommand(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SetMatrixCommand() {
+      matrix_ = emptyFloatList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SetMatrixCommand();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_SetMatrixCommand_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_SetMatrixCommand_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.class, io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.Builder.class);
+    }
+
+    public static final int MATRIX_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.FloatList matrix_;
+    /**
+     * <code>repeated float matrix = 1;</code>
+     * @return A list containing the matrix.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Float>
+        getMatrixList() {
+      return matrix_;
+    }
+    /**
+     * <code>repeated float matrix = 1;</code>
+     * @return The count of matrix.
+     */
+    public int getMatrixCount() {
+      return matrix_.size();
+    }
+    /**
+     * <code>repeated float matrix = 1;</code>
+     * @param index The index of the element to return.
+     * @return The matrix at the given index.
+     */
+    public float getMatrix(int index) {
+      return matrix_.getFloat(index);
+    }
+    private int matrixMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getMatrixList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(matrixMemoizedSerializedSize);
+      }
+      for (int i = 0; i < matrix_.size(); i++) {
+        output.writeFloatNoTag(matrix_.getFloat(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        dataSize = 4 * getMatrixList().size();
+        size += dataSize;
+        if (!getMatrixList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        matrixMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand)) {
+        return super.equals(obj);
+      }
+      io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand other = (io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand) obj;
+
+      if (!getMatrixList()
+          .equals(other.getMatrixList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getMatrixCount() > 0) {
+        hash = (37 * hash) + MATRIX_FIELD_NUMBER;
+        hash = (53 * hash) + getMatrixList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.sentry.replay.android.proto.SetMatrixCommand}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.sentry.replay.android.proto.SetMatrixCommand)
+        io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommandOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_SetMatrixCommand_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_SetMatrixCommand_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.class, io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.Builder.class);
+      }
+
+      // Construct using io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        matrix_ = emptyFloatList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_SetMatrixCommand_descriptor;
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand getDefaultInstanceForType() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand build() {
+        io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand buildPartial() {
+        io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand result = new io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          matrix_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.matrix_ = matrix_;
+      }
+
+      private void buildPartial0(io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand) {
+          return mergeFrom((io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand other) {
+        if (other == io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.getDefaultInstance()) return this;
+        if (!other.matrix_.isEmpty()) {
+          if (matrix_.isEmpty()) {
+            matrix_ = other.matrix_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureMatrixIsMutable();
+            matrix_.addAll(other.matrix_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 13: {
+                float v = input.readFloat();
+                ensureMatrixIsMutable();
+                matrix_.addFloat(v);
+                break;
+              } // case 13
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureMatrixIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  matrix_.addFloat(input.readFloat());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.FloatList matrix_ = emptyFloatList();
+      private void ensureMatrixIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          matrix_ = mutableCopy(matrix_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <code>repeated float matrix = 1;</code>
+       * @return A list containing the matrix.
+       */
+      public java.util.List<java.lang.Float>
+          getMatrixList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(matrix_) : matrix_;
+      }
+      /**
+       * <code>repeated float matrix = 1;</code>
+       * @return The count of matrix.
+       */
+      public int getMatrixCount() {
+        return matrix_.size();
+      }
+      /**
+       * <code>repeated float matrix = 1;</code>
+       * @param index The index of the element to return.
+       * @return The matrix at the given index.
+       */
+      public float getMatrix(int index) {
+        return matrix_.getFloat(index);
+      }
+      /**
+       * <code>repeated float matrix = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The matrix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMatrix(
+          int index, float value) {
+
+        ensureMatrixIsMutable();
+        matrix_.setFloat(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated float matrix = 1;</code>
+       * @param value The matrix to add.
+       * @return This builder for chaining.
+       */
+      public Builder addMatrix(float value) {
+
+        ensureMatrixIsMutable();
+        matrix_.addFloat(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated float matrix = 1;</code>
+       * @param values The matrix to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllMatrix(
+          java.lang.Iterable<? extends java.lang.Float> values) {
+        ensureMatrixIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, matrix_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated float matrix = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMatrix() {
+        matrix_ = emptyFloatList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.sentry.replay.android.proto.SetMatrixCommand)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.sentry.replay.android.proto.SetMatrixCommand)
+    private static final io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand();
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SetMatrixCommand>
+        PARSER = new com.google.protobuf.AbstractParser<SetMatrixCommand>() {
+      @java.lang.Override
+      public SetMatrixCommand parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<SetMatrixCommand> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SetMatrixCommand> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DrawingCommandPayloadOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.sentry.replay.android.proto.DrawingCommandPayload)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.io.sentry.replay.android.proto.SaveCommand save = 2;</code>
+     * @return Whether the save field is set.
+     */
+    boolean hasSave();
+    /**
+     * <code>.io.sentry.replay.android.proto.SaveCommand save = 2;</code>
+     * @return The save.
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand getSave();
+    /**
+     * <code>.io.sentry.replay.android.proto.SaveCommand save = 2;</code>
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.SaveCommandOrBuilder getSaveOrBuilder();
+
+    /**
+     * <code>.io.sentry.replay.android.proto.RestoreCommand restore = 3;</code>
+     * @return Whether the restore field is set.
+     */
+    boolean hasRestore();
+    /**
+     * <code>.io.sentry.replay.android.proto.RestoreCommand restore = 3;</code>
+     * @return The restore.
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand getRestore();
+    /**
+     * <code>.io.sentry.replay.android.proto.RestoreCommand restore = 3;</code>
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommandOrBuilder getRestoreOrBuilder();
+
+    /**
+     * <code>.io.sentry.replay.android.proto.RestoreToCountCommand restoreToCount = 4;</code>
+     * @return Whether the restoreToCount field is set.
+     */
+    boolean hasRestoreToCount();
+    /**
+     * <code>.io.sentry.replay.android.proto.RestoreToCountCommand restoreToCount = 4;</code>
+     * @return The restoreToCount.
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand getRestoreToCount();
+    /**
+     * <code>.io.sentry.replay.android.proto.RestoreToCountCommand restoreToCount = 4;</code>
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommandOrBuilder getRestoreToCountOrBuilder();
+
+    /**
+     * <code>.io.sentry.replay.android.proto.TranslateCommand translate = 5;</code>
+     * @return Whether the translate field is set.
+     */
+    boolean hasTranslate();
+    /**
+     * <code>.io.sentry.replay.android.proto.TranslateCommand translate = 5;</code>
+     * @return The translate.
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand getTranslate();
+    /**
+     * <code>.io.sentry.replay.android.proto.TranslateCommand translate = 5;</code>
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommandOrBuilder getTranslateOrBuilder();
+
+    /**
+     * <code>.io.sentry.replay.android.proto.ClipRectFCommand clipRectF = 7;</code>
+     * @return Whether the clipRectF field is set.
+     */
+    boolean hasClipRectF();
+    /**
+     * <code>.io.sentry.replay.android.proto.ClipRectFCommand clipRectF = 7;</code>
+     * @return The clipRectF.
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand getClipRectF();
+    /**
+     * <code>.io.sentry.replay.android.proto.ClipRectFCommand clipRectF = 7;</code>
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommandOrBuilder getClipRectFOrBuilder();
+
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawTextCommand drawText = 8;</code>
+     * @return Whether the drawText field is set.
+     */
+    boolean hasDrawText();
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawTextCommand drawText = 8;</code>
+     * @return The drawText.
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand getDrawText();
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawTextCommand drawText = 8;</code>
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommandOrBuilder getDrawTextOrBuilder();
+
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawRoundRectCommand drawRoundRect = 9;</code>
+     * @return Whether the drawRoundRect field is set.
+     */
+    boolean hasDrawRoundRect();
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawRoundRectCommand drawRoundRect = 9;</code>
+     * @return The drawRoundRect.
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand getDrawRoundRect();
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawRoundRectCommand drawRoundRect = 9;</code>
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommandOrBuilder getDrawRoundRectOrBuilder();
+
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawRectCommand drawRect = 10;</code>
+     * @return Whether the drawRect field is set.
+     */
+    boolean hasDrawRect();
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawRectCommand drawRect = 10;</code>
+     * @return The drawRect.
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand getDrawRect();
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawRectCommand drawRect = 10;</code>
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommandOrBuilder getDrawRectOrBuilder();
+
+    /**
+     * <code>.io.sentry.replay.android.proto.ConcatCommand concat = 11;</code>
+     * @return Whether the concat field is set.
+     */
+    boolean hasConcat();
+    /**
+     * <code>.io.sentry.replay.android.proto.ConcatCommand concat = 11;</code>
+     * @return The concat.
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand getConcat();
+    /**
+     * <code>.io.sentry.replay.android.proto.ConcatCommand concat = 11;</code>
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommandOrBuilder getConcatOrBuilder();
+
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawCircleCommand drawCircle = 12;</code>
+     * @return Whether the drawCircle field is set.
+     */
+    boolean hasDrawCircle();
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawCircleCommand drawCircle = 12;</code>
+     * @return The drawCircle.
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand getDrawCircle();
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawCircleCommand drawCircle = 12;</code>
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommandOrBuilder getDrawCircleOrBuilder();
+
+    /**
+     * <code>.io.sentry.replay.android.proto.RotateCommand rotate = 13;</code>
+     * @return Whether the rotate field is set.
+     */
+    boolean hasRotate();
+    /**
+     * <code>.io.sentry.replay.android.proto.RotateCommand rotate = 13;</code>
+     * @return The rotate.
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand getRotate();
+    /**
+     * <code>.io.sentry.replay.android.proto.RotateCommand rotate = 13;</code>
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.RotateCommandOrBuilder getRotateOrBuilder();
+
+    /**
+     * <code>.io.sentry.replay.android.proto.SkewCommand skew = 14;</code>
+     * @return Whether the skew field is set.
+     */
+    boolean hasSkew();
+    /**
+     * <code>.io.sentry.replay.android.proto.SkewCommand skew = 14;</code>
+     * @return The skew.
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand getSkew();
+    /**
+     * <code>.io.sentry.replay.android.proto.SkewCommand skew = 14;</code>
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.SkewCommandOrBuilder getSkewOrBuilder();
+
+    /**
+     * <code>.io.sentry.replay.android.proto.ScaleCommand scale = 15;</code>
+     * @return Whether the scale field is set.
+     */
+    boolean hasScale();
+    /**
+     * <code>.io.sentry.replay.android.proto.ScaleCommand scale = 15;</code>
+     * @return The scale.
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand getScale();
+    /**
+     * <code>.io.sentry.replay.android.proto.ScaleCommand scale = 15;</code>
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommandOrBuilder getScaleOrBuilder();
+
+    /**
+     * <code>.io.sentry.replay.android.proto.SetMatrixCommand setMatrix = 16;</code>
+     * @return Whether the setMatrix field is set.
+     */
+    boolean hasSetMatrix();
+    /**
+     * <code>.io.sentry.replay.android.proto.SetMatrixCommand setMatrix = 16;</code>
+     * @return The setMatrix.
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand getSetMatrix();
+    /**
+     * <code>.io.sentry.replay.android.proto.SetMatrixCommand setMatrix = 16;</code>
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommandOrBuilder getSetMatrixOrBuilder();
+
+    io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.PayloadCase getPayloadCase();
+  }
+  /**
+   * Protobuf type {@code io.sentry.replay.android.proto.DrawingCommandPayload}
+   */
+  public static final class DrawingCommandPayload extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.sentry.replay.android.proto.DrawingCommandPayload)
+      DrawingCommandPayloadOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DrawingCommandPayload.newBuilder() to construct.
+    private DrawingCommandPayload(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DrawingCommandPayload() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DrawingCommandPayload();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_DrawingCommandPayload_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_DrawingCommandPayload_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.class, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.Builder.class);
+    }
+
+    private int payloadCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object payload_;
+    public enum PayloadCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      SAVE(2),
+      RESTORE(3),
+      RESTORETOCOUNT(4),
+      TRANSLATE(5),
+      CLIPRECTF(7),
+      DRAWTEXT(8),
+      DRAWROUNDRECT(9),
+      DRAWRECT(10),
+      CONCAT(11),
+      DRAWCIRCLE(12),
+      ROTATE(13),
+      SKEW(14),
+      SCALE(15),
+      SETMATRIX(16),
+      PAYLOAD_NOT_SET(0);
+      private final int value;
+      private PayloadCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PayloadCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static PayloadCase forNumber(int value) {
+        switch (value) {
+          case 2: return SAVE;
+          case 3: return RESTORE;
+          case 4: return RESTORETOCOUNT;
+          case 5: return TRANSLATE;
+          case 7: return CLIPRECTF;
+          case 8: return DRAWTEXT;
+          case 9: return DRAWROUNDRECT;
+          case 10: return DRAWRECT;
+          case 11: return CONCAT;
+          case 12: return DRAWCIRCLE;
+          case 13: return ROTATE;
+          case 14: return SKEW;
+          case 15: return SCALE;
+          case 16: return SETMATRIX;
+          case 0: return PAYLOAD_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public PayloadCase
+    getPayloadCase() {
+      return PayloadCase.forNumber(
+          payloadCase_);
+    }
+
+    public static final int SAVE_FIELD_NUMBER = 2;
+    /**
+     * <code>.io.sentry.replay.android.proto.SaveCommand save = 2;</code>
+     * @return Whether the save field is set.
+     */
+    @java.lang.Override
+    public boolean hasSave() {
+      return payloadCase_ == 2;
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.SaveCommand save = 2;</code>
+     * @return The save.
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand getSave() {
+      if (payloadCase_ == 2) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.SaveCommand save = 2;</code>
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.SaveCommandOrBuilder getSaveOrBuilder() {
+      if (payloadCase_ == 2) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand.getDefaultInstance();
+    }
+
+    public static final int RESTORE_FIELD_NUMBER = 3;
+    /**
+     * <code>.io.sentry.replay.android.proto.RestoreCommand restore = 3;</code>
+     * @return Whether the restore field is set.
+     */
+    @java.lang.Override
+    public boolean hasRestore() {
+      return payloadCase_ == 3;
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.RestoreCommand restore = 3;</code>
+     * @return The restore.
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand getRestore() {
+      if (payloadCase_ == 3) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.RestoreCommand restore = 3;</code>
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommandOrBuilder getRestoreOrBuilder() {
+      if (payloadCase_ == 3) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand.getDefaultInstance();
+    }
+
+    public static final int RESTORETOCOUNT_FIELD_NUMBER = 4;
+    /**
+     * <code>.io.sentry.replay.android.proto.RestoreToCountCommand restoreToCount = 4;</code>
+     * @return Whether the restoreToCount field is set.
+     */
+    @java.lang.Override
+    public boolean hasRestoreToCount() {
+      return payloadCase_ == 4;
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.RestoreToCountCommand restoreToCount = 4;</code>
+     * @return The restoreToCount.
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand getRestoreToCount() {
+      if (payloadCase_ == 4) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.RestoreToCountCommand restoreToCount = 4;</code>
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommandOrBuilder getRestoreToCountOrBuilder() {
+      if (payloadCase_ == 4) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand.getDefaultInstance();
+    }
+
+    public static final int TRANSLATE_FIELD_NUMBER = 5;
+    /**
+     * <code>.io.sentry.replay.android.proto.TranslateCommand translate = 5;</code>
+     * @return Whether the translate field is set.
+     */
+    @java.lang.Override
+    public boolean hasTranslate() {
+      return payloadCase_ == 5;
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.TranslateCommand translate = 5;</code>
+     * @return The translate.
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand getTranslate() {
+      if (payloadCase_ == 5) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.TranslateCommand translate = 5;</code>
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommandOrBuilder getTranslateOrBuilder() {
+      if (payloadCase_ == 5) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.getDefaultInstance();
+    }
+
+    public static final int CLIPRECTF_FIELD_NUMBER = 7;
+    /**
+     * <code>.io.sentry.replay.android.proto.ClipRectFCommand clipRectF = 7;</code>
+     * @return Whether the clipRectF field is set.
+     */
+    @java.lang.Override
+    public boolean hasClipRectF() {
+      return payloadCase_ == 7;
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.ClipRectFCommand clipRectF = 7;</code>
+     * @return The clipRectF.
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand getClipRectF() {
+      if (payloadCase_ == 7) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.ClipRectFCommand clipRectF = 7;</code>
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommandOrBuilder getClipRectFOrBuilder() {
+      if (payloadCase_ == 7) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand.getDefaultInstance();
+    }
+
+    public static final int DRAWTEXT_FIELD_NUMBER = 8;
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawTextCommand drawText = 8;</code>
+     * @return Whether the drawText field is set.
+     */
+    @java.lang.Override
+    public boolean hasDrawText() {
+      return payloadCase_ == 8;
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawTextCommand drawText = 8;</code>
+     * @return The drawText.
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand getDrawText() {
+      if (payloadCase_ == 8) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawTextCommand drawText = 8;</code>
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommandOrBuilder getDrawTextOrBuilder() {
+      if (payloadCase_ == 8) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.getDefaultInstance();
+    }
+
+    public static final int DRAWROUNDRECT_FIELD_NUMBER = 9;
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawRoundRectCommand drawRoundRect = 9;</code>
+     * @return Whether the drawRoundRect field is set.
+     */
+    @java.lang.Override
+    public boolean hasDrawRoundRect() {
+      return payloadCase_ == 9;
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawRoundRectCommand drawRoundRect = 9;</code>
+     * @return The drawRoundRect.
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand getDrawRoundRect() {
+      if (payloadCase_ == 9) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawRoundRectCommand drawRoundRect = 9;</code>
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommandOrBuilder getDrawRoundRectOrBuilder() {
+      if (payloadCase_ == 9) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand.getDefaultInstance();
+    }
+
+    public static final int DRAWRECT_FIELD_NUMBER = 10;
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawRectCommand drawRect = 10;</code>
+     * @return Whether the drawRect field is set.
+     */
+    @java.lang.Override
+    public boolean hasDrawRect() {
+      return payloadCase_ == 10;
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawRectCommand drawRect = 10;</code>
+     * @return The drawRect.
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand getDrawRect() {
+      if (payloadCase_ == 10) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawRectCommand drawRect = 10;</code>
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommandOrBuilder getDrawRectOrBuilder() {
+      if (payloadCase_ == 10) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand.getDefaultInstance();
+    }
+
+    public static final int CONCAT_FIELD_NUMBER = 11;
+    /**
+     * <code>.io.sentry.replay.android.proto.ConcatCommand concat = 11;</code>
+     * @return Whether the concat field is set.
+     */
+    @java.lang.Override
+    public boolean hasConcat() {
+      return payloadCase_ == 11;
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.ConcatCommand concat = 11;</code>
+     * @return The concat.
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand getConcat() {
+      if (payloadCase_ == 11) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.ConcatCommand concat = 11;</code>
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommandOrBuilder getConcatOrBuilder() {
+      if (payloadCase_ == 11) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand.getDefaultInstance();
+    }
+
+    public static final int DRAWCIRCLE_FIELD_NUMBER = 12;
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawCircleCommand drawCircle = 12;</code>
+     * @return Whether the drawCircle field is set.
+     */
+    @java.lang.Override
+    public boolean hasDrawCircle() {
+      return payloadCase_ == 12;
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawCircleCommand drawCircle = 12;</code>
+     * @return The drawCircle.
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand getDrawCircle() {
+      if (payloadCase_ == 12) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawCircleCommand drawCircle = 12;</code>
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommandOrBuilder getDrawCircleOrBuilder() {
+      if (payloadCase_ == 12) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand.getDefaultInstance();
+    }
+
+    public static final int ROTATE_FIELD_NUMBER = 13;
+    /**
+     * <code>.io.sentry.replay.android.proto.RotateCommand rotate = 13;</code>
+     * @return Whether the rotate field is set.
+     */
+    @java.lang.Override
+    public boolean hasRotate() {
+      return payloadCase_ == 13;
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.RotateCommand rotate = 13;</code>
+     * @return The rotate.
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand getRotate() {
+      if (payloadCase_ == 13) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.RotateCommand rotate = 13;</code>
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.RotateCommandOrBuilder getRotateOrBuilder() {
+      if (payloadCase_ == 13) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.getDefaultInstance();
+    }
+
+    public static final int SKEW_FIELD_NUMBER = 14;
+    /**
+     * <code>.io.sentry.replay.android.proto.SkewCommand skew = 14;</code>
+     * @return Whether the skew field is set.
+     */
+    @java.lang.Override
+    public boolean hasSkew() {
+      return payloadCase_ == 14;
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.SkewCommand skew = 14;</code>
+     * @return The skew.
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand getSkew() {
+      if (payloadCase_ == 14) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.SkewCommand skew = 14;</code>
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.SkewCommandOrBuilder getSkewOrBuilder() {
+      if (payloadCase_ == 14) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.getDefaultInstance();
+    }
+
+    public static final int SCALE_FIELD_NUMBER = 15;
+    /**
+     * <code>.io.sentry.replay.android.proto.ScaleCommand scale = 15;</code>
+     * @return Whether the scale field is set.
+     */
+    @java.lang.Override
+    public boolean hasScale() {
+      return payloadCase_ == 15;
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.ScaleCommand scale = 15;</code>
+     * @return The scale.
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand getScale() {
+      if (payloadCase_ == 15) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.ScaleCommand scale = 15;</code>
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommandOrBuilder getScaleOrBuilder() {
+      if (payloadCase_ == 15) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.getDefaultInstance();
+    }
+
+    public static final int SETMATRIX_FIELD_NUMBER = 16;
+    /**
+     * <code>.io.sentry.replay.android.proto.SetMatrixCommand setMatrix = 16;</code>
+     * @return Whether the setMatrix field is set.
+     */
+    @java.lang.Override
+    public boolean hasSetMatrix() {
+      return payloadCase_ == 16;
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.SetMatrixCommand setMatrix = 16;</code>
+     * @return The setMatrix.
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand getSetMatrix() {
+      if (payloadCase_ == 16) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.SetMatrixCommand setMatrix = 16;</code>
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommandOrBuilder getSetMatrixOrBuilder() {
+      if (payloadCase_ == 16) {
+         return (io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand) payload_;
+      }
+      return io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (payloadCase_ == 2) {
+        output.writeMessage(2, (io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand) payload_);
+      }
+      if (payloadCase_ == 3) {
+        output.writeMessage(3, (io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand) payload_);
+      }
+      if (payloadCase_ == 4) {
+        output.writeMessage(4, (io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand) payload_);
+      }
+      if (payloadCase_ == 5) {
+        output.writeMessage(5, (io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand) payload_);
+      }
+      if (payloadCase_ == 7) {
+        output.writeMessage(7, (io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand) payload_);
+      }
+      if (payloadCase_ == 8) {
+        output.writeMessage(8, (io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand) payload_);
+      }
+      if (payloadCase_ == 9) {
+        output.writeMessage(9, (io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand) payload_);
+      }
+      if (payloadCase_ == 10) {
+        output.writeMessage(10, (io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand) payload_);
+      }
+      if (payloadCase_ == 11) {
+        output.writeMessage(11, (io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand) payload_);
+      }
+      if (payloadCase_ == 12) {
+        output.writeMessage(12, (io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand) payload_);
+      }
+      if (payloadCase_ == 13) {
+        output.writeMessage(13, (io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand) payload_);
+      }
+      if (payloadCase_ == 14) {
+        output.writeMessage(14, (io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand) payload_);
+      }
+      if (payloadCase_ == 15) {
+        output.writeMessage(15, (io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand) payload_);
+      }
+      if (payloadCase_ == 16) {
+        output.writeMessage(16, (io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand) payload_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (payloadCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand) payload_);
+      }
+      if (payloadCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand) payload_);
+      }
+      if (payloadCase_ == 4) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, (io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand) payload_);
+      }
+      if (payloadCase_ == 5) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, (io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand) payload_);
+      }
+      if (payloadCase_ == 7) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, (io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand) payload_);
+      }
+      if (payloadCase_ == 8) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, (io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand) payload_);
+      }
+      if (payloadCase_ == 9) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, (io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand) payload_);
+      }
+      if (payloadCase_ == 10) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, (io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand) payload_);
+      }
+      if (payloadCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, (io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand) payload_);
+      }
+      if (payloadCase_ == 12) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, (io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand) payload_);
+      }
+      if (payloadCase_ == 13) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, (io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand) payload_);
+      }
+      if (payloadCase_ == 14) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, (io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand) payload_);
+      }
+      if (payloadCase_ == 15) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, (io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand) payload_);
+      }
+      if (payloadCase_ == 16) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, (io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand) payload_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload)) {
+        return super.equals(obj);
+      }
+      io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload other = (io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload) obj;
+
+      if (!getPayloadCase().equals(other.getPayloadCase())) return false;
+      switch (payloadCase_) {
+        case 2:
+          if (!getSave()
+              .equals(other.getSave())) return false;
+          break;
+        case 3:
+          if (!getRestore()
+              .equals(other.getRestore())) return false;
+          break;
+        case 4:
+          if (!getRestoreToCount()
+              .equals(other.getRestoreToCount())) return false;
+          break;
+        case 5:
+          if (!getTranslate()
+              .equals(other.getTranslate())) return false;
+          break;
+        case 7:
+          if (!getClipRectF()
+              .equals(other.getClipRectF())) return false;
+          break;
+        case 8:
+          if (!getDrawText()
+              .equals(other.getDrawText())) return false;
+          break;
+        case 9:
+          if (!getDrawRoundRect()
+              .equals(other.getDrawRoundRect())) return false;
+          break;
+        case 10:
+          if (!getDrawRect()
+              .equals(other.getDrawRect())) return false;
+          break;
+        case 11:
+          if (!getConcat()
+              .equals(other.getConcat())) return false;
+          break;
+        case 12:
+          if (!getDrawCircle()
+              .equals(other.getDrawCircle())) return false;
+          break;
+        case 13:
+          if (!getRotate()
+              .equals(other.getRotate())) return false;
+          break;
+        case 14:
+          if (!getSkew()
+              .equals(other.getSkew())) return false;
+          break;
+        case 15:
+          if (!getScale()
+              .equals(other.getScale())) return false;
+          break;
+        case 16:
+          if (!getSetMatrix()
+              .equals(other.getSetMatrix())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (payloadCase_) {
+        case 2:
+          hash = (37 * hash) + SAVE_FIELD_NUMBER;
+          hash = (53 * hash) + getSave().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + RESTORE_FIELD_NUMBER;
+          hash = (53 * hash) + getRestore().hashCode();
+          break;
+        case 4:
+          hash = (37 * hash) + RESTORETOCOUNT_FIELD_NUMBER;
+          hash = (53 * hash) + getRestoreToCount().hashCode();
+          break;
+        case 5:
+          hash = (37 * hash) + TRANSLATE_FIELD_NUMBER;
+          hash = (53 * hash) + getTranslate().hashCode();
+          break;
+        case 7:
+          hash = (37 * hash) + CLIPRECTF_FIELD_NUMBER;
+          hash = (53 * hash) + getClipRectF().hashCode();
+          break;
+        case 8:
+          hash = (37 * hash) + DRAWTEXT_FIELD_NUMBER;
+          hash = (53 * hash) + getDrawText().hashCode();
+          break;
+        case 9:
+          hash = (37 * hash) + DRAWROUNDRECT_FIELD_NUMBER;
+          hash = (53 * hash) + getDrawRoundRect().hashCode();
+          break;
+        case 10:
+          hash = (37 * hash) + DRAWRECT_FIELD_NUMBER;
+          hash = (53 * hash) + getDrawRect().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + CONCAT_FIELD_NUMBER;
+          hash = (53 * hash) + getConcat().hashCode();
+          break;
+        case 12:
+          hash = (37 * hash) + DRAWCIRCLE_FIELD_NUMBER;
+          hash = (53 * hash) + getDrawCircle().hashCode();
+          break;
+        case 13:
+          hash = (37 * hash) + ROTATE_FIELD_NUMBER;
+          hash = (53 * hash) + getRotate().hashCode();
+          break;
+        case 14:
+          hash = (37 * hash) + SKEW_FIELD_NUMBER;
+          hash = (53 * hash) + getSkew().hashCode();
+          break;
+        case 15:
+          hash = (37 * hash) + SCALE_FIELD_NUMBER;
+          hash = (53 * hash) + getScale().hashCode();
+          break;
+        case 16:
+          hash = (37 * hash) + SETMATRIX_FIELD_NUMBER;
+          hash = (53 * hash) + getSetMatrix().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.sentry.replay.android.proto.DrawingCommandPayload}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.sentry.replay.android.proto.DrawingCommandPayload)
+        io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayloadOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_DrawingCommandPayload_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_DrawingCommandPayload_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.class, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.Builder.class);
+      }
+
+      // Construct using io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (saveBuilder_ != null) {
+          saveBuilder_.clear();
+        }
+        if (restoreBuilder_ != null) {
+          restoreBuilder_.clear();
+        }
+        if (restoreToCountBuilder_ != null) {
+          restoreToCountBuilder_.clear();
+        }
+        if (translateBuilder_ != null) {
+          translateBuilder_.clear();
+        }
+        if (clipRectFBuilder_ != null) {
+          clipRectFBuilder_.clear();
+        }
+        if (drawTextBuilder_ != null) {
+          drawTextBuilder_.clear();
+        }
+        if (drawRoundRectBuilder_ != null) {
+          drawRoundRectBuilder_.clear();
+        }
+        if (drawRectBuilder_ != null) {
+          drawRectBuilder_.clear();
+        }
+        if (concatBuilder_ != null) {
+          concatBuilder_.clear();
+        }
+        if (drawCircleBuilder_ != null) {
+          drawCircleBuilder_.clear();
+        }
+        if (rotateBuilder_ != null) {
+          rotateBuilder_.clear();
+        }
+        if (skewBuilder_ != null) {
+          skewBuilder_.clear();
+        }
+        if (scaleBuilder_ != null) {
+          scaleBuilder_.clear();
+        }
+        if (setMatrixBuilder_ != null) {
+          setMatrixBuilder_.clear();
+        }
+        payloadCase_ = 0;
+        payload_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_DrawingCommandPayload_descriptor;
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload getDefaultInstanceForType() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload build() {
+        io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload buildPartial() {
+        io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload result = new io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload result) {
+        result.payloadCase_ = payloadCase_;
+        result.payload_ = this.payload_;
+        if (payloadCase_ == 2 &&
+            saveBuilder_ != null) {
+          result.payload_ = saveBuilder_.build();
+        }
+        if (payloadCase_ == 3 &&
+            restoreBuilder_ != null) {
+          result.payload_ = restoreBuilder_.build();
+        }
+        if (payloadCase_ == 4 &&
+            restoreToCountBuilder_ != null) {
+          result.payload_ = restoreToCountBuilder_.build();
+        }
+        if (payloadCase_ == 5 &&
+            translateBuilder_ != null) {
+          result.payload_ = translateBuilder_.build();
+        }
+        if (payloadCase_ == 7 &&
+            clipRectFBuilder_ != null) {
+          result.payload_ = clipRectFBuilder_.build();
+        }
+        if (payloadCase_ == 8 &&
+            drawTextBuilder_ != null) {
+          result.payload_ = drawTextBuilder_.build();
+        }
+        if (payloadCase_ == 9 &&
+            drawRoundRectBuilder_ != null) {
+          result.payload_ = drawRoundRectBuilder_.build();
+        }
+        if (payloadCase_ == 10 &&
+            drawRectBuilder_ != null) {
+          result.payload_ = drawRectBuilder_.build();
+        }
+        if (payloadCase_ == 11 &&
+            concatBuilder_ != null) {
+          result.payload_ = concatBuilder_.build();
+        }
+        if (payloadCase_ == 12 &&
+            drawCircleBuilder_ != null) {
+          result.payload_ = drawCircleBuilder_.build();
+        }
+        if (payloadCase_ == 13 &&
+            rotateBuilder_ != null) {
+          result.payload_ = rotateBuilder_.build();
+        }
+        if (payloadCase_ == 14 &&
+            skewBuilder_ != null) {
+          result.payload_ = skewBuilder_.build();
+        }
+        if (payloadCase_ == 15 &&
+            scaleBuilder_ != null) {
+          result.payload_ = scaleBuilder_.build();
+        }
+        if (payloadCase_ == 16 &&
+            setMatrixBuilder_ != null) {
+          result.payload_ = setMatrixBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload) {
+          return mergeFrom((io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload other) {
+        if (other == io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.getDefaultInstance()) return this;
+        switch (other.getPayloadCase()) {
+          case SAVE: {
+            mergeSave(other.getSave());
+            break;
+          }
+          case RESTORE: {
+            mergeRestore(other.getRestore());
+            break;
+          }
+          case RESTORETOCOUNT: {
+            mergeRestoreToCount(other.getRestoreToCount());
+            break;
+          }
+          case TRANSLATE: {
+            mergeTranslate(other.getTranslate());
+            break;
+          }
+          case CLIPRECTF: {
+            mergeClipRectF(other.getClipRectF());
+            break;
+          }
+          case DRAWTEXT: {
+            mergeDrawText(other.getDrawText());
+            break;
+          }
+          case DRAWROUNDRECT: {
+            mergeDrawRoundRect(other.getDrawRoundRect());
+            break;
+          }
+          case DRAWRECT: {
+            mergeDrawRect(other.getDrawRect());
+            break;
+          }
+          case CONCAT: {
+            mergeConcat(other.getConcat());
+            break;
+          }
+          case DRAWCIRCLE: {
+            mergeDrawCircle(other.getDrawCircle());
+            break;
+          }
+          case ROTATE: {
+            mergeRotate(other.getRotate());
+            break;
+          }
+          case SKEW: {
+            mergeSkew(other.getSkew());
+            break;
+          }
+          case SCALE: {
+            mergeScale(other.getScale());
+            break;
+          }
+          case SETMATRIX: {
+            mergeSetMatrix(other.getSetMatrix());
+            break;
+          }
+          case PAYLOAD_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 18: {
+                input.readMessage(
+                    getSaveFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getRestoreFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 3;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getRestoreToCountFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 4;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getTranslateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 5;
+                break;
+              } // case 42
+              case 58: {
+                input.readMessage(
+                    getClipRectFFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 7;
+                break;
+              } // case 58
+              case 66: {
+                input.readMessage(
+                    getDrawTextFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 8;
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getDrawRoundRectFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 9;
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getDrawRectFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 10;
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getConcatFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 11;
+                break;
+              } // case 90
+              case 98: {
+                input.readMessage(
+                    getDrawCircleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 12;
+                break;
+              } // case 98
+              case 106: {
+                input.readMessage(
+                    getRotateFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 13;
+                break;
+              } // case 106
+              case 114: {
+                input.readMessage(
+                    getSkewFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 14;
+                break;
+              } // case 114
+              case 122: {
+                input.readMessage(
+                    getScaleFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 15;
+                break;
+              } // case 122
+              case 130: {
+                input.readMessage(
+                    getSetMatrixFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                payloadCase_ = 16;
+                break;
+              } // case 130
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int payloadCase_ = 0;
+      private java.lang.Object payload_;
+      public PayloadCase
+          getPayloadCase() {
+        return PayloadCase.forNumber(
+            payloadCase_);
+      }
+
+      public Builder clearPayload() {
+        payloadCase_ = 0;
+        payload_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand, io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.SaveCommandOrBuilder> saveBuilder_;
+      /**
+       * <code>.io.sentry.replay.android.proto.SaveCommand save = 2;</code>
+       * @return Whether the save field is set.
+       */
+      @java.lang.Override
+      public boolean hasSave() {
+        return payloadCase_ == 2;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SaveCommand save = 2;</code>
+       * @return The save.
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand getSave() {
+        if (saveBuilder_ == null) {
+          if (payloadCase_ == 2) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 2) {
+            return saveBuilder_.getMessage();
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SaveCommand save = 2;</code>
+       */
+      public Builder setSave(io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand value) {
+        if (saveBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          saveBuilder_.setMessage(value);
+        }
+        payloadCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SaveCommand save = 2;</code>
+       */
+      public Builder setSave(
+          io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand.Builder builderForValue) {
+        if (saveBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          saveBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SaveCommand save = 2;</code>
+       */
+      public Builder mergeSave(io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand value) {
+        if (saveBuilder_ == null) {
+          if (payloadCase_ == 2 &&
+              payload_ != io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand.getDefaultInstance()) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand.newBuilder((io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 2) {
+            saveBuilder_.mergeFrom(value);
+          } else {
+            saveBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SaveCommand save = 2;</code>
+       */
+      public Builder clearSave() {
+        if (saveBuilder_ == null) {
+          if (payloadCase_ == 2) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 2) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          saveBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SaveCommand save = 2;</code>
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand.Builder getSaveBuilder() {
+        return getSaveFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SaveCommand save = 2;</code>
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.SaveCommandOrBuilder getSaveOrBuilder() {
+        if ((payloadCase_ == 2) && (saveBuilder_ != null)) {
+          return saveBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 2) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SaveCommand save = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand, io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.SaveCommandOrBuilder> 
+          getSaveFieldBuilder() {
+        if (saveBuilder_ == null) {
+          if (!(payloadCase_ == 2)) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand.getDefaultInstance();
+          }
+          saveBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand, io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.SaveCommandOrBuilder>(
+                  (io.sentry.replay.android.proto.ReplayOuterClass.SaveCommand) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 2;
+        onChanged();
+        return saveBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand, io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommandOrBuilder> restoreBuilder_;
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreCommand restore = 3;</code>
+       * @return Whether the restore field is set.
+       */
+      @java.lang.Override
+      public boolean hasRestore() {
+        return payloadCase_ == 3;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreCommand restore = 3;</code>
+       * @return The restore.
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand getRestore() {
+        if (restoreBuilder_ == null) {
+          if (payloadCase_ == 3) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 3) {
+            return restoreBuilder_.getMessage();
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreCommand restore = 3;</code>
+       */
+      public Builder setRestore(io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand value) {
+        if (restoreBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          restoreBuilder_.setMessage(value);
+        }
+        payloadCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreCommand restore = 3;</code>
+       */
+      public Builder setRestore(
+          io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand.Builder builderForValue) {
+        if (restoreBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          restoreBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreCommand restore = 3;</code>
+       */
+      public Builder mergeRestore(io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand value) {
+        if (restoreBuilder_ == null) {
+          if (payloadCase_ == 3 &&
+              payload_ != io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand.getDefaultInstance()) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand.newBuilder((io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 3) {
+            restoreBuilder_.mergeFrom(value);
+          } else {
+            restoreBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreCommand restore = 3;</code>
+       */
+      public Builder clearRestore() {
+        if (restoreBuilder_ == null) {
+          if (payloadCase_ == 3) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 3) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          restoreBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreCommand restore = 3;</code>
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand.Builder getRestoreBuilder() {
+        return getRestoreFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreCommand restore = 3;</code>
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommandOrBuilder getRestoreOrBuilder() {
+        if ((payloadCase_ == 3) && (restoreBuilder_ != null)) {
+          return restoreBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 3) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreCommand restore = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand, io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommandOrBuilder> 
+          getRestoreFieldBuilder() {
+        if (restoreBuilder_ == null) {
+          if (!(payloadCase_ == 3)) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand.getDefaultInstance();
+          }
+          restoreBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand, io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommandOrBuilder>(
+                  (io.sentry.replay.android.proto.ReplayOuterClass.RestoreCommand) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 3;
+        onChanged();
+        return restoreBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand, io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommandOrBuilder> restoreToCountBuilder_;
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreToCountCommand restoreToCount = 4;</code>
+       * @return Whether the restoreToCount field is set.
+       */
+      @java.lang.Override
+      public boolean hasRestoreToCount() {
+        return payloadCase_ == 4;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreToCountCommand restoreToCount = 4;</code>
+       * @return The restoreToCount.
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand getRestoreToCount() {
+        if (restoreToCountBuilder_ == null) {
+          if (payloadCase_ == 4) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 4) {
+            return restoreToCountBuilder_.getMessage();
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreToCountCommand restoreToCount = 4;</code>
+       */
+      public Builder setRestoreToCount(io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand value) {
+        if (restoreToCountBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          restoreToCountBuilder_.setMessage(value);
+        }
+        payloadCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreToCountCommand restoreToCount = 4;</code>
+       */
+      public Builder setRestoreToCount(
+          io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand.Builder builderForValue) {
+        if (restoreToCountBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          restoreToCountBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreToCountCommand restoreToCount = 4;</code>
+       */
+      public Builder mergeRestoreToCount(io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand value) {
+        if (restoreToCountBuilder_ == null) {
+          if (payloadCase_ == 4 &&
+              payload_ != io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand.getDefaultInstance()) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand.newBuilder((io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 4) {
+            restoreToCountBuilder_.mergeFrom(value);
+          } else {
+            restoreToCountBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 4;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreToCountCommand restoreToCount = 4;</code>
+       */
+      public Builder clearRestoreToCount() {
+        if (restoreToCountBuilder_ == null) {
+          if (payloadCase_ == 4) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 4) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          restoreToCountBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreToCountCommand restoreToCount = 4;</code>
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand.Builder getRestoreToCountBuilder() {
+        return getRestoreToCountFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreToCountCommand restoreToCount = 4;</code>
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommandOrBuilder getRestoreToCountOrBuilder() {
+        if ((payloadCase_ == 4) && (restoreToCountBuilder_ != null)) {
+          return restoreToCountBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 4) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RestoreToCountCommand restoreToCount = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand, io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommandOrBuilder> 
+          getRestoreToCountFieldBuilder() {
+        if (restoreToCountBuilder_ == null) {
+          if (!(payloadCase_ == 4)) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand.getDefaultInstance();
+          }
+          restoreToCountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand, io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommandOrBuilder>(
+                  (io.sentry.replay.android.proto.ReplayOuterClass.RestoreToCountCommand) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 4;
+        onChanged();
+        return restoreToCountBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand, io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommandOrBuilder> translateBuilder_;
+      /**
+       * <code>.io.sentry.replay.android.proto.TranslateCommand translate = 5;</code>
+       * @return Whether the translate field is set.
+       */
+      @java.lang.Override
+      public boolean hasTranslate() {
+        return payloadCase_ == 5;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.TranslateCommand translate = 5;</code>
+       * @return The translate.
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand getTranslate() {
+        if (translateBuilder_ == null) {
+          if (payloadCase_ == 5) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 5) {
+            return translateBuilder_.getMessage();
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.TranslateCommand translate = 5;</code>
+       */
+      public Builder setTranslate(io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand value) {
+        if (translateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          translateBuilder_.setMessage(value);
+        }
+        payloadCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.TranslateCommand translate = 5;</code>
+       */
+      public Builder setTranslate(
+          io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.Builder builderForValue) {
+        if (translateBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          translateBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.TranslateCommand translate = 5;</code>
+       */
+      public Builder mergeTranslate(io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand value) {
+        if (translateBuilder_ == null) {
+          if (payloadCase_ == 5 &&
+              payload_ != io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.getDefaultInstance()) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.newBuilder((io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 5) {
+            translateBuilder_.mergeFrom(value);
+          } else {
+            translateBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 5;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.TranslateCommand translate = 5;</code>
+       */
+      public Builder clearTranslate() {
+        if (translateBuilder_ == null) {
+          if (payloadCase_ == 5) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 5) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          translateBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.TranslateCommand translate = 5;</code>
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.Builder getTranslateBuilder() {
+        return getTranslateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.TranslateCommand translate = 5;</code>
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommandOrBuilder getTranslateOrBuilder() {
+        if ((payloadCase_ == 5) && (translateBuilder_ != null)) {
+          return translateBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 5) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.TranslateCommand translate = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand, io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommandOrBuilder> 
+          getTranslateFieldBuilder() {
+        if (translateBuilder_ == null) {
+          if (!(payloadCase_ == 5)) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.getDefaultInstance();
+          }
+          translateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand, io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommandOrBuilder>(
+                  (io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 5;
+        onChanged();
+        return translateBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand, io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommandOrBuilder> clipRectFBuilder_;
+      /**
+       * <code>.io.sentry.replay.android.proto.ClipRectFCommand clipRectF = 7;</code>
+       * @return Whether the clipRectF field is set.
+       */
+      @java.lang.Override
+      public boolean hasClipRectF() {
+        return payloadCase_ == 7;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ClipRectFCommand clipRectF = 7;</code>
+       * @return The clipRectF.
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand getClipRectF() {
+        if (clipRectFBuilder_ == null) {
+          if (payloadCase_ == 7) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 7) {
+            return clipRectFBuilder_.getMessage();
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ClipRectFCommand clipRectF = 7;</code>
+       */
+      public Builder setClipRectF(io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand value) {
+        if (clipRectFBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          clipRectFBuilder_.setMessage(value);
+        }
+        payloadCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ClipRectFCommand clipRectF = 7;</code>
+       */
+      public Builder setClipRectF(
+          io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand.Builder builderForValue) {
+        if (clipRectFBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          clipRectFBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ClipRectFCommand clipRectF = 7;</code>
+       */
+      public Builder mergeClipRectF(io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand value) {
+        if (clipRectFBuilder_ == null) {
+          if (payloadCase_ == 7 &&
+              payload_ != io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand.getDefaultInstance()) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand.newBuilder((io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 7) {
+            clipRectFBuilder_.mergeFrom(value);
+          } else {
+            clipRectFBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 7;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ClipRectFCommand clipRectF = 7;</code>
+       */
+      public Builder clearClipRectF() {
+        if (clipRectFBuilder_ == null) {
+          if (payloadCase_ == 7) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 7) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          clipRectFBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ClipRectFCommand clipRectF = 7;</code>
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand.Builder getClipRectFBuilder() {
+        return getClipRectFFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ClipRectFCommand clipRectF = 7;</code>
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommandOrBuilder getClipRectFOrBuilder() {
+        if ((payloadCase_ == 7) && (clipRectFBuilder_ != null)) {
+          return clipRectFBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 7) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ClipRectFCommand clipRectF = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand, io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommandOrBuilder> 
+          getClipRectFFieldBuilder() {
+        if (clipRectFBuilder_ == null) {
+          if (!(payloadCase_ == 7)) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand.getDefaultInstance();
+          }
+          clipRectFBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand, io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommandOrBuilder>(
+                  (io.sentry.replay.android.proto.ReplayOuterClass.ClipRectFCommand) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 7;
+        onChanged();
+        return clipRectFBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand, io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommandOrBuilder> drawTextBuilder_;
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawTextCommand drawText = 8;</code>
+       * @return Whether the drawText field is set.
+       */
+      @java.lang.Override
+      public boolean hasDrawText() {
+        return payloadCase_ == 8;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawTextCommand drawText = 8;</code>
+       * @return The drawText.
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand getDrawText() {
+        if (drawTextBuilder_ == null) {
+          if (payloadCase_ == 8) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 8) {
+            return drawTextBuilder_.getMessage();
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawTextCommand drawText = 8;</code>
+       */
+      public Builder setDrawText(io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand value) {
+        if (drawTextBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          drawTextBuilder_.setMessage(value);
+        }
+        payloadCase_ = 8;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawTextCommand drawText = 8;</code>
+       */
+      public Builder setDrawText(
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.Builder builderForValue) {
+        if (drawTextBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          drawTextBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 8;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawTextCommand drawText = 8;</code>
+       */
+      public Builder mergeDrawText(io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand value) {
+        if (drawTextBuilder_ == null) {
+          if (payloadCase_ == 8 &&
+              payload_ != io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.getDefaultInstance()) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.newBuilder((io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 8) {
+            drawTextBuilder_.mergeFrom(value);
+          } else {
+            drawTextBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 8;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawTextCommand drawText = 8;</code>
+       */
+      public Builder clearDrawText() {
+        if (drawTextBuilder_ == null) {
+          if (payloadCase_ == 8) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 8) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          drawTextBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawTextCommand drawText = 8;</code>
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.Builder getDrawTextBuilder() {
+        return getDrawTextFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawTextCommand drawText = 8;</code>
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommandOrBuilder getDrawTextOrBuilder() {
+        if ((payloadCase_ == 8) && (drawTextBuilder_ != null)) {
+          return drawTextBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 8) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawTextCommand drawText = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand, io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommandOrBuilder> 
+          getDrawTextFieldBuilder() {
+        if (drawTextBuilder_ == null) {
+          if (!(payloadCase_ == 8)) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.getDefaultInstance();
+          }
+          drawTextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand, io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommandOrBuilder>(
+                  (io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 8;
+        onChanged();
+        return drawTextBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand, io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommandOrBuilder> drawRoundRectBuilder_;
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRoundRectCommand drawRoundRect = 9;</code>
+       * @return Whether the drawRoundRect field is set.
+       */
+      @java.lang.Override
+      public boolean hasDrawRoundRect() {
+        return payloadCase_ == 9;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRoundRectCommand drawRoundRect = 9;</code>
+       * @return The drawRoundRect.
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand getDrawRoundRect() {
+        if (drawRoundRectBuilder_ == null) {
+          if (payloadCase_ == 9) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 9) {
+            return drawRoundRectBuilder_.getMessage();
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRoundRectCommand drawRoundRect = 9;</code>
+       */
+      public Builder setDrawRoundRect(io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand value) {
+        if (drawRoundRectBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          drawRoundRectBuilder_.setMessage(value);
+        }
+        payloadCase_ = 9;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRoundRectCommand drawRoundRect = 9;</code>
+       */
+      public Builder setDrawRoundRect(
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand.Builder builderForValue) {
+        if (drawRoundRectBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          drawRoundRectBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 9;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRoundRectCommand drawRoundRect = 9;</code>
+       */
+      public Builder mergeDrawRoundRect(io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand value) {
+        if (drawRoundRectBuilder_ == null) {
+          if (payloadCase_ == 9 &&
+              payload_ != io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand.getDefaultInstance()) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand.newBuilder((io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 9) {
+            drawRoundRectBuilder_.mergeFrom(value);
+          } else {
+            drawRoundRectBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 9;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRoundRectCommand drawRoundRect = 9;</code>
+       */
+      public Builder clearDrawRoundRect() {
+        if (drawRoundRectBuilder_ == null) {
+          if (payloadCase_ == 9) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 9) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          drawRoundRectBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRoundRectCommand drawRoundRect = 9;</code>
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand.Builder getDrawRoundRectBuilder() {
+        return getDrawRoundRectFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRoundRectCommand drawRoundRect = 9;</code>
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommandOrBuilder getDrawRoundRectOrBuilder() {
+        if ((payloadCase_ == 9) && (drawRoundRectBuilder_ != null)) {
+          return drawRoundRectBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 9) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRoundRectCommand drawRoundRect = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand, io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommandOrBuilder> 
+          getDrawRoundRectFieldBuilder() {
+        if (drawRoundRectBuilder_ == null) {
+          if (!(payloadCase_ == 9)) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand.getDefaultInstance();
+          }
+          drawRoundRectBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand, io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommandOrBuilder>(
+                  (io.sentry.replay.android.proto.ReplayOuterClass.DrawRoundRectCommand) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 9;
+        onChanged();
+        return drawRoundRectBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand, io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommandOrBuilder> drawRectBuilder_;
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRectCommand drawRect = 10;</code>
+       * @return Whether the drawRect field is set.
+       */
+      @java.lang.Override
+      public boolean hasDrawRect() {
+        return payloadCase_ == 10;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRectCommand drawRect = 10;</code>
+       * @return The drawRect.
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand getDrawRect() {
+        if (drawRectBuilder_ == null) {
+          if (payloadCase_ == 10) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 10) {
+            return drawRectBuilder_.getMessage();
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRectCommand drawRect = 10;</code>
+       */
+      public Builder setDrawRect(io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand value) {
+        if (drawRectBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          drawRectBuilder_.setMessage(value);
+        }
+        payloadCase_ = 10;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRectCommand drawRect = 10;</code>
+       */
+      public Builder setDrawRect(
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand.Builder builderForValue) {
+        if (drawRectBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          drawRectBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 10;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRectCommand drawRect = 10;</code>
+       */
+      public Builder mergeDrawRect(io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand value) {
+        if (drawRectBuilder_ == null) {
+          if (payloadCase_ == 10 &&
+              payload_ != io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand.getDefaultInstance()) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand.newBuilder((io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 10) {
+            drawRectBuilder_.mergeFrom(value);
+          } else {
+            drawRectBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 10;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRectCommand drawRect = 10;</code>
+       */
+      public Builder clearDrawRect() {
+        if (drawRectBuilder_ == null) {
+          if (payloadCase_ == 10) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 10) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          drawRectBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRectCommand drawRect = 10;</code>
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand.Builder getDrawRectBuilder() {
+        return getDrawRectFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRectCommand drawRect = 10;</code>
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommandOrBuilder getDrawRectOrBuilder() {
+        if ((payloadCase_ == 10) && (drawRectBuilder_ != null)) {
+          return drawRectBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 10) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawRectCommand drawRect = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand, io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommandOrBuilder> 
+          getDrawRectFieldBuilder() {
+        if (drawRectBuilder_ == null) {
+          if (!(payloadCase_ == 10)) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand.getDefaultInstance();
+          }
+          drawRectBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand, io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommandOrBuilder>(
+                  (io.sentry.replay.android.proto.ReplayOuterClass.DrawRectCommand) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 10;
+        onChanged();
+        return drawRectBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand, io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommandOrBuilder> concatBuilder_;
+      /**
+       * <code>.io.sentry.replay.android.proto.ConcatCommand concat = 11;</code>
+       * @return Whether the concat field is set.
+       */
+      @java.lang.Override
+      public boolean hasConcat() {
+        return payloadCase_ == 11;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ConcatCommand concat = 11;</code>
+       * @return The concat.
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand getConcat() {
+        if (concatBuilder_ == null) {
+          if (payloadCase_ == 11) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 11) {
+            return concatBuilder_.getMessage();
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ConcatCommand concat = 11;</code>
+       */
+      public Builder setConcat(io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand value) {
+        if (concatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          concatBuilder_.setMessage(value);
+        }
+        payloadCase_ = 11;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ConcatCommand concat = 11;</code>
+       */
+      public Builder setConcat(
+          io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand.Builder builderForValue) {
+        if (concatBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          concatBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 11;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ConcatCommand concat = 11;</code>
+       */
+      public Builder mergeConcat(io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand value) {
+        if (concatBuilder_ == null) {
+          if (payloadCase_ == 11 &&
+              payload_ != io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand.getDefaultInstance()) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand.newBuilder((io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 11) {
+            concatBuilder_.mergeFrom(value);
+          } else {
+            concatBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 11;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ConcatCommand concat = 11;</code>
+       */
+      public Builder clearConcat() {
+        if (concatBuilder_ == null) {
+          if (payloadCase_ == 11) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 11) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          concatBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ConcatCommand concat = 11;</code>
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand.Builder getConcatBuilder() {
+        return getConcatFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ConcatCommand concat = 11;</code>
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommandOrBuilder getConcatOrBuilder() {
+        if ((payloadCase_ == 11) && (concatBuilder_ != null)) {
+          return concatBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 11) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ConcatCommand concat = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand, io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommandOrBuilder> 
+          getConcatFieldBuilder() {
+        if (concatBuilder_ == null) {
+          if (!(payloadCase_ == 11)) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand.getDefaultInstance();
+          }
+          concatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand, io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommandOrBuilder>(
+                  (io.sentry.replay.android.proto.ReplayOuterClass.ConcatCommand) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 11;
+        onChanged();
+        return concatBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand, io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommandOrBuilder> drawCircleBuilder_;
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawCircleCommand drawCircle = 12;</code>
+       * @return Whether the drawCircle field is set.
+       */
+      @java.lang.Override
+      public boolean hasDrawCircle() {
+        return payloadCase_ == 12;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawCircleCommand drawCircle = 12;</code>
+       * @return The drawCircle.
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand getDrawCircle() {
+        if (drawCircleBuilder_ == null) {
+          if (payloadCase_ == 12) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 12) {
+            return drawCircleBuilder_.getMessage();
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawCircleCommand drawCircle = 12;</code>
+       */
+      public Builder setDrawCircle(io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand value) {
+        if (drawCircleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          drawCircleBuilder_.setMessage(value);
+        }
+        payloadCase_ = 12;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawCircleCommand drawCircle = 12;</code>
+       */
+      public Builder setDrawCircle(
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand.Builder builderForValue) {
+        if (drawCircleBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          drawCircleBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 12;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawCircleCommand drawCircle = 12;</code>
+       */
+      public Builder mergeDrawCircle(io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand value) {
+        if (drawCircleBuilder_ == null) {
+          if (payloadCase_ == 12 &&
+              payload_ != io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand.getDefaultInstance()) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand.newBuilder((io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 12) {
+            drawCircleBuilder_.mergeFrom(value);
+          } else {
+            drawCircleBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 12;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawCircleCommand drawCircle = 12;</code>
+       */
+      public Builder clearDrawCircle() {
+        if (drawCircleBuilder_ == null) {
+          if (payloadCase_ == 12) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 12) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          drawCircleBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawCircleCommand drawCircle = 12;</code>
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand.Builder getDrawCircleBuilder() {
+        return getDrawCircleFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawCircleCommand drawCircle = 12;</code>
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommandOrBuilder getDrawCircleOrBuilder() {
+        if ((payloadCase_ == 12) && (drawCircleBuilder_ != null)) {
+          return drawCircleBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 12) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawCircleCommand drawCircle = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand, io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommandOrBuilder> 
+          getDrawCircleFieldBuilder() {
+        if (drawCircleBuilder_ == null) {
+          if (!(payloadCase_ == 12)) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand.getDefaultInstance();
+          }
+          drawCircleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand, io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommandOrBuilder>(
+                  (io.sentry.replay.android.proto.ReplayOuterClass.DrawCircleCommand) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 12;
+        onChanged();
+        return drawCircleBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand, io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.RotateCommandOrBuilder> rotateBuilder_;
+      /**
+       * <code>.io.sentry.replay.android.proto.RotateCommand rotate = 13;</code>
+       * @return Whether the rotate field is set.
+       */
+      @java.lang.Override
+      public boolean hasRotate() {
+        return payloadCase_ == 13;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RotateCommand rotate = 13;</code>
+       * @return The rotate.
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand getRotate() {
+        if (rotateBuilder_ == null) {
+          if (payloadCase_ == 13) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 13) {
+            return rotateBuilder_.getMessage();
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RotateCommand rotate = 13;</code>
+       */
+      public Builder setRotate(io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand value) {
+        if (rotateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          rotateBuilder_.setMessage(value);
+        }
+        payloadCase_ = 13;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RotateCommand rotate = 13;</code>
+       */
+      public Builder setRotate(
+          io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.Builder builderForValue) {
+        if (rotateBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          rotateBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 13;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RotateCommand rotate = 13;</code>
+       */
+      public Builder mergeRotate(io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand value) {
+        if (rotateBuilder_ == null) {
+          if (payloadCase_ == 13 &&
+              payload_ != io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.getDefaultInstance()) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.newBuilder((io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 13) {
+            rotateBuilder_.mergeFrom(value);
+          } else {
+            rotateBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 13;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RotateCommand rotate = 13;</code>
+       */
+      public Builder clearRotate() {
+        if (rotateBuilder_ == null) {
+          if (payloadCase_ == 13) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 13) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          rotateBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RotateCommand rotate = 13;</code>
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.Builder getRotateBuilder() {
+        return getRotateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RotateCommand rotate = 13;</code>
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.RotateCommandOrBuilder getRotateOrBuilder() {
+        if ((payloadCase_ == 13) && (rotateBuilder_ != null)) {
+          return rotateBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 13) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.RotateCommand rotate = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand, io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.RotateCommandOrBuilder> 
+          getRotateFieldBuilder() {
+        if (rotateBuilder_ == null) {
+          if (!(payloadCase_ == 13)) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.getDefaultInstance();
+          }
+          rotateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand, io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.RotateCommandOrBuilder>(
+                  (io.sentry.replay.android.proto.ReplayOuterClass.RotateCommand) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 13;
+        onChanged();
+        return rotateBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand, io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.SkewCommandOrBuilder> skewBuilder_;
+      /**
+       * <code>.io.sentry.replay.android.proto.SkewCommand skew = 14;</code>
+       * @return Whether the skew field is set.
+       */
+      @java.lang.Override
+      public boolean hasSkew() {
+        return payloadCase_ == 14;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SkewCommand skew = 14;</code>
+       * @return The skew.
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand getSkew() {
+        if (skewBuilder_ == null) {
+          if (payloadCase_ == 14) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 14) {
+            return skewBuilder_.getMessage();
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SkewCommand skew = 14;</code>
+       */
+      public Builder setSkew(io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand value) {
+        if (skewBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          skewBuilder_.setMessage(value);
+        }
+        payloadCase_ = 14;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SkewCommand skew = 14;</code>
+       */
+      public Builder setSkew(
+          io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.Builder builderForValue) {
+        if (skewBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          skewBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 14;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SkewCommand skew = 14;</code>
+       */
+      public Builder mergeSkew(io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand value) {
+        if (skewBuilder_ == null) {
+          if (payloadCase_ == 14 &&
+              payload_ != io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.getDefaultInstance()) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.newBuilder((io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 14) {
+            skewBuilder_.mergeFrom(value);
+          } else {
+            skewBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 14;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SkewCommand skew = 14;</code>
+       */
+      public Builder clearSkew() {
+        if (skewBuilder_ == null) {
+          if (payloadCase_ == 14) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 14) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          skewBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SkewCommand skew = 14;</code>
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.Builder getSkewBuilder() {
+        return getSkewFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SkewCommand skew = 14;</code>
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.SkewCommandOrBuilder getSkewOrBuilder() {
+        if ((payloadCase_ == 14) && (skewBuilder_ != null)) {
+          return skewBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 14) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SkewCommand skew = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand, io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.SkewCommandOrBuilder> 
+          getSkewFieldBuilder() {
+        if (skewBuilder_ == null) {
+          if (!(payloadCase_ == 14)) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.getDefaultInstance();
+          }
+          skewBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand, io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.SkewCommandOrBuilder>(
+                  (io.sentry.replay.android.proto.ReplayOuterClass.SkewCommand) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 14;
+        onChanged();
+        return skewBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand, io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommandOrBuilder> scaleBuilder_;
+      /**
+       * <code>.io.sentry.replay.android.proto.ScaleCommand scale = 15;</code>
+       * @return Whether the scale field is set.
+       */
+      @java.lang.Override
+      public boolean hasScale() {
+        return payloadCase_ == 15;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ScaleCommand scale = 15;</code>
+       * @return The scale.
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand getScale() {
+        if (scaleBuilder_ == null) {
+          if (payloadCase_ == 15) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 15) {
+            return scaleBuilder_.getMessage();
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ScaleCommand scale = 15;</code>
+       */
+      public Builder setScale(io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand value) {
+        if (scaleBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          scaleBuilder_.setMessage(value);
+        }
+        payloadCase_ = 15;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ScaleCommand scale = 15;</code>
+       */
+      public Builder setScale(
+          io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.Builder builderForValue) {
+        if (scaleBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          scaleBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 15;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ScaleCommand scale = 15;</code>
+       */
+      public Builder mergeScale(io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand value) {
+        if (scaleBuilder_ == null) {
+          if (payloadCase_ == 15 &&
+              payload_ != io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.getDefaultInstance()) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.newBuilder((io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 15) {
+            scaleBuilder_.mergeFrom(value);
+          } else {
+            scaleBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 15;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ScaleCommand scale = 15;</code>
+       */
+      public Builder clearScale() {
+        if (scaleBuilder_ == null) {
+          if (payloadCase_ == 15) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 15) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          scaleBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ScaleCommand scale = 15;</code>
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.Builder getScaleBuilder() {
+        return getScaleFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ScaleCommand scale = 15;</code>
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommandOrBuilder getScaleOrBuilder() {
+        if ((payloadCase_ == 15) && (scaleBuilder_ != null)) {
+          return scaleBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 15) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.ScaleCommand scale = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand, io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommandOrBuilder> 
+          getScaleFieldBuilder() {
+        if (scaleBuilder_ == null) {
+          if (!(payloadCase_ == 15)) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.getDefaultInstance();
+          }
+          scaleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand, io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommandOrBuilder>(
+                  (io.sentry.replay.android.proto.ReplayOuterClass.ScaleCommand) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 15;
+        onChanged();
+        return scaleBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand, io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommandOrBuilder> setMatrixBuilder_;
+      /**
+       * <code>.io.sentry.replay.android.proto.SetMatrixCommand setMatrix = 16;</code>
+       * @return Whether the setMatrix field is set.
+       */
+      @java.lang.Override
+      public boolean hasSetMatrix() {
+        return payloadCase_ == 16;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SetMatrixCommand setMatrix = 16;</code>
+       * @return The setMatrix.
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand getSetMatrix() {
+        if (setMatrixBuilder_ == null) {
+          if (payloadCase_ == 16) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.getDefaultInstance();
+        } else {
+          if (payloadCase_ == 16) {
+            return setMatrixBuilder_.getMessage();
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SetMatrixCommand setMatrix = 16;</code>
+       */
+      public Builder setSetMatrix(io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand value) {
+        if (setMatrixBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+          onChanged();
+        } else {
+          setMatrixBuilder_.setMessage(value);
+        }
+        payloadCase_ = 16;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SetMatrixCommand setMatrix = 16;</code>
+       */
+      public Builder setSetMatrix(
+          io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.Builder builderForValue) {
+        if (setMatrixBuilder_ == null) {
+          payload_ = builderForValue.build();
+          onChanged();
+        } else {
+          setMatrixBuilder_.setMessage(builderForValue.build());
+        }
+        payloadCase_ = 16;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SetMatrixCommand setMatrix = 16;</code>
+       */
+      public Builder mergeSetMatrix(io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand value) {
+        if (setMatrixBuilder_ == null) {
+          if (payloadCase_ == 16 &&
+              payload_ != io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.getDefaultInstance()) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.newBuilder((io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand) payload_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            payload_ = value;
+          }
+          onChanged();
+        } else {
+          if (payloadCase_ == 16) {
+            setMatrixBuilder_.mergeFrom(value);
+          } else {
+            setMatrixBuilder_.setMessage(value);
+          }
+        }
+        payloadCase_ = 16;
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SetMatrixCommand setMatrix = 16;</code>
+       */
+      public Builder clearSetMatrix() {
+        if (setMatrixBuilder_ == null) {
+          if (payloadCase_ == 16) {
+            payloadCase_ = 0;
+            payload_ = null;
+            onChanged();
+          }
+        } else {
+          if (payloadCase_ == 16) {
+            payloadCase_ = 0;
+            payload_ = null;
+          }
+          setMatrixBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SetMatrixCommand setMatrix = 16;</code>
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.Builder getSetMatrixBuilder() {
+        return getSetMatrixFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SetMatrixCommand setMatrix = 16;</code>
+       */
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommandOrBuilder getSetMatrixOrBuilder() {
+        if ((payloadCase_ == 16) && (setMatrixBuilder_ != null)) {
+          return setMatrixBuilder_.getMessageOrBuilder();
+        } else {
+          if (payloadCase_ == 16) {
+            return (io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand) payload_;
+          }
+          return io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.SetMatrixCommand setMatrix = 16;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand, io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommandOrBuilder> 
+          getSetMatrixFieldBuilder() {
+        if (setMatrixBuilder_ == null) {
+          if (!(payloadCase_ == 16)) {
+            payload_ = io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.getDefaultInstance();
+          }
+          setMatrixBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand, io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommandOrBuilder>(
+                  (io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand) payload_,
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        payloadCase_ = 16;
+        onChanged();
+        return setMatrixBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.sentry.replay.android.proto.DrawingCommandPayload)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.sentry.replay.android.proto.DrawingCommandPayload)
+    private static final io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload();
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DrawingCommandPayload>
+        PARSER = new com.google.protobuf.AbstractParser<DrawingCommandPayload>() {
+      @java.lang.Override
+      public DrawingCommandPayload parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DrawingCommandPayload> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DrawingCommandPayload> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DrawingCommandOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:io.sentry.replay.android.proto.DrawingCommand)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawingCommandPayload payload = 1;</code>
+     * @return Whether the payload field is set.
+     */
+    boolean hasPayload();
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawingCommandPayload payload = 1;</code>
+     * @return The payload.
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload getPayload();
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawingCommandPayload payload = 1;</code>
+     */
+    io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayloadOrBuilder getPayloadOrBuilder();
+  }
+  /**
+   * Protobuf type {@code io.sentry.replay.android.proto.DrawingCommand}
+   */
+  public static final class DrawingCommand extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:io.sentry.replay.android.proto.DrawingCommand)
+      DrawingCommandOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DrawingCommand.newBuilder() to construct.
+    private DrawingCommand(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DrawingCommand() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DrawingCommand();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_DrawingCommand_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_DrawingCommand_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.class, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.Builder.class);
+    }
+
+    public static final int PAYLOAD_FIELD_NUMBER = 1;
+    private io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload payload_;
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawingCommandPayload payload = 1;</code>
+     * @return Whether the payload field is set.
+     */
+    @java.lang.Override
+    public boolean hasPayload() {
+      return payload_ != null;
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawingCommandPayload payload = 1;</code>
+     * @return The payload.
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload getPayload() {
+      return payload_ == null ? io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.getDefaultInstance() : payload_;
+    }
+    /**
+     * <code>.io.sentry.replay.android.proto.DrawingCommandPayload payload = 1;</code>
+     */
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayloadOrBuilder getPayloadOrBuilder() {
+      return payload_ == null ? io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.getDefaultInstance() : payload_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (payload_ != null) {
+        output.writeMessage(1, getPayload());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (payload_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getPayload());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand)) {
+        return super.equals(obj);
+      }
+      io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand other = (io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand) obj;
+
+      if (hasPayload() != other.hasPayload()) return false;
+      if (hasPayload()) {
+        if (!getPayload()
+            .equals(other.getPayload())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasPayload()) {
+        hash = (37 * hash) + PAYLOAD_FIELD_NUMBER;
+        hash = (53 * hash) + getPayload().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code io.sentry.replay.android.proto.DrawingCommand}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:io.sentry.replay.android.proto.DrawingCommand)
+        io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_DrawingCommand_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_DrawingCommand_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.class, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.Builder.class);
+      }
+
+      // Construct using io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        payload_ = null;
+        if (payloadBuilder_ != null) {
+          payloadBuilder_.dispose();
+          payloadBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.internal_static_io_sentry_replay_android_proto_DrawingCommand_descriptor;
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand getDefaultInstanceForType() {
+        return io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand build() {
+        io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand buildPartial() {
+        io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand result = new io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.payload_ = payloadBuilder_ == null
+              ? payload_
+              : payloadBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand) {
+          return mergeFrom((io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand other) {
+        if (other == io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.getDefaultInstance()) return this;
+        if (other.hasPayload()) {
+          mergePayload(other.getPayload());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getPayloadFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload payload_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayloadOrBuilder> payloadBuilder_;
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawingCommandPayload payload = 1;</code>
+       * @return Whether the payload field is set.
+       */
+      public boolean hasPayload() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawingCommandPayload payload = 1;</code>
+       * @return The payload.
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload getPayload() {
+        if (payloadBuilder_ == null) {
+          return payload_ == null ? io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.getDefaultInstance() : payload_;
+        } else {
+          return payloadBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawingCommandPayload payload = 1;</code>
+       */
+      public Builder setPayload(io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload value) {
+        if (payloadBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          payload_ = value;
+        } else {
+          payloadBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawingCommandPayload payload = 1;</code>
+       */
+      public Builder setPayload(
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.Builder builderForValue) {
+        if (payloadBuilder_ == null) {
+          payload_ = builderForValue.build();
+        } else {
+          payloadBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawingCommandPayload payload = 1;</code>
+       */
+      public Builder mergePayload(io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload value) {
+        if (payloadBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            payload_ != null &&
+            payload_ != io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.getDefaultInstance()) {
+            getPayloadBuilder().mergeFrom(value);
+          } else {
+            payload_ = value;
+          }
+        } else {
+          payloadBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawingCommandPayload payload = 1;</code>
+       */
+      public Builder clearPayload() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        payload_ = null;
+        if (payloadBuilder_ != null) {
+          payloadBuilder_.dispose();
+          payloadBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawingCommandPayload payload = 1;</code>
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.Builder getPayloadBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPayloadFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawingCommandPayload payload = 1;</code>
+       */
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayloadOrBuilder getPayloadOrBuilder() {
+        if (payloadBuilder_ != null) {
+          return payloadBuilder_.getMessageOrBuilder();
+        } else {
+          return payload_ == null ?
+              io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.getDefaultInstance() : payload_;
+        }
+      }
+      /**
+       * <code>.io.sentry.replay.android.proto.DrawingCommandPayload payload = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayloadOrBuilder> 
+          getPayloadFieldBuilder() {
+        if (payloadBuilder_ == null) {
+          payloadBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayload.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandPayloadOrBuilder>(
+                  getPayload(),
+                  getParentForChildren(),
+                  isClean());
+          payload_ = null;
+        }
+        return payloadBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:io.sentry.replay.android.proto.DrawingCommand)
+    }
+
+    // @@protoc_insertion_point(class_scope:io.sentry.replay.android.proto.DrawingCommand)
+    private static final io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand();
+    }
+
+    public static io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DrawingCommand>
+        PARSER = new com.google.protobuf.AbstractParser<DrawingCommand>() {
+      @java.lang.Override
+      public DrawingCommand parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<DrawingCommand> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DrawingCommand> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface FrameOrBuilder extends
       // @@protoc_insertion_point(interface_extends:io.sentry.replay.android.proto.Frame)
       com.google.protobuf.MessageOrBuilder {
@@ -12477,27 +18255,27 @@ public final class ReplayOuterClass {
     long getTime();
 
     /**
-     * <code>repeated .google.protobuf.Any commands = 2;</code>
+     * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
      */
-    java.util.List<com.google.protobuf.Any> 
+    java.util.List<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand> 
         getCommandsList();
     /**
-     * <code>repeated .google.protobuf.Any commands = 2;</code>
+     * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
      */
-    com.google.protobuf.Any getCommands(int index);
+    io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand getCommands(int index);
     /**
-     * <code>repeated .google.protobuf.Any commands = 2;</code>
+     * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
      */
     int getCommandsCount();
     /**
-     * <code>repeated .google.protobuf.Any commands = 2;</code>
+     * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
      */
-    java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+    java.util.List<? extends io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandOrBuilder> 
         getCommandsOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.Any commands = 2;</code>
+     * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
      */
-    com.google.protobuf.AnyOrBuilder getCommandsOrBuilder(
+    io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandOrBuilder getCommandsOrBuilder(
         int index);
   }
   /**
@@ -12549,41 +18327,41 @@ public final class ReplayOuterClass {
 
     public static final int COMMANDS_FIELD_NUMBER = 2;
     @SuppressWarnings("serial")
-    private java.util.List<com.google.protobuf.Any> commands_;
+    private java.util.List<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand> commands_;
     /**
-     * <code>repeated .google.protobuf.Any commands = 2;</code>
+     * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<com.google.protobuf.Any> getCommandsList() {
+    public java.util.List<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand> getCommandsList() {
       return commands_;
     }
     /**
-     * <code>repeated .google.protobuf.Any commands = 2;</code>
+     * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+    public java.util.List<? extends io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandOrBuilder> 
         getCommandsOrBuilderList() {
       return commands_;
     }
     /**
-     * <code>repeated .google.protobuf.Any commands = 2;</code>
+     * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
      */
     @java.lang.Override
     public int getCommandsCount() {
       return commands_.size();
     }
     /**
-     * <code>repeated .google.protobuf.Any commands = 2;</code>
+     * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.Any getCommands(int index) {
+    public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand getCommands(int index) {
       return commands_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.Any commands = 2;</code>
+     * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
      */
     @java.lang.Override
-    public com.google.protobuf.AnyOrBuilder getCommandsOrBuilder(
+    public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandOrBuilder getCommandsOrBuilder(
         int index) {
       return commands_.get(index);
     }
@@ -12957,9 +18735,9 @@ public final class ReplayOuterClass {
                 break;
               } // case 8
               case 18: {
-                com.google.protobuf.Any m =
+                io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand m =
                     input.readMessage(
-                        com.google.protobuf.Any.parser(),
+                        io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.parser(),
                         extensionRegistry);
                 if (commandsBuilder_ == null) {
                   ensureCommandsIsMutable();
@@ -13018,22 +18796,22 @@ public final class ReplayOuterClass {
         return this;
       }
 
-      private java.util.List<com.google.protobuf.Any> commands_ =
+      private java.util.List<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand> commands_ =
         java.util.Collections.emptyList();
       private void ensureCommandsIsMutable() {
         if (!((bitField0_ & 0x00000002) != 0)) {
-          commands_ = new java.util.ArrayList<com.google.protobuf.Any>(commands_);
+          commands_ = new java.util.ArrayList<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand>(commands_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> commandsBuilder_;
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandOrBuilder> commandsBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
-      public java.util.List<com.google.protobuf.Any> getCommandsList() {
+      public java.util.List<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand> getCommandsList() {
         if (commandsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(commands_);
         } else {
@@ -13041,7 +18819,7 @@ public final class ReplayOuterClass {
         }
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
       public int getCommandsCount() {
         if (commandsBuilder_ == null) {
@@ -13051,9 +18829,9 @@ public final class ReplayOuterClass {
         }
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
-      public com.google.protobuf.Any getCommands(int index) {
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand getCommands(int index) {
         if (commandsBuilder_ == null) {
           return commands_.get(index);
         } else {
@@ -13061,10 +18839,10 @@ public final class ReplayOuterClass {
         }
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
       public Builder setCommands(
-          int index, com.google.protobuf.Any value) {
+          int index, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand value) {
         if (commandsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -13078,10 +18856,10 @@ public final class ReplayOuterClass {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
       public Builder setCommands(
-          int index, com.google.protobuf.Any.Builder builderForValue) {
+          int index, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.Builder builderForValue) {
         if (commandsBuilder_ == null) {
           ensureCommandsIsMutable();
           commands_.set(index, builderForValue.build());
@@ -13092,9 +18870,9 @@ public final class ReplayOuterClass {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
-      public Builder addCommands(com.google.protobuf.Any value) {
+      public Builder addCommands(io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand value) {
         if (commandsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -13108,10 +18886,10 @@ public final class ReplayOuterClass {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
       public Builder addCommands(
-          int index, com.google.protobuf.Any value) {
+          int index, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand value) {
         if (commandsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -13125,10 +18903,10 @@ public final class ReplayOuterClass {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
       public Builder addCommands(
-          com.google.protobuf.Any.Builder builderForValue) {
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.Builder builderForValue) {
         if (commandsBuilder_ == null) {
           ensureCommandsIsMutable();
           commands_.add(builderForValue.build());
@@ -13139,10 +18917,10 @@ public final class ReplayOuterClass {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
       public Builder addCommands(
-          int index, com.google.protobuf.Any.Builder builderForValue) {
+          int index, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.Builder builderForValue) {
         if (commandsBuilder_ == null) {
           ensureCommandsIsMutable();
           commands_.add(index, builderForValue.build());
@@ -13153,10 +18931,10 @@ public final class ReplayOuterClass {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
       public Builder addAllCommands(
-          java.lang.Iterable<? extends com.google.protobuf.Any> values) {
+          java.lang.Iterable<? extends io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand> values) {
         if (commandsBuilder_ == null) {
           ensureCommandsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -13168,7 +18946,7 @@ public final class ReplayOuterClass {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
       public Builder clearCommands() {
         if (commandsBuilder_ == null) {
@@ -13181,7 +18959,7 @@ public final class ReplayOuterClass {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
       public Builder removeCommands(int index) {
         if (commandsBuilder_ == null) {
@@ -13194,16 +18972,16 @@ public final class ReplayOuterClass {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
-      public com.google.protobuf.Any.Builder getCommandsBuilder(
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.Builder getCommandsBuilder(
           int index) {
         return getCommandsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
-      public com.google.protobuf.AnyOrBuilder getCommandsOrBuilder(
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandOrBuilder getCommandsOrBuilder(
           int index) {
         if (commandsBuilder_ == null) {
           return commands_.get(index);  } else {
@@ -13211,9 +18989,9 @@ public final class ReplayOuterClass {
         }
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
-      public java.util.List<? extends com.google.protobuf.AnyOrBuilder> 
+      public java.util.List<? extends io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandOrBuilder> 
            getCommandsOrBuilderList() {
         if (commandsBuilder_ != null) {
           return commandsBuilder_.getMessageOrBuilderList();
@@ -13222,33 +19000,33 @@ public final class ReplayOuterClass {
         }
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
-      public com.google.protobuf.Any.Builder addCommandsBuilder() {
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.Builder addCommandsBuilder() {
         return getCommandsFieldBuilder().addBuilder(
-            com.google.protobuf.Any.getDefaultInstance());
+            io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
-      public com.google.protobuf.Any.Builder addCommandsBuilder(
+      public io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.Builder addCommandsBuilder(
           int index) {
         return getCommandsFieldBuilder().addBuilder(
-            index, com.google.protobuf.Any.getDefaultInstance());
+            index, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.Any commands = 2;</code>
+       * <code>repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;</code>
        */
-      public java.util.List<com.google.protobuf.Any.Builder> 
+      public java.util.List<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.Builder> 
            getCommandsBuilderList() {
         return getCommandsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder> 
+          io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandOrBuilder> 
           getCommandsFieldBuilder() {
         if (commandsBuilder_ == null) {
           commandsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.Any, com.google.protobuf.Any.Builder, com.google.protobuf.AnyOrBuilder>(
+              io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand.Builder, io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommandOrBuilder>(
                   commands_,
                   ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
@@ -14302,11 +20080,6 @@ public final class ReplayOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_sentry_replay_android_proto_TranslateCommand_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_io_sentry_replay_android_proto_ClipRectCommand_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_io_sentry_replay_android_proto_ClipRectCommand_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_sentry_replay_android_proto_ClipRectFCommand_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14337,6 +20110,36 @@ public final class ReplayOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_io_sentry_replay_android_proto_ConcatCommand_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_sentry_replay_android_proto_ScaleCommand_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_sentry_replay_android_proto_ScaleCommand_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_sentry_replay_android_proto_RotateCommand_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_sentry_replay_android_proto_RotateCommand_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_sentry_replay_android_proto_SkewCommand_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_sentry_replay_android_proto_SkewCommand_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_sentry_replay_android_proto_SetMatrixCommand_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_sentry_replay_android_proto_SetMatrixCommand_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_sentry_replay_android_proto_DrawingCommandPayload_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_sentry_replay_android_proto_DrawingCommandPayload_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_io_sentry_replay_android_proto_DrawingCommand_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_io_sentry_replay_android_proto_DrawingCommand_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_io_sentry_replay_android_proto_Frame_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -14356,95 +20159,123 @@ public final class ReplayOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\014replay.proto\022\036io.sentry.replay.android" +
-      ".proto\032\031google/protobuf/any.proto\"d\n\025Por" +
-      "terDuffColorFilter\022\r\n\005color\030\001 \001(\005\022<\n\004mod" +
-      "e\030\002 \001(\0162..io.sentry.replay.android.proto" +
-      ".PorterDuffMode\"^\n\024BlendModeColorFilter\022" +
-      "\r\n\005color\030\001 \001(\005\0227\n\004mode\030\002 \001(\0162).io.sentry" +
-      ".replay.android.proto.BlendMode\"\213\003\n\005Pain" +
-      "t\0229\n\005style\030\001 \001(\0162*.io.sentry.replay.andr" +
-      "oid.proto.PaintStyle\022<\n\ttextAlign\030\002 \001(\0162" +
-      ").io.sentry.replay.android.proto.TextAli" +
-      "gn\022\r\n\005color\030\003 \001(\005\022\r\n\005alpha\030\010 \001(\002\022\023\n\013stro" +
-      "keWidth\030\004 \001(\002\022\020\n\010textSize\030\005 \001(\002\022Y\n\025porte" +
-      "rDuffColorFilter\030\006 \001(\01325.io.sentry.repla" +
-      "y.android.proto.PorterDuffColorFilterH\000\210" +
-      "\001\001\022A\n\tblendMode\030\007 \001(\0162).io.sentry.replay" +
-      ".android.proto.BlendModeH\001\210\001\001B\030\n\026_porter" +
-      "DuffColorFilterB\014\n\n_blendMode\"#\n\013Coordin" +
-      "ateF\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\"@\n\004Rect\022\014\n\004le" +
-      "ft\030\001 \001(\005\022\r\n\005right\030\002 \001(\005\022\013\n\003top\030\003 \001(\005\022\016\n\006" +
-      "bottom\030\004 \001(\005\"A\n\005RectF\022\014\n\004left\030\001 \001(\002\022\r\n\005r" +
-      "ight\030\002 \001(\002\022\013\n\003top\030\003 \001(\002\022\016\n\006bottom\030\004 \001(\002\"" +
-      "\r\n\013SaveCommand\"\020\n\016RestoreCommand\"&\n\025Rest" +
-      "oreToCountCommand\022\r\n\005count\030\001 \001(\005\"S\n\020Tran" +
-      "slateCommand\022?\n\ncoordinate\030\001 \001(\0132+.io.se" +
-      "ntry.replay.android.proto.CoordinateF\"E\n" +
-      "\017ClipRectCommand\0222\n\004rect\030\001 \001(\0132$.io.sent" +
-      "ry.replay.android.proto.Rect\"G\n\020ClipRect" +
-      "FCommand\0223\n\004rect\030\001 \001(\0132%.io.sentry.repla" +
-      "y.android.proto.RectF\"\224\001\n\017DrawTextComman" +
-      "d\022\014\n\004text\030\001 \001(\t\022=\n\010position\030\002 \001(\0132+.io.s" +
-      "entry.replay.android.proto.CoordinateF\0224" +
-      "\n\005paint\030\003 \001(\0132%.io.sentry.replay.android" +
-      ".proto.Paint\"\275\001\n\024DrawRoundRectCommand\0223\n" +
-      "\004rect\030\001 \001(\0132%.io.sentry.replay.android.p" +
-      "roto.RectF\022:\n\005radii\030\002 \001(\0132+.io.sentry.re" +
-      "play.android.proto.CoordinateF\0224\n\005paint\030" +
-      "\003 \001(\0132%.io.sentry.replay.android.proto.P" +
-      "aint\"\230\001\n\021DrawCircleCommand\022=\n\010position\030\001" +
-      " \001(\0132+.io.sentry.replay.android.proto.Co" +
-      "ordinateF\022\016\n\006radius\030\002 \001(\002\0224\n\005paint\030\003 \001(\013" +
-      "2%.io.sentry.replay.android.proto.Paint\"" +
-      "{\n\017DrawRectCommand\0222\n\004rect\030\001 \001(\0132$.io.se" +
-      "ntry.replay.android.proto.Rect\0224\n\005paint\030" +
-      "\002 \001(\0132%.io.sentry.replay.android.proto.P" +
-      "aint\"\037\n\rConcatCommand\022\016\n\006matrix\030\001 \003(\002\"=\n" +
-      "\005Frame\022\014\n\004time\030\001 \001(\003\022&\n\010commands\030\002 \003(\0132\024" +
-      ".google.protobuf.Any\"K\n\006Replay\022\n\n\002id\030\001 \001" +
-      "(\t\0225\n\006frames\030\002 \003(\0132%.io.sentry.replay.an" +
-      "droid.proto.Frame*[\n\nPaintStyle\022\024\n\020PAINT" +
-      "_STYLE_FILL\020\000\022\026\n\022PAINT_STYLE_STROKE\020\001\022\037\n" +
-      "\033PAINT_STYLE_FILL_AND_STROKE\020\002*M\n\tTextAl" +
-      "ign\022\023\n\017TEXT_ALIGN_LEFT\020\000\022\025\n\021TEXT_ALIGN_C" +
-      "ENTER\020\001\022\024\n\020TEXT_ALIGN_RIGHT\020\002*\233\004\n\016Porter" +
-      "DuffMode\022\032\n\026PORTER_DUFF_MODE_CLEAR\020\000\022\030\n\024" +
-      "PORTER_DUFF_MODE_SRC\020\001\022\030\n\024PORTER_DUFF_MO" +
-      "DE_DST\020\002\022\035\n\031PORTER_DUFF_MODE_SRC_OVER\020\003\022" +
-      "\035\n\031PORTER_DUFF_MODE_DST_OVER\020\004\022\033\n\027PORTER" +
-      "_DUFF_MODE_SRC_IN\020\005\022\033\n\027PORTER_DUFF_MODE_" +
-      "DST_IN\020\006\022\034\n\030PORTER_DUFF_MODE_SRC_OUT\020\007\022\034" +
-      "\n\030PORTER_DUFF_MODE_DST_OUT\020\010\022\035\n\031PORTER_D" +
-      "UFF_MODE_SRC_ATOP\020\t\022\035\n\031PORTER_DUFF_MODE_" +
-      "DST_ATOP\020\n\022\030\n\024PORTER_DUFF_MODE_XOR\020\013\022\033\n\027" +
-      "PORTER_DUFF_MODE_DARKEN\020\020\022\034\n\030PORTER_DUFF" +
-      "_MODE_LIGHTEN\020\021\022\035\n\031PORTER_DUFF_MODE_MULT" +
-      "IPLY\020\r\022\033\n\027PORTER_DUFF_MODE_SCREEN\020\016\022\030\n\024P" +
-      "ORTER_DUFF_MODE_ADD\020\014\022\034\n\030PORTER_DUFF_MOD" +
-      "E_OVERLAY\020\017*\306\005\n\tBlendMode\022\024\n\020BLEND_MODE_" +
-      "CLEAR\020\000\022\022\n\016BLEND_MODE_SRC\020\001\022\022\n\016BLEND_MOD" +
-      "E_DST\020\002\022\027\n\023BLEND_MODE_SRC_OVER\020\003\022\027\n\023BLEN" +
-      "D_MODE_DST_OVER\020\004\022\025\n\021BLEND_MODE_SRC_IN\020\005" +
-      "\022\025\n\021BLEND_MODE_DST_IN\020\006\022\026\n\022BLEND_MODE_SR" +
-      "C_OUT\020\007\022\026\n\022BLEND_MODE_DST_OUT\020\010\022\027\n\023BLEND" +
-      "_MODE_SRC_ATOP\020\t\022\027\n\023BLEND_MODE_DST_ATOP\020" +
-      "\n\022\022\n\016BLEND_MODE_XOR\020\013\022\023\n\017BLEND_MODE_PLUS" +
-      "\020\014\022\027\n\023BLEND_MODE_MODULATE\020\r\022\025\n\021BLEND_MOD" +
-      "E_SCREEN\020\016\022\026\n\022BLEND_MODE_OVERLAY\020\017\022\025\n\021BL" +
-      "END_MODE_DARKEN\020\020\022\026\n\022BLEND_MODE_LIGHTEN\020" +
-      "\021\022\032\n\026BLEND_MODE_COLOR_DODGE\020\022\022\031\n\025BLEND_M" +
-      "ODE_COLOR_BURN\020\023\022\031\n\025BLEND_MODE_HARD_LIGH" +
-      "T\020\024\022\031\n\025BLEND_MODE_SOFT_LIGHT\020\025\022\031\n\025BLEND_" +
-      "MODE_DIFFERENCE\020\026\022\030\n\024BLEND_MODE_EXCLUSIO" +
-      "N\020\027\022\027\n\023BLEND_MODE_MULTIPLY\020\030\022\022\n\016BLEND_MO" +
-      "DE_HUE\020\031\022\031\n\025BLEND_MODE_SATURATION\020\032\022\024\n\020B" +
-      "LEND_MODE_COLOR\020\033\022\031\n\025BLEND_MODE_LUMINOSI" +
-      "TY\020\034b\006proto3"
+      ".proto\"d\n\025PorterDuffColorFilter\022\r\n\005color" +
+      "\030\001 \001(\005\022<\n\004mode\030\002 \001(\0162..io.sentry.replay." +
+      "android.proto.PorterDuffMode\"^\n\024BlendMod" +
+      "eColorFilter\022\r\n\005color\030\001 \001(\005\0227\n\004mode\030\002 \001(" +
+      "\0162).io.sentry.replay.android.proto.Blend" +
+      "Mode\"\213\003\n\005Paint\0229\n\005style\030\001 \001(\0162*.io.sentr" +
+      "y.replay.android.proto.PaintStyle\022<\n\ttex" +
+      "tAlign\030\002 \001(\0162).io.sentry.replay.android." +
+      "proto.TextAlign\022\r\n\005color\030\003 \001(\005\022\r\n\005alpha\030" +
+      "\010 \001(\002\022\023\n\013strokeWidth\030\004 \001(\002\022\020\n\010textSize\030\005" +
+      " \001(\002\022Y\n\025porterDuffColorFilter\030\006 \001(\01325.io" +
+      ".sentry.replay.android.proto.PorterDuffC" +
+      "olorFilterH\000\210\001\001\022A\n\tblendMode\030\007 \001(\0162).io." +
+      "sentry.replay.android.proto.BlendModeH\001\210" +
+      "\001\001B\030\n\026_porterDuffColorFilterB\014\n\n_blendMo" +
+      "de\"#\n\013CoordinateF\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\"" +
+      "@\n\004Rect\022\014\n\004left\030\001 \001(\005\022\r\n\005right\030\002 \001(\005\022\013\n\003" +
+      "top\030\003 \001(\005\022\016\n\006bottom\030\004 \001(\005\"A\n\005RectF\022\014\n\004le" +
+      "ft\030\001 \001(\002\022\r\n\005right\030\002 \001(\002\022\013\n\003top\030\003 \001(\002\022\016\n\006" +
+      "bottom\030\004 \001(\002\"\r\n\013SaveCommand\"\020\n\016RestoreCo" +
+      "mmand\"&\n\025RestoreToCountCommand\022\r\n\005count\030" +
+      "\001 \001(\005\"S\n\020TranslateCommand\022?\n\ncoordinate\030" +
+      "\001 \001(\0132+.io.sentry.replay.android.proto.C" +
+      "oordinateF\"G\n\020ClipRectFCommand\0223\n\004rect\030\001" +
+      " \001(\0132%.io.sentry.replay.android.proto.Re" +
+      "ctF\"\224\001\n\017DrawTextCommand\022\014\n\004text\030\001 \001(\t\022=\n" +
+      "\010position\030\002 \001(\0132+.io.sentry.replay.andro" +
+      "id.proto.CoordinateF\0224\n\005paint\030\003 \001(\0132%.io" +
+      ".sentry.replay.android.proto.Paint\"\275\001\n\024D" +
+      "rawRoundRectCommand\0223\n\004rect\030\001 \001(\0132%.io.s" +
+      "entry.replay.android.proto.RectF\022:\n\005radi" +
+      "i\030\002 \001(\0132+.io.sentry.replay.android.proto" +
+      ".CoordinateF\0224\n\005paint\030\003 \001(\0132%.io.sentry." +
+      "replay.android.proto.Paint\"\230\001\n\021DrawCircl" +
+      "eCommand\022=\n\010position\030\001 \001(\0132+.io.sentry.r" +
+      "eplay.android.proto.CoordinateF\022\016\n\006radiu" +
+      "s\030\002 \001(\002\0224\n\005paint\030\003 \001(\0132%.io.sentry.repla" +
+      "y.android.proto.Paint\"{\n\017DrawRectCommand" +
+      "\0222\n\004rect\030\001 \001(\0132$.io.sentry.replay.androi" +
+      "d.proto.Rect\0224\n\005paint\030\002 \001(\0132%.io.sentry." +
+      "replay.android.proto.Paint\"\037\n\rConcatComm" +
+      "and\022\016\n\006matrix\030\001 \003(\002\"&\n\014ScaleCommand\022\n\n\002s" +
+      "x\030\001 \001(\002\022\n\n\002sy\030\002 \001(\002\" \n\rRotateCommand\022\017\n\007" +
+      "degrees\030\001 \001(\002\"%\n\013SkewCommand\022\n\n\002sx\030\001 \001(\002" +
+      "\022\n\n\002sy\030\002 \001(\002\"\"\n\020SetMatrixCommand\022\016\n\006matr" +
+      "ix\030\001 \003(\002\"\350\007\n\025DrawingCommandPayload\022;\n\004sa" +
+      "ve\030\002 \001(\0132+.io.sentry.replay.android.prot" +
+      "o.SaveCommandH\000\022A\n\007restore\030\003 \001(\0132..io.se" +
+      "ntry.replay.android.proto.RestoreCommand" +
+      "H\000\022O\n\016restoreToCount\030\004 \001(\01325.io.sentry.r" +
+      "eplay.android.proto.RestoreToCountComman" +
+      "dH\000\022E\n\ttranslate\030\005 \001(\01320.io.sentry.repla" +
+      "y.android.proto.TranslateCommandH\000\022E\n\tcl" +
+      "ipRectF\030\007 \001(\01320.io.sentry.replay.android" +
+      ".proto.ClipRectFCommandH\000\022C\n\010drawText\030\010 " +
+      "\001(\0132/.io.sentry.replay.android.proto.Dra" +
+      "wTextCommandH\000\022M\n\rdrawRoundRect\030\t \001(\01324." +
+      "io.sentry.replay.android.proto.DrawRound" +
+      "RectCommandH\000\022C\n\010drawRect\030\n \001(\0132/.io.sen" +
+      "try.replay.android.proto.DrawRectCommand" +
+      "H\000\022?\n\006concat\030\013 \001(\0132-.io.sentry.replay.an" +
+      "droid.proto.ConcatCommandH\000\022G\n\ndrawCircl" +
+      "e\030\014 \001(\01321.io.sentry.replay.android.proto" +
+      ".DrawCircleCommandH\000\022?\n\006rotate\030\r \001(\0132-.i" +
+      "o.sentry.replay.android.proto.RotateComm" +
+      "andH\000\022;\n\004skew\030\016 \001(\0132+.io.sentry.replay.a" +
+      "ndroid.proto.SkewCommandH\000\022=\n\005scale\030\017 \001(" +
+      "\0132,.io.sentry.replay.android.proto.Scale" +
+      "CommandH\000\022E\n\tsetMatrix\030\020 \001(\01320.io.sentry" +
+      ".replay.android.proto.SetMatrixCommandH\000" +
+      "B\t\n\007payload\"X\n\016DrawingCommand\022F\n\007payload" +
+      "\030\001 \001(\01325.io.sentry.replay.android.proto." +
+      "DrawingCommandPayload\"W\n\005Frame\022\014\n\004time\030\001" +
+      " \001(\003\022@\n\010commands\030\002 \003(\0132..io.sentry.repla" +
+      "y.android.proto.DrawingCommand\"K\n\006Replay" +
+      "\022\n\n\002id\030\001 \001(\t\0225\n\006frames\030\002 \003(\0132%.io.sentry" +
+      ".replay.android.proto.Frame*[\n\nPaintStyl" +
+      "e\022\024\n\020PAINT_STYLE_FILL\020\000\022\026\n\022PAINT_STYLE_S" +
+      "TROKE\020\001\022\037\n\033PAINT_STYLE_FILL_AND_STROKE\020\002" +
+      "*M\n\tTextAlign\022\023\n\017TEXT_ALIGN_LEFT\020\000\022\025\n\021TE" +
+      "XT_ALIGN_CENTER\020\001\022\024\n\020TEXT_ALIGN_RIGHT\020\002*" +
+      "\233\004\n\016PorterDuffMode\022\032\n\026PORTER_DUFF_MODE_C" +
+      "LEAR\020\000\022\030\n\024PORTER_DUFF_MODE_SRC\020\001\022\030\n\024PORT" +
+      "ER_DUFF_MODE_DST\020\002\022\035\n\031PORTER_DUFF_MODE_S" +
+      "RC_OVER\020\003\022\035\n\031PORTER_DUFF_MODE_DST_OVER\020\004" +
+      "\022\033\n\027PORTER_DUFF_MODE_SRC_IN\020\005\022\033\n\027PORTER_" +
+      "DUFF_MODE_DST_IN\020\006\022\034\n\030PORTER_DUFF_MODE_S" +
+      "RC_OUT\020\007\022\034\n\030PORTER_DUFF_MODE_DST_OUT\020\010\022\035" +
+      "\n\031PORTER_DUFF_MODE_SRC_ATOP\020\t\022\035\n\031PORTER_" +
+      "DUFF_MODE_DST_ATOP\020\n\022\030\n\024PORTER_DUFF_MODE" +
+      "_XOR\020\013\022\033\n\027PORTER_DUFF_MODE_DARKEN\020\020\022\034\n\030P" +
+      "ORTER_DUFF_MODE_LIGHTEN\020\021\022\035\n\031PORTER_DUFF" +
+      "_MODE_MULTIPLY\020\r\022\033\n\027PORTER_DUFF_MODE_SCR" +
+      "EEN\020\016\022\030\n\024PORTER_DUFF_MODE_ADD\020\014\022\034\n\030PORTE" +
+      "R_DUFF_MODE_OVERLAY\020\017*\306\005\n\tBlendMode\022\024\n\020B" +
+      "LEND_MODE_CLEAR\020\000\022\022\n\016BLEND_MODE_SRC\020\001\022\022\n" +
+      "\016BLEND_MODE_DST\020\002\022\027\n\023BLEND_MODE_SRC_OVER" +
+      "\020\003\022\027\n\023BLEND_MODE_DST_OVER\020\004\022\025\n\021BLEND_MOD" +
+      "E_SRC_IN\020\005\022\025\n\021BLEND_MODE_DST_IN\020\006\022\026\n\022BLE" +
+      "ND_MODE_SRC_OUT\020\007\022\026\n\022BLEND_MODE_DST_OUT\020" +
+      "\010\022\027\n\023BLEND_MODE_SRC_ATOP\020\t\022\027\n\023BLEND_MODE" +
+      "_DST_ATOP\020\n\022\022\n\016BLEND_MODE_XOR\020\013\022\023\n\017BLEND" +
+      "_MODE_PLUS\020\014\022\027\n\023BLEND_MODE_MODULATE\020\r\022\025\n" +
+      "\021BLEND_MODE_SCREEN\020\016\022\026\n\022BLEND_MODE_OVERL" +
+      "AY\020\017\022\025\n\021BLEND_MODE_DARKEN\020\020\022\026\n\022BLEND_MOD" +
+      "E_LIGHTEN\020\021\022\032\n\026BLEND_MODE_COLOR_DODGE\020\022\022" +
+      "\031\n\025BLEND_MODE_COLOR_BURN\020\023\022\031\n\025BLEND_MODE" +
+      "_HARD_LIGHT\020\024\022\031\n\025BLEND_MODE_SOFT_LIGHT\020\025" +
+      "\022\031\n\025BLEND_MODE_DIFFERENCE\020\026\022\030\n\024BLEND_MOD" +
+      "E_EXCLUSION\020\027\022\027\n\023BLEND_MODE_MULTIPLY\020\030\022\022" +
+      "\n\016BLEND_MODE_HUE\020\031\022\031\n\025BLEND_MODE_SATURAT" +
+      "ION\020\032\022\024\n\020BLEND_MODE_COLOR\020\033\022\031\n\025BLEND_MOD" +
+      "E_LUMINOSITY\020\034b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.AnyProto.getDescriptor(),
         });
     internal_static_io_sentry_replay_android_proto_PorterDuffColorFilter_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -14506,61 +20337,90 @@ public final class ReplayOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_sentry_replay_android_proto_TranslateCommand_descriptor,
         new java.lang.String[] { "Coordinate", });
-    internal_static_io_sentry_replay_android_proto_ClipRectCommand_descriptor =
-      getDescriptor().getMessageTypes().get(10);
-    internal_static_io_sentry_replay_android_proto_ClipRectCommand_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_io_sentry_replay_android_proto_ClipRectCommand_descriptor,
-        new java.lang.String[] { "Rect", });
     internal_static_io_sentry_replay_android_proto_ClipRectFCommand_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_io_sentry_replay_android_proto_ClipRectFCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_sentry_replay_android_proto_ClipRectFCommand_descriptor,
         new java.lang.String[] { "Rect", });
     internal_static_io_sentry_replay_android_proto_DrawTextCommand_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_io_sentry_replay_android_proto_DrawTextCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_sentry_replay_android_proto_DrawTextCommand_descriptor,
         new java.lang.String[] { "Text", "Position", "Paint", });
     internal_static_io_sentry_replay_android_proto_DrawRoundRectCommand_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_io_sentry_replay_android_proto_DrawRoundRectCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_sentry_replay_android_proto_DrawRoundRectCommand_descriptor,
         new java.lang.String[] { "Rect", "Radii", "Paint", });
     internal_static_io_sentry_replay_android_proto_DrawCircleCommand_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_io_sentry_replay_android_proto_DrawCircleCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_sentry_replay_android_proto_DrawCircleCommand_descriptor,
         new java.lang.String[] { "Position", "Radius", "Paint", });
     internal_static_io_sentry_replay_android_proto_DrawRectCommand_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_io_sentry_replay_android_proto_DrawRectCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_sentry_replay_android_proto_DrawRectCommand_descriptor,
         new java.lang.String[] { "Rect", "Paint", });
     internal_static_io_sentry_replay_android_proto_ConcatCommand_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_io_sentry_replay_android_proto_ConcatCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_sentry_replay_android_proto_ConcatCommand_descriptor,
         new java.lang.String[] { "Matrix", });
-    internal_static_io_sentry_replay_android_proto_Frame_descriptor =
+    internal_static_io_sentry_replay_android_proto_ScaleCommand_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_io_sentry_replay_android_proto_ScaleCommand_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_sentry_replay_android_proto_ScaleCommand_descriptor,
+        new java.lang.String[] { "Sx", "Sy", });
+    internal_static_io_sentry_replay_android_proto_RotateCommand_descriptor =
       getDescriptor().getMessageTypes().get(17);
+    internal_static_io_sentry_replay_android_proto_RotateCommand_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_sentry_replay_android_proto_RotateCommand_descriptor,
+        new java.lang.String[] { "Degrees", });
+    internal_static_io_sentry_replay_android_proto_SkewCommand_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_io_sentry_replay_android_proto_SkewCommand_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_sentry_replay_android_proto_SkewCommand_descriptor,
+        new java.lang.String[] { "Sx", "Sy", });
+    internal_static_io_sentry_replay_android_proto_SetMatrixCommand_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_io_sentry_replay_android_proto_SetMatrixCommand_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_sentry_replay_android_proto_SetMatrixCommand_descriptor,
+        new java.lang.String[] { "Matrix", });
+    internal_static_io_sentry_replay_android_proto_DrawingCommandPayload_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_io_sentry_replay_android_proto_DrawingCommandPayload_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_sentry_replay_android_proto_DrawingCommandPayload_descriptor,
+        new java.lang.String[] { "Save", "Restore", "RestoreToCount", "Translate", "ClipRectF", "DrawText", "DrawRoundRect", "DrawRect", "Concat", "DrawCircle", "Rotate", "Skew", "Scale", "SetMatrix", "Payload", });
+    internal_static_io_sentry_replay_android_proto_DrawingCommand_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_io_sentry_replay_android_proto_DrawingCommand_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_io_sentry_replay_android_proto_DrawingCommand_descriptor,
+        new java.lang.String[] { "Payload", });
+    internal_static_io_sentry_replay_android_proto_Frame_descriptor =
+      getDescriptor().getMessageTypes().get(22);
     internal_static_io_sentry_replay_android_proto_Frame_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_sentry_replay_android_proto_Frame_descriptor,
         new java.lang.String[] { "Time", "Commands", });
     internal_static_io_sentry_replay_android_proto_Replay_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_io_sentry_replay_android_proto_Replay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_io_sentry_replay_android_proto_Replay_descriptor,
         new java.lang.String[] { "Id", "Frames", });
-    com.google.protobuf.AnyProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

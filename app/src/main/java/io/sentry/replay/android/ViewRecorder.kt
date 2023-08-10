@@ -1,44 +1,62 @@
 package io.sentry.replay.android
 
-import android.content.Context
+import android.app.Activity
+import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.CanvasDelegate
-import android.util.AttributeSet
+import android.util.DisplayMetrics
+import android.view.Choreographer
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import io.sentry.replay.android.recorder.ProtoBufCanvasRecorder
 import java.util.LinkedList
 
-// TODO remove, use Choreographer instead
-// it's not really required to add a custom view as we could call draw at any point
-// but handy as we get notified for every screen change
-class InterceptingView @JvmOverloads constructor(
-    context: Context, attrs: AttributeSet? = null
-) : FrameLayout(context, attrs) {
+class ViewRecorder : Choreographer.FrameCallback {
 
     val canvasCommandRecorder = ProtoBufCanvasRecorder()
     private var canvasDelegate: CanvasDelegate? = null
+    private var canvas: Canvas? = null
+    private var view: View? = null
 
-    override fun dispatchDraw(canvas: Canvas?) {
-        super.dispatchDraw(canvas)
+    fun setView(view: View?) {
+        this.view = view
+        Choreographer.getInstance().postFrameCallback(this)
+    }
 
+    override fun doFrame(frameTimeNanos: Long) {
+        view?.let {
+            captureFrame(it)
+            Choreographer.getInstance().postFrameCallback(this@ViewRecorder)
+        }
+    }
 
-        if (canvasDelegate == null && canvas != null) {
+    private fun captureFrame(view: View) {
+        if (view.width == 0 || view.height == 0 || view.visibility == View.GONE) {
+            return
+        }
+
+        if (canvasDelegate == null) {
+            val displayMetrics = DisplayMetrics()
+            (view.context as Activity).windowManager.defaultDisplay.getMetrics(displayMetrics)
+            val bitmap = Bitmap.createBitmap(
+                displayMetrics.widthPixels,
+                displayMetrics.heightPixels,
+                Bitmap.Config.ARGB_8888
+            )
+            canvas = Canvas(bitmap)
             canvasDelegate = CanvasDelegate(
                 canvasCommandRecorder,
-                canvas
+                canvas!!
             )
         }
 
         // reset the canvas first, as it will be re-used for clipping operations
         canvas!!.restoreToCount(1)
-
         canvasCommandRecorder.beginFrame()
 
         val location = IntArray(2)
         val items = LinkedList<View?>()
-        items.add(this)
+        items.add(view)
         while (!items.isEmpty()) {
             val item = items.removeFirst()
             if (item != null && item.visibility == View.VISIBLE) {

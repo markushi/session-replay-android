@@ -1,8 +1,10 @@
 package io.sentry.replay.android
 
+import android.graphics.Canvas
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
 import android.util.Log
+import android.view.View
 import java.lang.reflect.Field
 import java.lang.reflect.Method
 
@@ -29,6 +31,15 @@ object PaintHelper {
     private val porterDuffColorFilterClass =
         forName.invoke(null, "android.graphics.PorterDuffColorFilter") as Class<*>
 
+    val onDrawMethod = View::class.java.getDeclaredMethod("onDraw", Canvas::class.java).also {
+        it.isAccessible = true
+    }
+
+    fun executeOnDraw(view: View, canvas: Canvas) {
+        // performs drawing operations for a view, without their childs
+        view.background?.draw(canvas)
+        onDrawMethod.invoke(view, canvas)
+    }
 
     fun decodePorterDuffcolorFilter(colorFilter: PorterDuffColorFilter): Pair<Int, PorterDuff.Mode>? {
         try {

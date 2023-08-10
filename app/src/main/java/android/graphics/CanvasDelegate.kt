@@ -9,9 +9,6 @@ import io.sentry.replay.android.recorder.Recorder
 
 class CanvasDelegate(
     private val recorder: Recorder,
-    private val width: Int,
-    private val height: Int,
-    private val density: Int,
     private val original: Canvas,
 ) : Canvas() {
 
@@ -37,11 +34,11 @@ class CanvasDelegate(
 
     override fun isOpaque(): Boolean = super.isOpaque()
 
-    override fun getWidth(): Int = width
+    override fun getWidth(): Int = original.width
 
-    override fun getHeight(): Int = height
+    override fun getHeight(): Int = original.height
 
-    override fun getDensity(): Int = density
+    override fun getDensity(): Int = original.density
 
     override fun setDensity(density: Int) {
         // no-op
@@ -64,7 +61,6 @@ class CanvasDelegate(
     fun save(saveFlags: Int): Int {
         return save()
     }
-
 
     override fun saveLayer(bounds: RectF?, paint: Paint?, saveFlags: Int): Int {
         Log.d(TAG, "TODO saveLayer: ")
@@ -153,38 +149,43 @@ class CanvasDelegate(
     }
 
     override fun scale(sx: Float, sy: Float) {
+        // Log.d(TAG, "TODO scale: ")
+        recorder.scale(sx, sy)
         original.scale(sx, sy)
-        Log.d(TAG, "TODO scale: ")
     }
 
     override fun rotate(degrees: Float) {
+        // Log.d(TAG, "TODO rotate: ")
+        recorder.rotate(degrees);
         original.rotate(degrees)
-        Log.d(TAG, "TODO rotate: ")
     }
 
     override fun skew(sx: Float, sy: Float) {
+        // Log.d(TAG, "TODO skew: ")
+        recorder.skew(sx, sy)
         original.skew(sx, sy)
-        Log.d(TAG, "TODO skew: ")
     }
 
     override fun concat(matrix: Matrix?) {
+        // Log.d(TAG, "concat: ")
         recorder.concat(matrix!!)
         original.concat(matrix)
-//         Log.d(TAG, "concat: ")
     }
 
     override fun setMatrix(matrix: Matrix?) {
+        // Log.d(TAG, "TODO setMatrix: ")
+        recorder.setMatrix(matrix)
         original.setMatrix(matrix)
-        Log.d(TAG, "TODO setMatrix: ")
     }
 
     override fun getMatrix(ctm: Matrix) {
+        // Log.d(TAG, "TODO getMatrix: ")
         original.getMatrix(ctm)
-        Log.d(TAG, "TODO getMatrix: ")
     }
 
     override fun clipRect(rect: RectF, op: Region.Op): Boolean {
         Log.d(TAG, "TODO clipRect: rect: RectF, op: Region.Op")
+
         return original.clipRect(rect, op)
     }
 
@@ -194,13 +195,24 @@ class CanvasDelegate(
     }
 
     override fun clipRect(rect: RectF): Boolean {
-        Log.d(TAG, "TODO clipRect: rect: RectF")
+        // Log.d(TAG, "TODO clipRect: rect: Rect")
+        recorder.clipRectF(
+            rect.left,
+            rect.top,
+            rect.right,
+            rect.bottom
+        )
         return original.clipRect(rect)
     }
 
     override fun clipRect(rect: Rect): Boolean {
-        Log.d(TAG, "TODO clipRect: rect: Rect")
-        recorder.clipRect(rect)
+        // Log.d(TAG, "TODO clipRect: rect: Rect")
+        recorder.clipRectF(
+            rect.left.toFloat(),
+            rect.top.toFloat(),
+            rect.right.toFloat(),
+            rect.bottom.toFloat()
+        )
         return original.clipRect(rect)
     }
 
@@ -216,14 +228,14 @@ class CanvasDelegate(
     }
 
     override fun clipRect(left: Float, top: Float, right: Float, bottom: Float): Boolean {
-        recorder.clipRectF(left, top, right, bottom)
         // Log.d(TAG, "clipRect: left: Float, top: Float, right: Float, bottom: Float")
+        recorder.clipRectF(left, top, right, bottom)
         return original.clipRect(left, top, right, bottom)
     }
 
     override fun clipRect(left: Int, top: Int, right: Int, bottom: Int): Boolean {
-        recorder.clipRect(left, top, right, bottom)
         // Log.d(TAG, "TODO clipRect: left: Int, top: Int, right: Int, bottom: Int")
+        recorder.clipRectF(left.toFloat(), top.toFloat(), right.toFloat(), bottom.toFloat())
         return original.clipRect(left, top, right, bottom)
     }
 
@@ -560,7 +572,7 @@ class CanvasDelegate(
 
     override fun drawRoundRect(rect: RectF, rx: Float, ry: Float, paint: Paint) {
         // Log.d(TAG, "drawRoundRect: 0")
-        recorder.drawRoundRect(rect, rx, ry, paint)
+        recorder.drawRoundRect(rect.left, rect.top, rect.right, rect.bottom, rx, ry, paint)
     }
 
     override fun drawRoundRect(
@@ -572,8 +584,8 @@ class CanvasDelegate(
         ry: Float,
         paint: Paint
     ) {
-        Log.d(TAG, "drawRoundRect: 1")
-        // original.drawRoundRect(left, top, right, bottom, rx, ry, paint)
+        // Log.d(TAG, "drawRoundRect: 1")
+        recorder.drawRoundRect(left, top, right, bottom, rx, ry, paint)
     }
 
     override fun drawDoubleRoundRect(
@@ -620,10 +632,10 @@ class CanvasDelegate(
         y: Float,
         paint: Paint
     ) {
-        Log.d(
-            TAG,
-            "drawText: text: CharArray, index: Int, count: Int, x: Float, y: Float, paint: Paint"
-        )
+        // Log.d(
+        // TAG,
+        // "drawText: text: CharArray, index: Int, count: Int, x: Float, y: Float, paint: Paint"
+        // )
         recorder.drawText(text.toString(), 0, text.size, x, y, paint)
     }
 
@@ -633,7 +645,7 @@ class CanvasDelegate(
     }
 
     override fun drawText(text: String, start: Int, end: Int, x: Float, y: Float, paint: Paint) {
-//        Log.d(TAG, "drawText: text: String, start: Int, end: Int, x: Float, y: Float, paint: Paint")
+        // Log.d(TAG, "drawText: text: String, start: Int, end: Int, x: Float, y: Float, paint: Paint")
         recorder.drawText(text, start, end, x, y, paint)
     }
 
