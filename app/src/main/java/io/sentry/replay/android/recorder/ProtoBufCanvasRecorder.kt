@@ -6,6 +6,7 @@ import android.graphics.Rect
 import android.os.SystemClock
 import android.util.Log
 import androidx.core.graphics.values
+import io.sentry.replay.android.paintToProto
 import io.sentry.replay.android.proto.ReplayOuterClass
 import io.sentry.replay.android.proto.ReplayOuterClass.CoordinateF
 

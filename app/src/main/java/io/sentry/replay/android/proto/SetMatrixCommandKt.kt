@@ -3,97 +3,124 @@
 
 // Generated files should ignore deprecation warnings
 @file:Suppress("DEPRECATION")
+
 package io.sentry.replay.android.proto;
 
 @kotlin.jvm.JvmName("-initializesetMatrixCommand")
 public inline fun setMatrixCommand(block: io.sentry.replay.android.proto.SetMatrixCommandKt.Dsl.() -> kotlin.Unit): io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand =
-  io.sentry.replay.android.proto.SetMatrixCommandKt.Dsl._create(io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.newBuilder()).apply { block() }._build()
+    io.sentry.replay.android.proto.SetMatrixCommandKt.Dsl._create(io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.newBuilder())
+        .apply { block() }._build()
+
 /**
  * Protobuf type `io.sentry.replay.android.proto.SetMatrixCommand`
  */
 public object SetMatrixCommandKt {
-  @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-  @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.Builder
-  ) {
-    public companion object {
-      @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
-      internal fun _create(builder: io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.Builder): Dsl = Dsl(builder)
-    }
-
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
-    internal fun _build(): io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand = _builder.build()
-
-    /**
-     * An uninstantiable, behaviorless type to represent the field in
-     * generics.
-     */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class MatrixProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
-    /**
-     * `repeated float matrix = 1;`
-     */
-     public val matrix: com.google.protobuf.kotlin.DslList<kotlin.Float, MatrixProxy>
-      @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
-        _builder.getMatrixList()
-      )
-    /**
-     * `repeated float matrix = 1;`
-     * @param value The matrix to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addMatrix")
-    public fun com.google.protobuf.kotlin.DslList<kotlin.Float, MatrixProxy>.add(value: kotlin.Float) {
-      _builder.addMatrix(value)
-    }/**
-     * `repeated float matrix = 1;`
-     * @param value The matrix to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignMatrix")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Float, MatrixProxy>.plusAssign(value: kotlin.Float) {
-      add(value)
-    }/**
-     * `repeated float matrix = 1;`
-     * @param values The matrix to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllMatrix")
-    public fun com.google.protobuf.kotlin.DslList<kotlin.Float, MatrixProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Float>) {
-      _builder.addAllMatrix(values)
-    }/**
-     * `repeated float matrix = 1;`
-     * @param values The matrix to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllMatrix")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Float, MatrixProxy>.plusAssign(values: kotlin.collections.Iterable<kotlin.Float>) {
-      addAll(values)
-    }/**
-     * `repeated float matrix = 1;`
-     * @param index The index to set the value at.
-     * @param value The matrix to set.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setMatrix")
-    public operator fun com.google.protobuf.kotlin.DslList<kotlin.Float, MatrixProxy>.set(index: kotlin.Int, value: kotlin.Float) {
-      _builder.setMatrix(index, value)
-    }/**
-     * `repeated float matrix = 1;`
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearMatrix")
-    public fun com.google.protobuf.kotlin.DslList<kotlin.Float, MatrixProxy>.clear() {
-      _builder.clearMatrix()
-    }}
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+        private val _builder: io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.Builder
+    ) {
+        public companion object {
+            @kotlin.jvm.JvmSynthetic
+            @kotlin.PublishedApi
+            internal fun _create(builder: io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.Builder): Dsl =
+                Dsl(builder)
+        }
+
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _build(): io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand =
+            _builder.build()
+
+        /**
+         * An uninstantiable, behaviorless type to represent the field in
+         * generics.
+         */
+        @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+        public class MatrixProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+
+        /**
+         * `repeated float matrix = 1;`
+         */
+        public val matrix: com.google.protobuf.kotlin.DslList<kotlin.Float, MatrixProxy>
+            @kotlin.jvm.JvmSynthetic
+            get() = com.google.protobuf.kotlin.DslList(
+                _builder.getMatrixList()
+            )
+
+        /**
+         * `repeated float matrix = 1;`
+         * @param value The matrix to add.
+         */
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.jvm.JvmName("addMatrix")
+        public fun com.google.protobuf.kotlin.DslList<kotlin.Float, MatrixProxy>.add(value: kotlin.Float) {
+            _builder.addMatrix(value)
+        }
+
+        /**
+         * `repeated float matrix = 1;`
+         * @param value The matrix to add.
+         */
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.jvm.JvmName("plusAssignMatrix")
+        @Suppress("NOTHING_TO_INLINE")
+        public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Float, MatrixProxy>.plusAssign(
+            value: kotlin.Float
+        ) {
+            add(value)
+        }
+
+        /**
+         * `repeated float matrix = 1;`
+         * @param values The matrix to add.
+         */
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.jvm.JvmName("addAllMatrix")
+        public fun com.google.protobuf.kotlin.DslList<kotlin.Float, MatrixProxy>.addAll(values: kotlin.collections.Iterable<kotlin.Float>) {
+            _builder.addAllMatrix(values)
+        }
+
+        /**
+         * `repeated float matrix = 1;`
+         * @param values The matrix to add.
+         */
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.jvm.JvmName("plusAssignAllMatrix")
+        @Suppress("NOTHING_TO_INLINE")
+        public inline operator fun com.google.protobuf.kotlin.DslList<kotlin.Float, MatrixProxy>.plusAssign(
+            values: kotlin.collections.Iterable<kotlin.Float>
+        ) {
+            addAll(values)
+        }
+
+        /**
+         * `repeated float matrix = 1;`
+         * @param index The index to set the value at.
+         * @param value The matrix to set.
+         */
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.jvm.JvmName("setMatrix")
+        public operator fun com.google.protobuf.kotlin.DslList<kotlin.Float, MatrixProxy>.set(
+            index: kotlin.Int,
+            value: kotlin.Float
+        ) {
+            _builder.setMatrix(index, value)
+        }
+
+        /**
+         * `repeated float matrix = 1;`
+         */
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.jvm.JvmName("clearMatrix")
+        public fun com.google.protobuf.kotlin.DslList<kotlin.Float, MatrixProxy>.clear() {
+            _builder.clearMatrix()
+        }
+    }
 }
+
 @kotlin.jvm.JvmSynthetic
 public inline fun io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand.copy(block: io.sentry.replay.android.proto.SetMatrixCommandKt.Dsl.() -> kotlin.Unit): io.sentry.replay.android.proto.ReplayOuterClass.SetMatrixCommand =
-  io.sentry.replay.android.proto.SetMatrixCommandKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+    io.sentry.replay.android.proto.SetMatrixCommandKt.Dsl._create(this.toBuilder())
+        .apply { block() }._build()
 

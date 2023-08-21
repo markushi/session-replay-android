@@ -3,73 +3,82 @@
 
 // Generated files should ignore deprecation warnings
 @file:Suppress("DEPRECATION")
+
 package io.sentry.replay.android.proto;
 
 @kotlin.jvm.JvmName("-initializeporterDuffColorFilter")
 public inline fun porterDuffColorFilter(block: io.sentry.replay.android.proto.PorterDuffColorFilterKt.Dsl.() -> kotlin.Unit): io.sentry.replay.android.proto.ReplayOuterClass.PorterDuffColorFilter =
-  io.sentry.replay.android.proto.PorterDuffColorFilterKt.Dsl._create(io.sentry.replay.android.proto.ReplayOuterClass.PorterDuffColorFilter.newBuilder()).apply { block() }._build()
+    io.sentry.replay.android.proto.PorterDuffColorFilterKt.Dsl._create(io.sentry.replay.android.proto.ReplayOuterClass.PorterDuffColorFilter.newBuilder())
+        .apply { block() }._build()
+
 /**
  * Protobuf type `io.sentry.replay.android.proto.PorterDuffColorFilter`
  */
 public object PorterDuffColorFilterKt {
-  @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-  @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: io.sentry.replay.android.proto.ReplayOuterClass.PorterDuffColorFilter.Builder
-  ) {
-    public companion object {
-      @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
-      internal fun _create(builder: io.sentry.replay.android.proto.ReplayOuterClass.PorterDuffColorFilter.Builder): Dsl = Dsl(builder)
-    }
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+        private val _builder: io.sentry.replay.android.proto.ReplayOuterClass.PorterDuffColorFilter.Builder
+    ) {
+        public companion object {
+            @kotlin.jvm.JvmSynthetic
+            @kotlin.PublishedApi
+            internal fun _create(builder: io.sentry.replay.android.proto.ReplayOuterClass.PorterDuffColorFilter.Builder): Dsl =
+                Dsl(builder)
+        }
 
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
-    internal fun _build(): io.sentry.replay.android.proto.ReplayOuterClass.PorterDuffColorFilter = _builder.build()
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _build(): io.sentry.replay.android.proto.ReplayOuterClass.PorterDuffColorFilter =
+            _builder.build()
 
-    /**
-     * `int32 color = 1;`
-     */
-    public var color: kotlin.Int
-      @JvmName("getColor")
-      get() = _builder.getColor()
-      @JvmName("setColor")
-      set(value) {
-        _builder.setColor(value)
-      }
-    /**
-     * `int32 color = 1;`
-     */
-    public fun clearColor() {
-      _builder.clearColor()
-    }
+        /**
+         * `int32 color = 1;`
+         */
+        public var color: kotlin.Int
+            @JvmName("getColor")
+            get() = _builder.getColor()
+            @JvmName("setColor")
+            set(value) {
+                _builder.setColor(value)
+            }
 
-    /**
-     * `.io.sentry.replay.android.proto.PorterDuffMode mode = 2;`
-     */
-    public var mode: io.sentry.replay.android.proto.ReplayOuterClass.PorterDuffMode
-      @JvmName("getMode")
-      get() = _builder.getMode()
-      @JvmName("setMode")
-      set(value) {
-        _builder.setMode(value)
-      }
-    public var modeValue: kotlin.Int
-      @JvmName("getModeValue")
-      get() = _builder.getModeValue()
-      @JvmName("setModeValue")
-      set(value) {
-        _builder.setModeValue(value)
-      }
-    /**
-     * `.io.sentry.replay.android.proto.PorterDuffMode mode = 2;`
-     */
-    public fun clearMode() {
-      _builder.clearMode()
+        /**
+         * `int32 color = 1;`
+         */
+        public fun clearColor() {
+            _builder.clearColor()
+        }
+
+        /**
+         * `.io.sentry.replay.android.proto.PorterDuffMode mode = 2;`
+         */
+        public var mode: io.sentry.replay.android.proto.ReplayOuterClass.PorterDuffMode
+            @JvmName("getMode")
+            get() = _builder.getMode()
+            @JvmName("setMode")
+            set(value) {
+                _builder.setMode(value)
+            }
+        public var modeValue: kotlin.Int
+            @JvmName("getModeValue")
+            get() = _builder.getModeValue()
+            @JvmName("setModeValue")
+            set(value) {
+                _builder.setModeValue(value)
+            }
+
+        /**
+         * `.io.sentry.replay.android.proto.PorterDuffMode mode = 2;`
+         */
+        public fun clearMode() {
+            _builder.clearMode()
+        }
     }
-  }
 }
+
 @kotlin.jvm.JvmSynthetic
 public inline fun io.sentry.replay.android.proto.ReplayOuterClass.PorterDuffColorFilter.copy(block: io.sentry.replay.android.proto.PorterDuffColorFilterKt.Dsl.() -> kotlin.Unit): io.sentry.replay.android.proto.ReplayOuterClass.PorterDuffColorFilter =
-  io.sentry.replay.android.proto.PorterDuffColorFilterKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+    io.sentry.replay.android.proto.PorterDuffColorFilterKt.Dsl._create(this.toBuilder())
+        .apply { block() }._build()
 

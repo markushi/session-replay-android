@@ -3,103 +3,115 @@
 
 // Generated files should ignore deprecation warnings
 @file:Suppress("DEPRECATION")
+
 package io.sentry.replay.android.proto;
 
 @kotlin.jvm.JvmName("-initializedrawTextCommand")
 public inline fun drawTextCommand(block: io.sentry.replay.android.proto.DrawTextCommandKt.Dsl.() -> kotlin.Unit): io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand =
-  io.sentry.replay.android.proto.DrawTextCommandKt.Dsl._create(io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.newBuilder()).apply { block() }._build()
+    io.sentry.replay.android.proto.DrawTextCommandKt.Dsl._create(io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.newBuilder())
+        .apply { block() }._build()
+
 /**
  * Protobuf type `io.sentry.replay.android.proto.DrawTextCommand`
  */
 public object DrawTextCommandKt {
-  @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-  @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.Builder
-  ) {
-    public companion object {
-      @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
-      internal fun _create(builder: io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.Builder): Dsl = Dsl(builder)
-    }
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+        private val _builder: io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.Builder
+    ) {
+        public companion object {
+            @kotlin.jvm.JvmSynthetic
+            @kotlin.PublishedApi
+            internal fun _create(builder: io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.Builder): Dsl =
+                Dsl(builder)
+        }
 
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
-    internal fun _build(): io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand = _builder.build()
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _build(): io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand =
+            _builder.build()
 
-    /**
-     * `string text = 1;`
-     */
-    public var text: kotlin.String
-      @JvmName("getText")
-      get() = _builder.getText()
-      @JvmName("setText")
-      set(value) {
-        _builder.setText(value)
-      }
-    /**
-     * `string text = 1;`
-     */
-    public fun clearText() {
-      _builder.clearText()
-    }
+        /**
+         * `string text = 1;`
+         */
+        public var text: kotlin.String
+            @JvmName("getText")
+            get() = _builder.getText()
+            @JvmName("setText")
+            set(value) {
+                _builder.setText(value)
+            }
 
-    /**
-     * `.io.sentry.replay.android.proto.CoordinateF position = 2;`
-     */
-    public var position: io.sentry.replay.android.proto.ReplayOuterClass.CoordinateF
-      @JvmName("getPosition")
-      get() = _builder.getPosition()
-      @JvmName("setPosition")
-      set(value) {
-        _builder.setPosition(value)
-      }
-    /**
-     * `.io.sentry.replay.android.proto.CoordinateF position = 2;`
-     */
-    public fun clearPosition() {
-      _builder.clearPosition()
-    }
-    /**
-     * `.io.sentry.replay.android.proto.CoordinateF position = 2;`
-     * @return Whether the position field is set.
-     */
-    public fun hasPosition(): kotlin.Boolean {
-      return _builder.hasPosition()
-    }
+        /**
+         * `string text = 1;`
+         */
+        public fun clearText() {
+            _builder.clearText()
+        }
 
-    /**
-     * `.io.sentry.replay.android.proto.Paint paint = 3;`
-     */
-    public var paint: io.sentry.replay.android.proto.ReplayOuterClass.Paint
-      @JvmName("getPaint")
-      get() = _builder.getPaint()
-      @JvmName("setPaint")
-      set(value) {
-        _builder.setPaint(value)
-      }
-    /**
-     * `.io.sentry.replay.android.proto.Paint paint = 3;`
-     */
-    public fun clearPaint() {
-      _builder.clearPaint()
+        /**
+         * `.io.sentry.replay.android.proto.CoordinateF position = 2;`
+         */
+        public var position: io.sentry.replay.android.proto.ReplayOuterClass.CoordinateF
+            @JvmName("getPosition")
+            get() = _builder.getPosition()
+            @JvmName("setPosition")
+            set(value) {
+                _builder.setPosition(value)
+            }
+
+        /**
+         * `.io.sentry.replay.android.proto.CoordinateF position = 2;`
+         */
+        public fun clearPosition() {
+            _builder.clearPosition()
+        }
+
+        /**
+         * `.io.sentry.replay.android.proto.CoordinateF position = 2;`
+         * @return Whether the position field is set.
+         */
+        public fun hasPosition(): kotlin.Boolean {
+            return _builder.hasPosition()
+        }
+
+        /**
+         * `.io.sentry.replay.android.proto.Paint paint = 3;`
+         */
+        public var paint: io.sentry.replay.android.proto.ReplayOuterClass.Paint
+            @JvmName("getPaint")
+            get() = _builder.getPaint()
+            @JvmName("setPaint")
+            set(value) {
+                _builder.setPaint(value)
+            }
+
+        /**
+         * `.io.sentry.replay.android.proto.Paint paint = 3;`
+         */
+        public fun clearPaint() {
+            _builder.clearPaint()
+        }
+
+        /**
+         * `.io.sentry.replay.android.proto.Paint paint = 3;`
+         * @return Whether the paint field is set.
+         */
+        public fun hasPaint(): kotlin.Boolean {
+            return _builder.hasPaint()
+        }
     }
-    /**
-     * `.io.sentry.replay.android.proto.Paint paint = 3;`
-     * @return Whether the paint field is set.
-     */
-    public fun hasPaint(): kotlin.Boolean {
-      return _builder.hasPaint()
-    }
-  }
 }
+
 @kotlin.jvm.JvmSynthetic
 public inline fun io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand.copy(block: io.sentry.replay.android.proto.DrawTextCommandKt.Dsl.() -> kotlin.Unit): io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommand =
-  io.sentry.replay.android.proto.DrawTextCommandKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+    io.sentry.replay.android.proto.DrawTextCommandKt.Dsl._create(this.toBuilder()).apply { block() }
+        ._build()
 
 public val io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommandOrBuilder.positionOrNull: io.sentry.replay.android.proto.ReplayOuterClass.CoordinateF?
-  get() = if (hasPosition()) getPosition() else null
+    get() = if (hasPosition()) getPosition() else null
 
 public val io.sentry.replay.android.proto.ReplayOuterClass.DrawTextCommandOrBuilder.paintOrNull: io.sentry.replay.android.proto.ReplayOuterClass.Paint?
-  get() = if (hasPaint()) getPaint() else null
+    get() = if (hasPaint()) getPaint() else null
 

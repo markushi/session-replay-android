@@ -3,5 +3,6 @@
 
 // Generated files should ignore deprecation warnings
 @file:Suppress("DEPRECATION")
+
 package io.sentry.replay.android.proto;
 

@@ -20,13 +20,14 @@ class ViewRecorder : Choreographer.FrameCallback {
 
     fun setView(view: View?) {
         this.view = view
-        Choreographer.getInstance().postFrameCallback(this)
+        Choreographer.getInstance().postFrameCallbackDelayed(this, 0)
     }
 
     override fun doFrame(frameTimeNanos: Long) {
         view?.let {
+            // Log.d("TAG", "doFrame: $frameTimeNanos")
             captureFrame(it)
-            Choreographer.getInstance().postFrameCallback(this@ViewRecorder)
+            Choreographer.getInstance().postFrameCallbackDelayed(this, 1000)
         }
     }
 
@@ -71,7 +72,7 @@ class ViewRecorder : Choreographer.FrameCallback {
                     canvasCommandRecorder.translate(
                         x, y
                     )
-                    PaintHelper.executeOnDraw(item, canvasDelegate!!)
+                    ViewHelper.executeOnDraw(item, canvasDelegate!!)
                     canvasDelegate!!.restoreToCount(saveCount)
                 }
 

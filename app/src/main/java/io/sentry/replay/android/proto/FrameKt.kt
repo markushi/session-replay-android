@@ -3,121 +3,146 @@
 
 // Generated files should ignore deprecation warnings
 @file:Suppress("DEPRECATION")
+
 package io.sentry.replay.android.proto;
 
 @kotlin.jvm.JvmName("-initializeframe")
 public inline fun frame(block: io.sentry.replay.android.proto.FrameKt.Dsl.() -> kotlin.Unit): io.sentry.replay.android.proto.ReplayOuterClass.Frame =
-  io.sentry.replay.android.proto.FrameKt.Dsl._create(io.sentry.replay.android.proto.ReplayOuterClass.Frame.newBuilder()).apply { block() }._build()
+    io.sentry.replay.android.proto.FrameKt.Dsl._create(io.sentry.replay.android.proto.ReplayOuterClass.Frame.newBuilder())
+        .apply { block() }._build()
+
 /**
  * Protobuf type `io.sentry.replay.android.proto.Frame`
  */
 public object FrameKt {
-  @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-  @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: io.sentry.replay.android.proto.ReplayOuterClass.Frame.Builder
-  ) {
-    public companion object {
-      @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
-      internal fun _create(builder: io.sentry.replay.android.proto.ReplayOuterClass.Frame.Builder): Dsl = Dsl(builder)
-    }
-
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
-    internal fun _build(): io.sentry.replay.android.proto.ReplayOuterClass.Frame = _builder.build()
-
-    /**
-     * `int64 time = 1;`
-     */
-    public var time: kotlin.Long
-      @JvmName("getTime")
-      get() = _builder.getTime()
-      @JvmName("setTime")
-      set(value) {
-        _builder.setTime(value)
-      }
-    /**
-     * `int64 time = 1;`
-     */
-    public fun clearTime() {
-      _builder.clearTime()
-    }
-
-    /**
-     * An uninstantiable, behaviorless type to represent the field in
-     * generics.
-     */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class CommandsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
-    /**
-     * `repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;`
-     */
-     public val commands: com.google.protobuf.kotlin.DslList<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, CommandsProxy>
-      @kotlin.jvm.JvmSynthetic
-      get() = com.google.protobuf.kotlin.DslList(
-        _builder.getCommandsList()
-      )
-    /**
-     * `repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;`
-     * @param value The commands to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addCommands")
-    public fun com.google.protobuf.kotlin.DslList<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, CommandsProxy>.add(value: io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand) {
-      _builder.addCommands(value)
-    }
-    /**
-     * `repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;`
-     * @param value The commands to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignCommands")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, CommandsProxy>.plusAssign(value: io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand) {
-      add(value)
-    }
-    /**
-     * `repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;`
-     * @param values The commands to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("addAllCommands")
-    public fun com.google.protobuf.kotlin.DslList<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, CommandsProxy>.addAll(values: kotlin.collections.Iterable<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand>) {
-      _builder.addAllCommands(values)
-    }
-    /**
-     * `repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;`
-     * @param values The commands to add.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("plusAssignAllCommands")
-    @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, CommandsProxy>.plusAssign(values: kotlin.collections.Iterable<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand>) {
-      addAll(values)
-    }
-    /**
-     * `repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;`
-     * @param index The index to set the value at.
-     * @param value The commands to set.
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("setCommands")
-    public operator fun com.google.protobuf.kotlin.DslList<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, CommandsProxy>.set(index: kotlin.Int, value: io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand) {
-      _builder.setCommands(index, value)
-    }
-    /**
-     * `repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;`
-     */
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.jvm.JvmName("clearCommands")
-    public fun com.google.protobuf.kotlin.DslList<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, CommandsProxy>.clear() {
-      _builder.clearCommands()
-    }
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+        private val _builder: io.sentry.replay.android.proto.ReplayOuterClass.Frame.Builder
+    ) {
+        public companion object {
+            @kotlin.jvm.JvmSynthetic
+            @kotlin.PublishedApi
+            internal fun _create(builder: io.sentry.replay.android.proto.ReplayOuterClass.Frame.Builder): Dsl =
+                Dsl(builder)
+        }
 
-  }
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _build(): io.sentry.replay.android.proto.ReplayOuterClass.Frame =
+            _builder.build()
+
+        /**
+         * `int64 time = 1;`
+         */
+        public var time: kotlin.Long
+            @JvmName("getTime")
+            get() = _builder.getTime()
+            @JvmName("setTime")
+            set(value) {
+                _builder.setTime(value)
+            }
+
+        /**
+         * `int64 time = 1;`
+         */
+        public fun clearTime() {
+            _builder.clearTime()
+        }
+
+        /**
+         * An uninstantiable, behaviorless type to represent the field in
+         * generics.
+         */
+        @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+        public class CommandsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+
+        /**
+         * `repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;`
+         */
+        public val commands: com.google.protobuf.kotlin.DslList<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, CommandsProxy>
+            @kotlin.jvm.JvmSynthetic
+            get() = com.google.protobuf.kotlin.DslList(
+                _builder.getCommandsList()
+            )
+
+        /**
+         * `repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;`
+         * @param value The commands to add.
+         */
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.jvm.JvmName("addCommands")
+        public fun com.google.protobuf.kotlin.DslList<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, CommandsProxy>.add(
+            value: io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand
+        ) {
+            _builder.addCommands(value)
+        }
+
+        /**
+         * `repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;`
+         * @param value The commands to add.
+         */
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.jvm.JvmName("plusAssignCommands")
+        @Suppress("NOTHING_TO_INLINE")
+        public inline operator fun com.google.protobuf.kotlin.DslList<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, CommandsProxy>.plusAssign(
+            value: io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand
+        ) {
+            add(value)
+        }
+
+        /**
+         * `repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;`
+         * @param values The commands to add.
+         */
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.jvm.JvmName("addAllCommands")
+        public fun com.google.protobuf.kotlin.DslList<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, CommandsProxy>.addAll(
+            values: kotlin.collections.Iterable<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand>
+        ) {
+            _builder.addAllCommands(values)
+        }
+
+        /**
+         * `repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;`
+         * @param values The commands to add.
+         */
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.jvm.JvmName("plusAssignAllCommands")
+        @Suppress("NOTHING_TO_INLINE")
+        public inline operator fun com.google.protobuf.kotlin.DslList<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, CommandsProxy>.plusAssign(
+            values: kotlin.collections.Iterable<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand>
+        ) {
+            addAll(values)
+        }
+
+        /**
+         * `repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;`
+         * @param index The index to set the value at.
+         * @param value The commands to set.
+         */
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.jvm.JvmName("setCommands")
+        public operator fun com.google.protobuf.kotlin.DslList<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, CommandsProxy>.set(
+            index: kotlin.Int,
+            value: io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand
+        ) {
+            _builder.setCommands(index, value)
+        }
+
+        /**
+         * `repeated .io.sentry.replay.android.proto.DrawingCommand commands = 2;`
+         */
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.jvm.JvmName("clearCommands")
+        public fun com.google.protobuf.kotlin.DslList<io.sentry.replay.android.proto.ReplayOuterClass.DrawingCommand, CommandsProxy>.clear() {
+            _builder.clearCommands()
+        }
+
+    }
 }
+
 @kotlin.jvm.JvmSynthetic
 public inline fun io.sentry.replay.android.proto.ReplayOuterClass.Frame.copy(block: io.sentry.replay.android.proto.FrameKt.Dsl.() -> kotlin.Unit): io.sentry.replay.android.proto.ReplayOuterClass.Frame =
-  io.sentry.replay.android.proto.FrameKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+    io.sentry.replay.android.proto.FrameKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 

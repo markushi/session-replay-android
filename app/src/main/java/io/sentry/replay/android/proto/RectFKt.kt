@@ -3,100 +3,110 @@
 
 // Generated files should ignore deprecation warnings
 @file:Suppress("DEPRECATION")
+
 package io.sentry.replay.android.proto;
 
 @kotlin.jvm.JvmName("-initializerectF")
 public inline fun rectF(block: io.sentry.replay.android.proto.RectFKt.Dsl.() -> kotlin.Unit): io.sentry.replay.android.proto.ReplayOuterClass.RectF =
-  io.sentry.replay.android.proto.RectFKt.Dsl._create(io.sentry.replay.android.proto.ReplayOuterClass.RectF.newBuilder()).apply { block() }._build()
+    io.sentry.replay.android.proto.RectFKt.Dsl._create(io.sentry.replay.android.proto.ReplayOuterClass.RectF.newBuilder())
+        .apply { block() }._build()
+
 /**
  * Protobuf type `io.sentry.replay.android.proto.RectF`
  */
 public object RectFKt {
-  @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-  @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: io.sentry.replay.android.proto.ReplayOuterClass.RectF.Builder
-  ) {
-    public companion object {
-      @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
-      internal fun _create(builder: io.sentry.replay.android.proto.ReplayOuterClass.RectF.Builder): Dsl = Dsl(builder)
-    }
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+        private val _builder: io.sentry.replay.android.proto.ReplayOuterClass.RectF.Builder
+    ) {
+        public companion object {
+            @kotlin.jvm.JvmSynthetic
+            @kotlin.PublishedApi
+            internal fun _create(builder: io.sentry.replay.android.proto.ReplayOuterClass.RectF.Builder): Dsl =
+                Dsl(builder)
+        }
 
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
-    internal fun _build(): io.sentry.replay.android.proto.ReplayOuterClass.RectF = _builder.build()
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _build(): io.sentry.replay.android.proto.ReplayOuterClass.RectF =
+            _builder.build()
 
-    /**
-     * `float left = 1;`
-     */
-    public var left: kotlin.Float
-      @JvmName("getLeft")
-      get() = _builder.getLeft()
-      @JvmName("setLeft")
-      set(value) {
-        _builder.setLeft(value)
-      }
-    /**
-     * `float left = 1;`
-     */
-    public fun clearLeft() {
-      _builder.clearLeft()
-    }
+        /**
+         * `float left = 1;`
+         */
+        public var left: kotlin.Float
+            @JvmName("getLeft")
+            get() = _builder.getLeft()
+            @JvmName("setLeft")
+            set(value) {
+                _builder.setLeft(value)
+            }
 
-    /**
-     * `float right = 2;`
-     */
-    public var right: kotlin.Float
-      @JvmName("getRight")
-      get() = _builder.getRight()
-      @JvmName("setRight")
-      set(value) {
-        _builder.setRight(value)
-      }
-    /**
-     * `float right = 2;`
-     */
-    public fun clearRight() {
-      _builder.clearRight()
-    }
+        /**
+         * `float left = 1;`
+         */
+        public fun clearLeft() {
+            _builder.clearLeft()
+        }
 
-    /**
-     * `float top = 3;`
-     */
-    public var top: kotlin.Float
-      @JvmName("getTop")
-      get() = _builder.getTop()
-      @JvmName("setTop")
-      set(value) {
-        _builder.setTop(value)
-      }
-    /**
-     * `float top = 3;`
-     */
-    public fun clearTop() {
-      _builder.clearTop()
-    }
+        /**
+         * `float right = 2;`
+         */
+        public var right: kotlin.Float
+            @JvmName("getRight")
+            get() = _builder.getRight()
+            @JvmName("setRight")
+            set(value) {
+                _builder.setRight(value)
+            }
 
-    /**
-     * `float bottom = 4;`
-     */
-    public var bottom: kotlin.Float
-      @JvmName("getBottom")
-      get() = _builder.getBottom()
-      @JvmName("setBottom")
-      set(value) {
-        _builder.setBottom(value)
-      }
-    /**
-     * `float bottom = 4;`
-     */
-    public fun clearBottom() {
-      _builder.clearBottom()
+        /**
+         * `float right = 2;`
+         */
+        public fun clearRight() {
+            _builder.clearRight()
+        }
+
+        /**
+         * `float top = 3;`
+         */
+        public var top: kotlin.Float
+            @JvmName("getTop")
+            get() = _builder.getTop()
+            @JvmName("setTop")
+            set(value) {
+                _builder.setTop(value)
+            }
+
+        /**
+         * `float top = 3;`
+         */
+        public fun clearTop() {
+            _builder.clearTop()
+        }
+
+        /**
+         * `float bottom = 4;`
+         */
+        public var bottom: kotlin.Float
+            @JvmName("getBottom")
+            get() = _builder.getBottom()
+            @JvmName("setBottom")
+            set(value) {
+                _builder.setBottom(value)
+            }
+
+        /**
+         * `float bottom = 4;`
+         */
+        public fun clearBottom() {
+            _builder.clearBottom()
+        }
     }
-  }
 }
+
 @kotlin.jvm.JvmSynthetic
 public inline fun io.sentry.replay.android.proto.ReplayOuterClass.RectF.copy(block: io.sentry.replay.android.proto.RectFKt.Dsl.() -> kotlin.Unit): io.sentry.replay.android.proto.ReplayOuterClass.RectF =
-  io.sentry.replay.android.proto.RectFKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+    io.sentry.replay.android.proto.RectFKt.Dsl._create(this.toBuilder()).apply { block() }._build()
 

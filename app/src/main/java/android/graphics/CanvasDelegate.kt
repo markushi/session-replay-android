@@ -185,7 +185,6 @@ class CanvasDelegate(
 
     override fun clipRect(rect: RectF, op: Region.Op): Boolean {
         Log.d(TAG, "TODO clipRect: rect: RectF, op: Region.Op")
-
         return original.clipRect(rect, op)
     }
 
@@ -223,7 +222,10 @@ class CanvasDelegate(
         bottom: Float,
         op: Region.Op
     ): Boolean {
-        Log.d(TAG, "TODO clipRect: left: Float, top: Float, right: Float, bottom: Float, op: Region.Op")
+        Log.d(
+            TAG,
+            "TODO clipRect: left: Float, top: Float, right: Float, bottom: Float, op: Region.Op"
+        )
         return original.clipRect(left, top, right, bottom, op)
     }
 

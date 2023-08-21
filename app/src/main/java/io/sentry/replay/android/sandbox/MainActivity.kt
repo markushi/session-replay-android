@@ -5,9 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.util.Base64
 import android.util.Log
-import android.util.TypedValue
 import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import io.sentry.replay.R
 import io.sentry.replay.android.ViewRecorder
@@ -17,35 +15,16 @@ class MainActivity : AppCompatActivity() {
         private const val TAG = "MainActivity"
     }
 
-    class State {
-        var count = 0;
-    }
-
     private val viewRecorder: ViewRecorder = ViewRecorder()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var state = State()
-
-        val txtCounter = findViewById<TextView>(R.id.counter_label)
-        findViewById<View>(R.id.increase_counter).setOnClickListener {
-            state.count++
-            txtCounter.setTextSize(TypedValue.COMPLEX_UNIT_PX, txtCounter.textSize + 6f)
-            txtCounter.text = "${state.count}"
-        }
-
-        findViewById<View>(R.id.decrease_counter).setOnClickListener {
-            state.count--
-            txtCounter.setTextSize(TypedValue.COMPLEX_UNIT_PX, txtCounter.textSize - 6f)
-            txtCounter.text = "${state.count}"
-        }
-
         findViewById<View>(R.id.action_replay).setOnClickListener {
             val replay = viewRecorder.canvasCommandRecorder.getReplay()
             val replayBase64 = String(Base64.encode(replay, Base64.DEFAULT or Base64.NO_WRAP))
-            val webpage: Uri = Uri.parse("https://markushi.github.io/session-replay-android/web/")
+            val webpage: Uri = Uri.parse("http://localhost:8000/")
                 .buildUpon()
                 .appendQueryParameter("payload", replayBase64).build()
 

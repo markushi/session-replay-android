@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Session Replay for Android - POC</title>
-  <style>
+    <meta charset="utf-8"/>
+    <meta content="ie=edge" http-equiv="x-ua-compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>Session Replay for Android - POC</title>
+    <style>
     * {
       margin: 0;
     }
@@ -26,17 +26,20 @@
     #seekbar {
       width: 100%;
     }
-  </style>
+
+    </style>
 </head>
 
 <body>
-  <canvas id="canvas"></canvas>
-  <section id="footer">
-    <input id="seekbar" disabled type="range" min="0" max="99" value="0">
-  </section>
-  <script type="text/javascript" src="https://unpkg.com/canvaskit-wasm@0.19.0/bin/canvaskit.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/protobufjs@7.2.4/dist/protobuf.js"></script>
-  <script>
+<canvas id="canvas"></canvas>
+<section id="footer">
+    <input disabled id="seekbar" max="99" min="0" type="range" value="0">
+</section>
+<script src="https://unpkg.com/canvaskit-wasm@0.19.0/bin/canvaskit.js"
+        type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/protobufjs@7.2.4/dist/protobuf.js"
+        type="text/javascript"></script>
+<script>
     const canvasElement = document.getElementById('canvas');
     canvasElement.width = window.innerWidth;
     canvasElement.height = window.innerHeight;
@@ -109,6 +112,7 @@
         skiaPaint.setColor(getColor(protoPaint.color));
         skiaPaint.setAlphaf(protoPaint.alpha);
         skiaPaint.setStyle(getPaintStyle(protoPaint.style));
+        skiaPaint.setStrokeWidth(protoPaint.strokeWidth);
 
         if (protoPaint.porterDuffColorFilter) {
           const skiaColor = getColor(protoPaint.porterDuffColorFilter.color);
@@ -258,8 +262,7 @@
             // canvas.drawText(data.text, data.position.x, data.position.y, paint, font);
           } else if (payload.drawRoundRect) {
             const data = payload.drawRoundRect;
-
-            if (data.paint.porterDuffColorFilter && data.paint.porterDuffColorFilter.color !== 0) {
+            if (data.paint.porterDuffColorFilter === null || (data.paint.porterDuffColorFilter !== null && data.paint.porterDuffColorFilter.color !== 0)) {
               const paint = getPaint(data.paint);
               const rect = getRect(data.rect);
               const rr = CanvasKit.RRectXY(rect, data.radii.x, data.radii.y);
@@ -277,7 +280,7 @@
             const paint = getPaint(data.paint);
             canvas.drawCircle(data.position.x, data.position.y, data.radius, paint);
           } else if (payload.concat) {
-            // TODO check if we can use matrix as-is
+             // TODO transform to proper type
             const data = payload.concat;
             const matrix = data.matrix;
             canvas.concat(data.matrix);
@@ -289,7 +292,7 @@
             canvas.skew(payload.skew.sx, payload.skew.sy);
           } else if (payload.setMatrix) {
             const matrix = payload.setMatrix.matrix;
-            // ?
+            // TODO transform to proper type
             // canvas.setMatrix(data.matrix);
           } else {
             console.error("unknown command", payload);
@@ -327,7 +330,8 @@
         seekbar.value = parseInt((frameIdx) / (frameCount - 1) * 99);
       }, 1000);
     });
-  </script>
+
+</script>
 </body>
 
 </html>

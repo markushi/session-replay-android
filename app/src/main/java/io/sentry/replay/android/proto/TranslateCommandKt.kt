@@ -3,59 +3,68 @@
 
 // Generated files should ignore deprecation warnings
 @file:Suppress("DEPRECATION")
+
 package io.sentry.replay.android.proto;
 
 @kotlin.jvm.JvmName("-initializetranslateCommand")
 public inline fun translateCommand(block: io.sentry.replay.android.proto.TranslateCommandKt.Dsl.() -> kotlin.Unit): io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand =
-  io.sentry.replay.android.proto.TranslateCommandKt.Dsl._create(io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.newBuilder()).apply { block() }._build()
+    io.sentry.replay.android.proto.TranslateCommandKt.Dsl._create(io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.newBuilder())
+        .apply { block() }._build()
+
 /**
  * Protobuf type `io.sentry.replay.android.proto.TranslateCommand`
  */
 public object TranslateCommandKt {
-  @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-  @com.google.protobuf.kotlin.ProtoDslMarker
-  public class Dsl private constructor(
-    private val _builder: io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.Builder
-  ) {
-    public companion object {
-      @kotlin.jvm.JvmSynthetic
-      @kotlin.PublishedApi
-      internal fun _create(builder: io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.Builder): Dsl = Dsl(builder)
-    }
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+        private val _builder: io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.Builder
+    ) {
+        public companion object {
+            @kotlin.jvm.JvmSynthetic
+            @kotlin.PublishedApi
+            internal fun _create(builder: io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.Builder): Dsl =
+                Dsl(builder)
+        }
 
-    @kotlin.jvm.JvmSynthetic
-    @kotlin.PublishedApi
-    internal fun _build(): io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand = _builder.build()
+        @kotlin.jvm.JvmSynthetic
+        @kotlin.PublishedApi
+        internal fun _build(): io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand =
+            _builder.build()
 
-    /**
-     * `.io.sentry.replay.android.proto.CoordinateF coordinate = 1;`
-     */
-    public var coordinate: io.sentry.replay.android.proto.ReplayOuterClass.CoordinateF
-      @JvmName("getCoordinate")
-      get() = _builder.getCoordinate()
-      @JvmName("setCoordinate")
-      set(value) {
-        _builder.setCoordinate(value)
-      }
-    /**
-     * `.io.sentry.replay.android.proto.CoordinateF coordinate = 1;`
-     */
-    public fun clearCoordinate() {
-      _builder.clearCoordinate()
+        /**
+         * `.io.sentry.replay.android.proto.CoordinateF coordinate = 1;`
+         */
+        public var coordinate: io.sentry.replay.android.proto.ReplayOuterClass.CoordinateF
+            @JvmName("getCoordinate")
+            get() = _builder.getCoordinate()
+            @JvmName("setCoordinate")
+            set(value) {
+                _builder.setCoordinate(value)
+            }
+
+        /**
+         * `.io.sentry.replay.android.proto.CoordinateF coordinate = 1;`
+         */
+        public fun clearCoordinate() {
+            _builder.clearCoordinate()
+        }
+
+        /**
+         * `.io.sentry.replay.android.proto.CoordinateF coordinate = 1;`
+         * @return Whether the coordinate field is set.
+         */
+        public fun hasCoordinate(): kotlin.Boolean {
+            return _builder.hasCoordinate()
+        }
     }
-    /**
-     * `.io.sentry.replay.android.proto.CoordinateF coordinate = 1;`
-     * @return Whether the coordinate field is set.
-     */
-    public fun hasCoordinate(): kotlin.Boolean {
-      return _builder.hasCoordinate()
-    }
-  }
 }
+
 @kotlin.jvm.JvmSynthetic
 public inline fun io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand.copy(block: io.sentry.replay.android.proto.TranslateCommandKt.Dsl.() -> kotlin.Unit): io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommand =
-  io.sentry.replay.android.proto.TranslateCommandKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+    io.sentry.replay.android.proto.TranslateCommandKt.Dsl._create(this.toBuilder())
+        .apply { block() }._build()
 
 public val io.sentry.replay.android.proto.ReplayOuterClass.TranslateCommandOrBuilder.coordinateOrNull: io.sentry.replay.android.proto.ReplayOuterClass.CoordinateF?
-  get() = if (hasCoordinate()) getCoordinate() else null
+    get() = if (hasCoordinate()) getCoordinate() else null
 
